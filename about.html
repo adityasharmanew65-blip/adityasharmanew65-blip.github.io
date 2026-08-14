@@ -4,11 +4,322 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>About | LexMinds</title>
-  <link rel='stylesheet' href='style.css'>
+
+  <meta name='description' content='Learn about LexMinds, its mission, vision, and commitment to legal education and student empowerment.'>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Segoe UI', Arial, sans-serif;
+      color:#1a1a1a;
+      line-height:1.8;
+      background:
+        radial-gradient(circle at top left, rgba(212,192,138,0.15), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(8,27,58,0.08), transparent 25%),
+        #f7f5ef;
+      background-attachment:fixed;
+      animation:fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(10px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    header{
+      background:linear-gradient(135deg,#081b3a,#102a56);
+      color:white;
+      text-align:center;
+      padding:60px 20px 50px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    header::before{
+      content:'';
+      position:absolute;
+      width:320px;
+      height:320px;
+      background:rgba(255,255,255,0.08);
+      border-radius:50%;
+      top:-140px;
+      left:-140px;
+      filter:blur(10px);
+    }
+
+    header::after{
+      content:'';
+      position:absolute;
+      width:260px;
+      height:260px;
+      background:rgba(212,192,138,0.12);
+      border-radius:50%;
+      bottom:-120px;
+      right:-120px;
+      filter:blur(10px);
+    }
+
+    .logo{
+      width:160px;
+      background:white;
+      border-radius:50%;
+      padding:10px;
+      margin-bottom:18px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.25);
+      animation:floatLogo 4s ease-in-out infinite;
+      position:relative;
+      z-index:1;
+    }
+
+    @keyframes floatLogo{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-8px);}
+    }
+
+    header h1{
+      font-size:3rem;
+      margin-bottom:12px;
+      position:relative;
+      z-index:1;
+    }
+
+    header p{
+      color:#d4c08a;
+      font-size:1.15rem;
+      max-width:850px;
+      margin:auto;
+      position:relative;
+      z-index:1;
+    }
+
+    nav{
+      background:#102a56;
+      text-align:center;
+      padding:14px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:600;
+      position:relative;
+    }
+
+    nav a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:0;
+      height:2px;
+      background:#d4c08a;
+      transition:width 0.3s ease;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:60px auto;
+      padding:0 20px;
+    }
+
+    .section{
+      background:rgba(255,255,255,0.78);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.35);
+      border-radius:18px;
+      padding:40px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
+      margin-bottom:32px;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 28px rgba(8,27,58,0.12);
+    }
+
+    h2{
+      color:#081b3a;
+      margin-bottom:18px;
+      font-size:2rem;
+      position:relative;
+    }
+
+    h2::after{
+      content:'';
+      display:block;
+      width:70px;
+      height:3px;
+      background:#d4c08a;
+      margin-top:10px;
+      border-radius:2px;
+    }
+
+    p{
+      margin-bottom:16px;
+      color:#333;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:24px;
+      margin-top:24px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.82);
+      border:1px solid rgba(255,255,255,0.4);
+      border-top:4px solid #d4c08a;
+      border-radius:16px;
+      padding:26px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      transition:transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 16px 30px rgba(8,27,58,0.16);
+    }
+
+    .card h3{
+      color:#081b3a;
+      margin-bottom:12px;
+      font-size:1.2rem;
+    }
+
+    .highlight{
+      background:linear-gradient(135deg,#081b3a,#102a56);
+      color:white;
+      border-radius:18px;
+      padding:42px;
+      text-align:center;
+      box-shadow:0 12px 28px rgba(8,27,58,0.22);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .highlight::before{
+      content:'';
+      position:absolute;
+      top:-50%;
+      left:-50%;
+      width:200%;
+      height:200%;
+      background:radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 60%);
+      animation:rotateGlow 8s linear infinite;
+    }
+
+    @keyframes rotateGlow{
+      from{transform:rotate(0deg);}
+      to{transform:rotate(360deg);}
+    }
+
+    .highlight h2{
+      color:white;
+      position:relative;
+      z-index:1;
+    }
+
+    .highlight h2::after{
+      background:#d4c08a;
+    }
+
+    .highlight p{
+      color:#f5f5f5;
+      position:relative;
+      z-index:1;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:14px 28px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      transition:0.3s;
+      position:relative;
+      z-index:1;
+      background:#d4c08a;
+      color:#081b3a;
+      box-shadow:0 6px 16px rgba(0,0,0,0.18);
+    }
+
+    .btn:hover{
+      background:white;
+      transform:translateY(-3px);
+    }
+
+    .founder{
+      font-style:italic;
+      border-left:4px solid #d4c08a;
+      padding-left:20px;
+      margin-top:20px;
+      color:#444;
+    }
+
+    footer{
+      background:#081b3a;
+      color:white;
+      text-align:center;
+      padding:35px 20px;
+      margin-top:70px;
+      border-top:3px solid #d4c08a;
+    }
+
+    footer p{
+      margin:6px 0;
+      color:white;
+    }
+
+    footer a{
+      color:#d4c08a;
+      text-decoration:none;
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size:2.2rem;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px 10px;
+      }
+
+      .section{
+        padding:28px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header><h1>About LexMinds</h1></header>
+<header>
+  <img src='logo.png' alt='LexMinds Logo' class='logo'>
+  <h1>About LexMinds</h1>
+  <p>
+    Building a student-friendly legal learning platform that simplifies law,
+    encourages research, and empowers future legal professionals.
+  </p>
+</header>
 
 <nav>
   <a href='index.html'>Home</a>
@@ -22,13 +333,173 @@
 </nav>
 
 <div class='container'>
-  <p>
-    LexMinds was created to make legal education accessible and student-friendly.
-    Our mission is to provide reliable legal notes, articles, and academic resources.
-  </p>
+
+  <!-- About -->
+  <section class='section'>
+    <h2>Who We Are</h2>
+
+    <p>
+      <strong>LexMinds</strong> is an independent legal education initiative created for
+      law students, researchers, and aspiring legal professionals across India.
+      Our objective is to provide reliable, well-structured, and easy-to-understand
+      legal resources in one accessible platform.
+    </p>
+
+    <p>
+      We understand that legal education can often feel overwhelming. LexMinds was
+      founded to bridge the gap between complex legal concepts and student-friendly
+      learning by offering concise notes, articles, case analyses, and academic guidance.
+    </p>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class='section'>
+    <h2>Our Mission & Vision</h2>
+
+    <div class='grid'>
+
+      <div class='card'>
+        <h3>🎯 Mission</h3>
+        <p>
+          To make legal education accessible, affordable, organized, and understandable
+          for every law student, regardless of their background.
+        </p>
+      </div>
+
+      <div class='card'>
+        <h3>🌟 Vision</h3>
+        <p>
+          To become a trusted digital legal learning platform that promotes academic
+          excellence, legal awareness, and research culture among students.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What Makes Us Different -->
+  <section class='section'>
+    <h2>What Makes LexMinds Different?</h2>
+
+    <div class='grid'>
+
+      <div class='card'>
+        <h3>📚 Student-Centric Content</h3>
+        <p>Notes written in simple language with examination-oriented structure.</p>
+      </div>
+
+      <div class='card'>
+        <h3>⚖️ Practical Legal Learning</h3>
+        <p>Focus on case law analysis, legal reasoning, and real legal issues.</p>
+      </div>
+
+      <div class='card'>
+        <h3>📝 Publication Opportunities</h3>
+        <p>Students can publish original legal articles and research work.</p>
+      </div>
+
+      <div class='card'>
+        <h3>🎓 Skill Development</h3>
+        <p>Internship guidance, legal writing practice, and research support.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Who It Is For -->
+  <section class='section'>
+    <h2>Who Can Benefit from LexMinds?</h2>
+
+    <p>LexMinds is designed for:</p>
+
+    <ul style='padding-left:22px; margin-top:12px;'>
+      <li>LL.B. students</li>
+      <li>B.A. LL.B., B.Com. LL.B., and BBA LL.B. students</li>
+      <li>Judiciary aspirants</li>
+      <li>Legal researchers and academicians</li>
+      <li>Moot court participants</li>
+      <li>Students preparing assignments and projects</li>
+    </ul>
+  </section>
+
+  <!-- What We Publish -->
+  <section class='section'>
+    <h2>What We Publish</h2>
+
+    <div class='grid'>
+
+      <div class='card'>
+        <h3>📖 Law Notes</h3>
+        <p>Semester-wise and subject-wise study material.</p>
+      </div>
+
+      <div class='card'>
+        <h3>⚖️ Case Commentaries</h3>
+        <p>Important judgments explained with facts, issues, and ratio.</p>
+      </div>
+
+      <div class='card'>
+        <h3>📝 Legal Articles</h3>
+        <p>Research-oriented articles on constitutional law, torts, contracts, and more.</p>
+      </div>
+
+      <div class='card'>
+        <h3>🎓 Internship Resources</h3>
+        <p>Updates, guidance, and opportunities for law students.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Founder Note -->
+  <section class='section'>
+    <h2>Founder’s Note</h2>
+
+    <div class='founder'>
+      “LexMinds started as a student initiative with a simple belief: legal knowledge
+      should be shared, simplified, and made accessible to everyone. As a law student,
+      I experienced the challenges of finding organized study material and reliable
+      academic guidance. This platform is my effort to help fellow students learn
+      law with confidence and clarity.”
+      <br><br>
+      <strong>— Aditya Sharma, Founder, LexMinds</strong>
+    </div>
+  </section>
+
+  <!-- Future Goals -->
+  <section class='section'>
+    <h2>Our Future Goals</h2>
+
+    <ul style='padding-left:22px; margin-top:12px;'>
+      <li>Expand publication categories across all major law subjects.</li>
+      <li>Provide downloadable PDF notes and revision material.</li>
+      <li>Launch student research and mentorship initiatives.</li>
+      <li>Organize webinars, workshops, and legal awareness programs.</li>
+      <li>Build a strong academic community of law students and researchers.</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class='highlight'>
+    <h2>Join the LexMinds Community</h2>
+
+    <p>
+      Explore publications, contribute articles, stay updated with internship
+      opportunities, and become part of a growing community of law learners.
+    </p>
+
+    <a href='publications.html' class='btn'>Explore Publications</a>
+  </section>
+
 </div>
 
-<footer>© 2026 LexMinds</footer>
+<footer>
+  <p><strong>LexMinds</strong></p>
+  <p>Know the Law, Empower the Mind</p>
+  <p>Email: lexmindsindia@gmail.com</p>
+  <p><a href='policy.html'>Privacy Policy</a></p>
+  <p>© 2026 LexMinds. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
