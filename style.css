@@ -1,12 +1,13 @@
 /* =========================================================
    LAW LEX MIND
    MASTER WEBSITE STYLESHEET
+   HOME + ALL PAGES
    ========================================================= */
 
 
 /* =========================================================
    1. RESET
-   ========================================================= */
+========================================================= */
 
 * {
   margin: 0;
@@ -43,7 +44,7 @@ button {
 
 /* =========================================================
    2. GLOBAL CONTAINER
-   ========================================================= */
+========================================================= */
 
 .container,
 .policy-container {
@@ -54,12 +55,7 @@ button {
 
 /* =========================================================
    3. HEADER
-   Supports:
-   .site-header
-   .logo-area
-   .site-logo
-   .brand-text
-   ========================================================= */
+========================================================= */
 
 .site-header,
 header {
@@ -94,48 +90,46 @@ header {
 
 .brand-text h1 {
   margin: 0;
+
   font-family: Georgia, "Times New Roman", serif;
+
   font-size: 28px;
   line-height: 1.2;
+
   color: #ffffff;
 }
 
 .brand-text p {
   margin-top: 5px;
+
   font-size: 14px;
+
   color: #d7b45d;
-}
-
-
-/* Support old header structure */
-
-header .logo-area {
-  padding: 0;
-}
-
-header .logo-area > div:not(.brand-text) {
-  min-width: 0;
 }
 
 
 /* =========================================================
    4. NAVIGATION
-   Supports old and new navigation structures
-   ========================================================= */
+========================================================= */
 
 .main-navigation,
 .navbar {
   width: 100%;
+
   background: #0b1b2a;
-  border-bottom: 1px solid rgba(201, 159, 60, 0.25);
+
+  border-bottom:
+    1px solid rgba(201, 159, 60, 0.25);
 }
 
 .main-navigation {
   min-height: 58px;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
+
   gap: 6px;
 }
 
@@ -145,6 +139,7 @@ header .logo-area > div:not(.brand-text) {
   padding: 17px 15px;
 
   color: #e8edf2;
+
   font-size: 14px;
   font-weight: 600;
 
@@ -162,6 +157,7 @@ header .logo-area > div:not(.brand-text) {
   content: "";
 
   position: absolute;
+
   left: 15px;
   right: 15px;
   bottom: 8px;
@@ -173,36 +169,45 @@ header .logo-area > div:not(.brand-text) {
 
 
 /* =========================================================
-   OLD NAVIGATION SUPPORT
-   ========================================================= */
+   5. OLD NAVIGATION SUPPORT
+========================================================= */
 
 .nav-container {
   width: min(1120px, calc(100% - 40px));
+
   min-height: 58px;
 
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
   justify-content: space-between;
 }
 
 .nav-brand {
   color: #ffffff;
+
   font-family: Georgia, "Times New Roman", serif;
+
   font-weight: 700;
+
   font-size: 18px;
 }
 
 .nav-links {
   display: flex;
+
   align-items: center;
+
   gap: 5px;
 }
 
 .nav-links a {
   padding: 17px 13px;
+
   color: #e8edf2;
+
   font-size: 14px;
   font-weight: 600;
 }
@@ -213,8 +218,8 @@ header .logo-area > div:not(.brand-text) {
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
-   ========================================================= */
+   6. MOBILE MENU BUTTON
+========================================================= */
 
 .menu-toggle {
   display: none;
@@ -222,10 +227,13 @@ header .logo-area > div:not(.brand-text) {
   width: 44px;
   height: 40px;
 
-  border: 1px solid rgba(215, 180, 93, 0.45);
+  border:
+    1px solid rgba(215, 180, 93, 0.45);
+
   border-radius: 6px;
 
   background: transparent;
+
   cursor: pointer;
 
   padding: 8px;
@@ -244,93 +252,268 @@ header .logo-area > div:not(.brand-text) {
 
 
 /* =========================================================
-   5. WEBSITE LOADER
-   ========================================================= */
+   7. HOME PAGE LOADER
+========================================================= */
 
-#website-loader {
+.page-loader {
   position: fixed;
-  inset: 0;
-  z-index: 9999;
 
-  background: #071522;
+  inset: 0;
+
+  z-index: 99999;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
+  background:
+    radial-gradient(
+      circle at center,
+      #102b40 0%,
+      #071522 55%,
+      #050e17 100%
+    );
+
+  opacity: 1;
+
+  visibility: visible;
+
   transition:
-    opacity 0.5s ease,
-    visibility 0.5s ease;
+    opacity 0.7s ease,
+    visibility 0.7s ease;
 }
 
-.loader-content {
+
+/* Loader hidden state */
+
+.page-loader.hide {
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+}
+
+
+/* Loader content */
+
+.page-loader-box {
+  width: min(420px, calc(100% - 40px));
+
   text-align: center;
-  color: #ffffff;
+
+  animation:
+    loaderBoxAppear 0.8s ease both;
 }
 
-.loader-logo {
-  width: 90px;
-  height: 90px;
+
+/* Loader logo */
+
+.page-loader-logo {
+  width: 105px;
+  height: 105px;
 
   object-fit: contain;
 
-  margin: 0 auto 18px;
+  margin: 0 auto 22px;
+
+  animation:
+    loaderLogoAppear 1s ease both,
+    loaderLogoFloat 2.5s ease-in-out 1s infinite;
 }
 
-.loader-content h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  margin-bottom: 5px;
+
+/* Loader name */
+
+.page-loader-name {
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  margin-bottom: 8px;
+
+  letter-spacing: 0.5px;
 }
 
-.loader-content p {
+
+/* Loader tagline */
+
+.page-loader-tagline {
   color: #d7b45d;
+
   font-size: 14px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 30px;
 }
 
-.loader-line {
-  width: 220px;
-  height: 3px;
 
-  margin: 25px auto 12px;
+/* Loading bar */
 
-  background: rgba(255, 255, 255, 0.15);
+.page-loader-bar {
+  width: 240px;
+  height: 4px;
+
+  margin: 0 auto 14px;
+
   overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.15);
 }
 
-.loader-progress {
+
+/* Animated gold bar */
+
+.page-loader-bar span {
+  display: block;
+
   width: 0;
+
   height: 100%;
+
+  border-radius: 20px;
+
   background: #d7b45d;
 
-  animation: loading 1.5s ease forwards;
+  animation:
+    pageLoaderProgress 1.8s
+    ease-in-out
+    forwards;
 }
 
-.loader-text {
+
+/* Loading text */
+
+.page-loader-loading {
+  color: #94a3b8;
+
   font-size: 12px;
-  color: #cbd5e1;
-}
 
-@keyframes loading {
-  from {
-    width: 0;
-  }
+  letter-spacing: 2px;
 
-  to {
-    width: 100%;
-  }
+  text-transform: uppercase;
+
+  animation:
+    loaderTextPulse 1.2s
+    ease-in-out
+    infinite;
 }
 
 
 /* =========================================================
-   6. GLOBAL TYPOGRAPHY
-   ========================================================= */
+   8. LOADER ANIMATIONS
+========================================================= */
+
+@keyframes pageLoaderProgress {
+
+  0% {
+    width: 0;
+  }
+
+  70% {
+    width: 78%;
+  }
+
+  100% {
+    width: 100%;
+  }
+
+}
+
+
+@keyframes loaderBoxAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+@keyframes loaderLogoAppear {
+
+  from {
+    opacity: 0;
+
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+
+}
+
+
+@keyframes loaderLogoFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+}
+
+
+@keyframes loaderTextPulse {
+
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   9. GLOBAL TYPOGRAPHY
+========================================================= */
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
   line-height: 1.25;
 }
 
@@ -348,17 +531,19 @@ p {
 
 
 /* =========================================================
-   7. SMALL GOLD HEADINGS
-   ========================================================= */
+   10. SMALL GOLD HEADINGS
+========================================================= */
 
 .small-heading,
 .hero-tag {
   color: #b58a2b;
 
   font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 2px;
+
   text-transform: uppercase;
 
   margin-bottom: 15px;
@@ -366,13 +551,14 @@ p {
 
 
 /* =========================================================
-   8. HERO
-   ========================================================= */
+   11. HERO
+========================================================= */
 
 .hero {
   min-height: 610px;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -388,13 +574,16 @@ p {
 
 .hero-content {
   width: min(1120px, calc(100% - 40px));
+
   margin: 0 auto;
 
   max-width: 900px;
 }
 
 .hero h2 {
-  font-size: clamp(42px, 6vw, 70px);
+  font-size:
+    clamp(42px, 6vw, 70px);
+
   margin-bottom: 25px;
 }
 
@@ -407,12 +596,15 @@ p {
   max-width: 720px;
 
   color: #cbd5e1;
+
   font-size: 17px;
 }
 
 .hero-buttons {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 12px;
 
   margin-top: 30px;
@@ -420,12 +612,14 @@ p {
 
 
 /* =========================================================
-   9. BUTTONS
-   ========================================================= */
+   12. BUTTONS
+========================================================= */
 
 .btn {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
 
   min-height: 48px;
@@ -435,11 +629,13 @@ p {
   border-radius: 5px;
 
   background: #d7b45d;
+
   color: #071522;
 
   border: 1px solid #d7b45d;
 
   font-size: 14px;
+
   font-weight: 700;
 
   transition:
@@ -450,23 +646,26 @@ p {
 
 .btn:hover {
   transform: translateY(-2px);
+
   background: #e3c875;
 }
 
 .secondary-btn {
   background: transparent;
+
   color: #d7b45d;
 }
 
 .secondary-btn:hover {
   background: #d7b45d;
+
   color: #071522;
 }
 
 
 /* =========================================================
-   10. GENERAL SECTIONS
-   ========================================================= */
+   13. GENERAL SECTIONS
+========================================================= */
 
 main {
   width: 100%;
@@ -478,13 +677,14 @@ section {
 
 section.container {
   padding-top: 80px;
+
   padding-bottom: 80px;
 }
 
 
 /* =========================================================
-   11. CARDS
-   ========================================================= */
+   14. CARDS
+========================================================= */
 
 .card {
   background: #ffffff;
@@ -496,7 +696,8 @@ section.container {
   padding: 35px;
 
   box-shadow:
-    0 8px 30px rgba(7, 21, 34, 0.06);
+    0 8px 30px
+    rgba(7, 21, 34, 0.06);
 }
 
 .intro-card {
@@ -513,8 +714,8 @@ section.container {
 
 
 /* =========================================================
-   12. SECTION HEADING
-   ========================================================= */
+   15. SECTION HEADING
+========================================================= */
 
 .section-heading {
   margin-bottom: 35px;
@@ -526,8 +727,8 @@ section.container {
 
 
 /* =========================================================
-   13. FEATURE GRID
-   ========================================================= */
+   16. FEATURE GRID
+========================================================= */
 
 .feature-grid {
   display: grid;
@@ -542,11 +743,13 @@ section.container {
   height: 100%;
 
   display: flex;
+
   flex-direction: column;
 }
 
 .feature-icon {
   font-size: 30px;
+
   margin-bottom: 18px;
 }
 
@@ -564,7 +767,9 @@ section.container {
   margin-top: 15px;
 
   color: #9a721e;
+
   font-weight: 700;
+
   font-size: 14px;
 }
 
@@ -574,13 +779,14 @@ section.container {
 
 
 /* =========================================================
-   14. DARK SECTION
-   ========================================================= */
+   17. DARK SECTION
+========================================================= */
 
 .dark-section {
   padding: 90px 0;
 
   background: #071522;
+
   color: #ffffff;
 }
 
@@ -598,8 +804,8 @@ section.container {
 
 
 /* =========================================================
-   15. CTA
-   ========================================================= */
+   18. CTA
+========================================================= */
 
 .cta-section {
   padding: 90px 0;
@@ -619,13 +825,14 @@ section.container {
 
 
 /* =========================================================
-   16. POLICY HERO
-   ========================================================= */
+   19. POLICY HERO
+========================================================= */
 
 .policy-hero {
   min-height: 440px;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -641,13 +848,15 @@ section.container {
 
 .policy-hero-content {
   width: min(1120px, calc(100% - 40px));
+
   margin: 0 auto;
 
   max-width: 850px;
 }
 
 .policy-hero h2 {
-  font-size: clamp(42px, 5vw, 62px);
+  font-size:
+    clamp(42px, 5vw, 62px);
 
   margin-bottom: 25px;
 
@@ -656,13 +865,14 @@ section.container {
 
 .policy-hero .hero-text {
   color: #cbd5e1;
+
   max-width: 760px;
 }
 
 
 /* =========================================================
-   17. POLICY SECTIONS
-   ========================================================= */
+   20. POLICY SECTIONS
+========================================================= */
 
 .policy-section {
   padding: 70px 0;
@@ -686,7 +896,8 @@ section.container {
   border-radius: 8px;
 
   box-shadow:
-    0 8px 28px rgba(7, 21, 34, 0.05);
+    0 8px 28px
+    rgba(7, 21, 34, 0.05);
 }
 
 .policy-card h2 {
@@ -703,6 +914,7 @@ section.container {
   font-size: 20px;
 
   margin-top: 30px;
+
   margin-bottom: 10px;
 }
 
@@ -720,18 +932,20 @@ section.container {
 
 
 /* =========================================================
-   18. POLICY CONTACT
-   ========================================================= */
+   21. POLICY CONTACT
+========================================================= */
 
 .policy-contact {
   padding: 90px 0;
 
   background: #071522;
+
   color: #ffffff;
 }
 
 .contact-content {
   max-width: 850px;
+
   margin: 0 auto;
 }
 
@@ -753,12 +967,13 @@ section.container {
 
 
 /* =========================================================
-   19. FOOTER
-   ========================================================= */
+   22. FOOTER
+========================================================= */
 
 .site-footer,
 footer {
-  padding: 65px 20px 25px;
+  padding:
+    65px 20px 25px;
 
   background: #050e17;
 
@@ -766,7 +981,8 @@ footer {
 
   text-align: center;
 
-  border-top: 1px solid rgba(215, 180, 93, 0.25);
+  border-top:
+    1px solid rgba(215, 180, 93, 0.25);
 }
 
 .footer-logo {
@@ -784,16 +1000,19 @@ footer {
 
 .footer-logo h3 {
   color: #ffffff;
+
   margin-bottom: 5px;
 }
 
 .footer-logo p {
   color: #d7b45d;
+
   font-size: 14px;
 }
 
 .footer-links {
   display: flex;
+
   flex-wrap: wrap;
 
   justify-content: center;
@@ -805,6 +1024,7 @@ footer {
 
 .footer-links a {
   color: #cbd5e1;
+
   font-size: 14px;
 }
 
@@ -827,9 +1047,11 @@ footer {
 
 .copyright {
   margin-top: 35px;
+
   padding-top: 20px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top:
+    1px solid rgba(255, 255, 255, 0.08);
 
   color: #94a3b8;
 
@@ -838,8 +1060,8 @@ footer {
 
 
 /* =========================================================
-   20. MOBILE
-   ========================================================= */
+   23. TABLET
+========================================================= */
 
 @media (max-width: 900px) {
 
@@ -860,10 +1082,11 @@ footer {
 
 
 /* =========================================================
-   21. TABLET / MOBILE NAVIGATION
-   ========================================================= */
+   24. MOBILE
+========================================================= */
 
 @media (max-width: 700px) {
+
 
   /* Header */
 
@@ -873,6 +1096,7 @@ footer {
 
   .logo-area {
     width: calc(100% - 30px);
+
     gap: 12px;
   }
 
@@ -890,7 +1114,7 @@ footer {
   }
 
 
-  /* New navigation */
+  /* Navigation */
 
   .main-navigation {
     display: grid;
@@ -913,7 +1137,9 @@ footer {
 
   .main-navigation a.active::after {
     left: 20%;
+
     right: 20%;
+
     bottom: 5px;
   }
 
@@ -934,17 +1160,21 @@ footer {
     position: absolute;
 
     top: 100%;
+
     left: 0;
+
     right: 0;
 
     z-index: 1000;
 
     flex-direction: column;
+
     align-items: stretch;
 
     background: #071522;
 
-    border-top: 1px solid rgba(215, 180, 93, 0.25);
+    border-top:
+      1px solid rgba(215, 180, 93, 0.25);
   }
 
   .nav-links.active {
@@ -954,7 +1184,8 @@ footer {
   .nav-links a {
     padding: 14px 20px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom:
+      1px solid rgba(255, 255, 255, 0.06);
 
     text-align: center;
   }
@@ -964,6 +1195,7 @@ footer {
 
   .hero {
     min-height: 560px;
+
     padding: 70px 0;
   }
 
@@ -980,10 +1212,11 @@ footer {
   }
 
 
-  /* Policy hero */
+  /* Policy Hero */
 
   .policy-hero {
     min-height: 430px;
+
     padding: 65px 0;
   }
 
@@ -1020,7 +1253,7 @@ footer {
   }
 
 
-  /* Feature grid */
+  /* Feature Grid */
 
   .feature-grid {
     grid-template-columns: 1fr;
@@ -1031,6 +1264,7 @@ footer {
 
   section.container {
     padding-top: 55px;
+
     padding-bottom: 55px;
   }
 
@@ -1052,6 +1286,7 @@ footer {
 
   .hero-buttons {
     flex-direction: column;
+
     align-items: stretch;
   }
 
@@ -1064,15 +1299,36 @@ footer {
 
   .footer-links {
     flex-direction: column;
+
     gap: 10px;
+  }
+
+
+  /* Loader */
+
+  .page-loader-logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .page-loader-name {
+    font-size: 28px;
+  }
+
+  .page-loader-tagline {
+    font-size: 12px;
+  }
+
+  .page-loader-bar {
+    width: 200px;
   }
 
 }
 
 
 /* =========================================================
-   22. SMALL MOBILE
-   ========================================================= */
+   25. SMALL MOBILE
+========================================================= */
 
 @media (max-width: 430px) {
 
@@ -1106,6 +1362,7 @@ footer {
   .hero-tag,
   .small-heading {
     font-size: 10px;
+
     letter-spacing: 1.5px;
   }
 
@@ -1121,29 +1378,50 @@ footer {
     font-size: 15px;
   }
 
+
+  /* Smaller loader */
+
+  .page-loader-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .page-loader-name {
+    font-size: 25px;
+  }
+
+  .page-loader-tagline {
+    font-size: 11px;
+  }
+
+  .page-loader-bar {
+    width: 180px;
+  }
+
 }
 
 
 /* =========================================================
-   23. ACCESSIBILITY
-   ========================================================= */
+   26. ACCESSIBILITY
+========================================================= */
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid #d7b45d;
+  outline:
+    2px solid #d7b45d;
+
   outline-offset: 3px;
 }
 
 
 /* =========================================================
-   24. PREVENT HUGE LOGOS
-   ========================================================= */
+   27. LOGO SIZE PROTECTION
+========================================================= */
 
 header img,
 .site-header img,
 .logo-area img,
-.footer-logo img,
-.loader-content img {
+.footer-logo img {
   max-width: 100%;
 }
 
@@ -1157,12 +1435,7 @@ header img,
   height: 70px !important;
 }
 
-.loader-content .loader-logo {
-  width: 90px !important;
-  height: 90px !important;
-}
-
 
 /* =========================================================
    END OF STYLE.CSS
-   ========================================================= */
+========================================================= */
