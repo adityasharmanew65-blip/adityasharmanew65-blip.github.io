@@ -1,524 +1,477 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>LexMinds | Know the Law, Empower the Mind</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name='description' content='LexMinds - Legal Notes, Publications, Internship Updates, and Academic Resources for Law Students.'>
+  <title>Law Lex Mind | Legal Education & Knowledge Platform</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+  <meta name="description"
+    content="Law Lex Mind is a legal education platform providing legal notes, articles, case commentaries, publications and internship opportunities for law students.">
 
-    body{
-      font-family:'Segoe UI', Arial, sans-serif;
-      color:#1a1a1a;
-      line-height:1.7;
-      background:
-        radial-gradient(circle at top left, rgba(212,192,138,0.15), transparent 25%),
-        radial-gradient(circle at bottom right, rgba(8,27,58,0.08), transparent 25%),
-        #f7f5ef;
-      background-attachment:fixed;
-      animation:pageFade 0.8s ease-in-out;
-    }
+  <meta name="keywords"
+    content="Law Lex Mind, legal notes, law students, legal articles, case laws, legal publications, law internships, legal education">
 
-    @keyframes pageFade{
-      from{opacity:0; transform:translateY(10px);}
-      to{opacity:1; transform:translateY(0);}
-    }
+  <meta name="author" content="Law Lex Mind">
 
-    /* Header */
-    header{
-      background:linear-gradient(135deg,#081b3a,#102a56);
-      color:white;
-      text-align:center;
-      padding:60px 20px 50px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    header::before{
-      content:'';
-      position:absolute;
-      width:300px;
-      height:300px;
-      background:rgba(255,255,255,0.08);
-      border-radius:50%;
-      top:-120px;
-      left:-120px;
-      filter:blur(10px);
-    }
-
-    header::after{
-      content:'';
-      position:absolute;
-      width:260px;
-      height:260px;
-      background:rgba(212,192,138,0.12);
-      border-radius:50%;
-      bottom:-120px;
-      right:-120px;
-      filter:blur(10px);
-    }
-
-    .logo{
-      width:170px;
-      background:white;
-      border-radius:50%;
-      padding:10px;
-      margin-bottom:18px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.25);
-      animation:floatLogo 4s ease-in-out infinite;
-      position:relative;
-      z-index:1;
-    }
-
-    @keyframes floatLogo{
-      0%,100%{transform:translateY(0);}
-      50%{transform:translateY(-8px);}
-    }
-
-    header h1{
-      font-size:3.2rem;
-      margin-bottom:10px;
-      letter-spacing:1px;
-      position:relative;
-      z-index:1;
-    }
-
-    header p{
-      color:#d4c08a;
-      font-size:1.15rem;
-      font-weight:600;
-      position:relative;
-      z-index:1;
-    }
-
-    /* Navigation */
-    nav{
-      background:#102a56;
-      text-align:center;
-      padding:15px;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 16px;
-      font-weight:600;
-      position:relative;
-    }
-
-    nav a::after{
-      content:'';
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      width:0;
-      height:2px;
-      background:#d4c08a;
-      transition:width 0.3s ease;
-    }
-
-    nav a:hover::after{
-      width:100%;
-    }
-
-    /* Hero */
-    .hero{
-      max-width:1150px;
-      margin:70px auto;
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:40px;
-      padding:0 20px;
-    }
-
-    .hero-text{
-      flex:1;
-      min-width:300px;
-    }
-
-    .hero-text h2{
-      font-size:2.8rem;
-      color:#081b3a;
-      margin-bottom:20px;
-    }
-
-    .hero-text p{
-      font-size:1.1rem;
-      margin-bottom:24px;
-      color:#333;
-    }
-
-    .hero-image{
-      flex:1;
-      min-width:280px;
-      text-align:center;
-    }
-
-    .hero-image img{
-      width:100%;
-      max-width:420px;
-      border-radius:22px;
-      box-shadow:0 12px 30px rgba(0,0,0,0.18);
-      transition:transform 0.4s ease;
-    }
-
-    .hero-image img:hover{
-      transform:scale(1.03);
-    }
-
-    /* Buttons */
-    .btn{
-      display:inline-block;
-      padding:14px 28px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      margin-right:12px;
-      transition:0.3s;
-      position:relative;
-      overflow:hidden;
-      box-shadow:0 6px 16px rgba(8,27,58,0.18);
-    }
-
-    .btn::before{
-      content:'';
-      position:absolute;
-      top:0;
-      left:-120%;
-      width:120%;
-      height:100%;
-      background:linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
-      transition:left 0.6s ease;
-    }
-
-    .btn:hover::before{
-      left:120%;
-    }
-
-    .btn-primary{
-      background:#081b3a;
-      color:white;
-    }
-
-    .btn-primary:hover{
-      background:#102a56;
-      transform:translateY(-3px);
-    }
-
-    .btn-secondary{
-      border:2px solid #081b3a;
-      color:#081b3a;
-      background:white;
-    }
-
-    .btn-secondary:hover{
-      background:#081b3a;
-      color:white;
-      transform:translateY(-3px);
-    }
-
-    /* Sections */
-    .section{
-      max-width:1100px;
-      margin:70px auto;
-      padding:0 20px;
-    }
-
-    .glass{
-      background:rgba(255,255,255,0.75);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,0.35);
-      border-radius:18px;
-      padding:38px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .glass:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 28px rgba(8,27,58,0.12);
-    }
-
-    .section h3{
-      text-align:center;
-      font-size:2.1rem;
-      color:#081b3a;
-      margin-bottom:22px;
-      position:relative;
-    }
-
-    .section h3::after{
-      content:'';
-      display:block;
-      width:70px;
-      height:3px;
-      background:#d4c08a;
-      margin:10px auto 0;
-      border-radius:2px;
-    }
-
-    /* Cards */
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:24px;
-      margin-top:25px;
-    }
-
-    .card{
-      background:rgba(255,255,255,0.82);
-      border:1px solid rgba(255,255,255,0.4);
-      border-top:4px solid #d4c08a;
-      border-radius:16px;
-      padding:28px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      transition:transform 0.35s ease, box-shadow 0.35s ease;
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 16px 30px rgba(8,27,58,0.16);
-    }
-
-    .card h4{
-      color:#081b3a;
-      margin-bottom:12px;
-      font-size:1.2rem;
-    }
-
-    .card p{
-      color:#444;
-      margin-bottom:16px;
-    }
-
-    .card a{
-      color:#081b3a;
-      font-weight:700;
-      text-decoration:none;
-    }
-
-    /* Contact Box */
-    .contact-box{
-      text-align:center;
-    }
-
-    .contact-box p{
-      margin:10px 0;
-      font-size:1.05rem;
-    }
-
-    .contact-box strong{
-      color:#081b3a;
-    }
-
-    /* Footer */
-    footer{
-      background:#081b3a;
-      color:white;
-      text-align:center;
-      padding:35px 20px;
-      margin-top:70px;
-      border-top:3px solid #d4c08a;
-    }
-
-    footer p{
-      margin:6px 0;
-    }
-
-    footer a{
-      color:#d4c08a;
-      text-decoration:none;
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar{
-      width:10px;
-    }
-
-    ::-webkit-scrollbar-track{
-      background:#f1efe8;
-    }
-
-    ::-webkit-scrollbar-thumb{
-      background:#081b3a;
-      border-radius:10px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover{
-      background:#102a56;
-    }
-
-    /* Mobile */
-    @media(max-width:768px){
-      header h1{
-        font-size:2.3rem;
-      }
-
-      .hero-text h2{
-        font-size:2rem;
-      }
-
-      nav a{
-        display:inline-block;
-        margin:8px 10px;
-      }
-
-      .glass{
-        padding:26px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <img src='logo.png' alt='LexMinds Logo' class='logo'>
-  <h1>LexMinds</h1>
-  <p>Know the Law, Empower the Mind</p>
-</header>
+  <!-- ================= HEADER ================= -->
 
-<nav>
-  <a href='index.html'>Home</a>
-  <a href='about.html'>About</a>
-  <a href='publications.html'>Publications</a>
-  <a href='notes.html'>Notes</a>
-  <a href='articles.html'>Articles</a>
-  <a href='internship.html'>Internship</a>
-  <a href='contact.html'>Contact</a>
-  <a href='policy.html'>Policy</a>
-</nav>
+  <header>
 
-<!-- Hero -->
-<section class='hero'>
-  <div class='hero-text'>
-    <h2>Legal Knowledge for Every Law Student</h2>
+    <div class="logo-area">
 
-    <p>
-      <strong>LexMinds</strong> is a modern legal learning platform dedicated to
-      law students, researchers, and aspiring legal professionals.
-      We provide reliable legal notes, publications, internship updates,
-      and academic resources designed to simplify legal education.
+      <img src="logo.png"
+           alt="Law Lex Mind Logo"
+           class="site-logo">
+
+      <div>
+        <h1>Law Lex Mind</h1>
+        <p>Know the Law • Shape the Mind</p>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="publications.html">Publications</a>
+
+    <a href="notes.html">Notes</a>
+
+    <a href="articles.html">Articles</a>
+
+    <a href="internship.html">Internship</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="policy.html">Policy</a>
+
+  </nav>
+
+
+  <!-- ================= HERO SECTION ================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="hero-tag">
+        LAW • EDUCATION • RESEARCH • OPPORTUNITIES
+      </p>
+
+      <h2>
+        Welcome to <span>Law Lex Mind</span>
+      </h2>
+
+      <p class="hero-text">
+
+        A student-focused platform created to make legal education
+        simpler, accessible and more practical.
+
+        Explore legal notes, articles, case commentaries,
+        publications and opportunities designed for aspiring
+        legal professionals.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+        <a href="notes.html" class="btn">
+          Explore Legal Notes
+        </a>
+
+        <a href="publications.html" class="btn secondary-btn">
+          Explore Publications
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= INTRODUCTION ================= -->
+
+  <main>
+
+    <section class="container">
+
+      <div class="card intro-card">
+
+        <h2>Welcome to Law Lex Mind</h2>
+
+        <p>
+          Law Lex Mind is a legal education and knowledge platform
+          dedicated to helping law students understand legal concepts,
+          important case laws, academic topics and contemporary legal
+          developments.
+        </p>
+
+        <p>
+          Our aim is to create a useful digital space where students
+          can access educational resources, improve their legal
+          understanding and discover opportunities for research,
+          writing and internships.
+        </p>
+
+        <p>
+          Whether you are studying for university examinations,
+          preparing assignments, researching a legal topic or looking
+          for opportunities to develop your legal skills, Law Lex Mind
+          is designed to support your learning journey.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHAT WE OFFER ================= -->
+
+    <section class="container">
+
+      <div class="section-heading">
+
+        <p class="small-heading">
+          EXPLORE OUR PLATFORM
+        </p>
+
+        <h2>What You Can Find Here</h2>
+
+        <p>
+          Explore different sections of Law Lex Mind and discover
+          resources created for law students and legal learners.
+        </p>
+
+      </div>
+
+
+      <div class="feature-grid">
+
+
+        <!-- NOTES -->
+
+        <div class="card feature-card">
+
+          <div class="feature-icon">
+            📚
+          </div>
+
+          <h3>Legal Notes</h3>
+
+          <p>
+            Study-oriented legal notes covering important subjects,
+            concepts, provisions, principles and case laws.
+          </p>
+
+          <a href="notes.html" class="card-button">
+            Explore Notes →
+          </a>
+
+        </div>
+
+
+        <!-- ARTICLES -->
+
+        <div class="card feature-card">
+
+          <div class="feature-icon">
+            ⚖️
+          </div>
+
+          <h3>Legal Articles</h3>
+
+          <p>
+            Read articles discussing legal concepts, contemporary
+            issues, judicial developments and important areas of law.
+          </p>
+
+          <a href="articles.html" class="card-button">
+            Read Articles →
+          </a>
+
+        </div>
+
+
+        <!-- PUBLICATIONS -->
+
+        <div class="card feature-card">
+
+          <div class="feature-icon">
+            📝
+          </div>
+
+          <h3>Publications</h3>
+
+          <p>
+            Discover legal publications, case commentaries and
+            opportunities to contribute your own legal research and
+            writing.
+          </p>
+
+          <a href="publications.html" class="card-button">
+            View Publications →
+          </a>
+
+        </div>
+
+
+        <!-- INTERNSHIP -->
+
+        <div class="card feature-card">
+
+          <div class="feature-icon">
+            🎓
+          </div>
+
+          <h3>Internship Opportunities</h3>
+
+          <p>
+            Stay informed about internship opportunities and updates
+            for students interested in developing practical legal
+            experience.
+          </p>
+
+          <a href="internship.html" class="card-button">
+            Internship →
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= OUR PURPOSE ================= -->
+
+    <section class="dark-section">
+
+      <div class="container">
+
+        <div class="purpose-content">
+
+          <p class="small-heading">
+            OUR PURPOSE
+          </p>
+
+          <h2>
+            Know the Law. Shape the Mind.
+          </h2>
+
+          <p>
+            Legal education is not only about memorising provisions.
+            It is about understanding principles, analysing facts,
+            studying judgments and developing the ability to think
+            legally.
+          </p>
+
+          <p>
+            Law Lex Mind aims to encourage students to learn,
+            research, write and engage with the law beyond the
+            classroom.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHY LAW LEX MIND ================= -->
+
+    <section class="container">
+
+      <div class="section-heading">
+
+        <p class="small-heading">
+          WHY LAW LEX MIND
+        </p>
+
+        <h2>Built for Legal Learners</h2>
+
+      </div>
+
+
+      <div class="benefits-grid">
+
+        <div class="benefit">
+
+          <h3>🎯 Student Focused</h3>
+
+          <p>
+            Resources are designed with the needs of law students
+            and legal learners in mind.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <h3>⚖️ Legal Knowledge</h3>
+
+          <p>
+            Explore important legal concepts, principles and
+            judicial developments.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <h3>🔎 Research & Analysis</h3>
+
+          <p>
+            Develop research and analytical skills through legal
+            articles and case commentaries.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <h3>🚀 Opportunities</h3>
+
+          <p>
+            Discover publication and internship opportunities that
+            can help students develop professionally.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="cta-section">
+
+      <div class="container">
+
+        <h2>
+          Start Your Legal Learning Journey
+        </h2>
+
+        <p>
+          Explore our resources, read legal content and stay updated
+          with opportunities for students.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a href="notes.html" class="btn">
+            Explore Notes
+          </a>
+
+          <a href="articles.html" class="btn secondary-btn">
+            Read Articles
+          </a>
+
+          <a href="internship.html" class="btn secondary-btn">
+            Find Opportunities
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="footer-logo">
+
+      <img src="logo.png"
+           alt="Law Lex Mind"
+           class="footer-logo-img">
+
+      <h3>Law Lex Mind</h3>
+
+      <p>
+        Know the Law, Shape the Mind
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="index.html">Home</a>
+
+      <a href="about.html">About</a>
+
+      <a href="publications.html">Publications</a>
+
+      <a href="notes.html">Notes</a>
+
+      <a href="articles.html">Articles</a>
+
+      <a href="internship.html">Internship</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="policy.html">Privacy Policy</a>
+
+    </div>
+
+
+    <div class="footer-contact">
+
+      <p>
+        📧 Email:
+        <a href="mailto:lexmindsindia@gmail.com">
+          lexmindsindia@gmail.com
+        </a>
+      </p>
+
+      <p>
+        🔗 LinkedIn:
+        <a
+          href="https://www.linkedin.com/company/legal-school-notes/"
+          target="_blank">
+          Law Lex Mind
+        </a>
+      </p>
+
+    </div>
+
+
+    <p class="copyright">
+      © 2026 Law Lex Mind. All Rights Reserved.
     </p>
 
-    <p>
-      Whether you are preparing for university examinations, internships,
-      moot courts, judiciary examinations, or legal research,
-      LexMinds is built to support your academic journey.
-    </p>
+  </footer>
 
-    <a href='publications.html' class='btn btn-primary'>Explore Publications</a>
-    <a href='internship.html' class='btn btn-secondary'>Internship Updates</a>
-  </div>
-
-  <div class='hero-image'>
-    <img src='logo.png' alt='LexMinds Legal Education'>
-  </div>
-</section>
-
-<!-- About -->
-<section class='section'>
-  <div class='glass'>
-    <h3>About LexMinds</h3>
-
-    <p style='text-align:center; max-width:850px; margin:auto;'>
-      LexMinds was created with a simple mission: to make legal education
-      accessible, organized, and student-friendly. We believe that understanding
-      the law should not be complicated. Our platform transforms complex legal
-      concepts into clear notes, structured publications, and practical learning resources.
-    </p>
-  </div>
-</section>
-
-<!-- Publications Preview -->
-<section class='section'>
-  <h3>📚 Publications</h3>
-
-  <div class='cards'>
-
-    <div class='card'>
-      <h4>Law of Torts</h4>
-      <p>Notes, case laws, and legal principles explained in a student-friendly manner.</p>
-      <a href='publications.html'>Read More →</a>
-    </div>
-
-    <div class='card'>
-      <h4>Specific Relief Act, 1963</h4>
-      <p>Specific performance, injunctions, and important statutory provisions.</p>
-      <a href='publications.html'>Read More →</a>
-    </div>
-
-    <div class='card'>
-      <h4>Constitutional Law</h4>
-      <p>Fundamental rights, judicial review, and constitutional governance in India.</p>
-      <a href='publications.html'>Read More →</a>
-    </div>
-
-  </div>
-
-  <div style='text-align:center; margin-top:28px;'>
-    <a href='publications.html' class='btn btn-primary'>View All Publications</a>
-  </div>
-</section>
-
-<!-- Internship Preview -->
-<section class='section'>
-  <div class='glass'>
-    <h3>🎓 Internship Program</h3>
-
-    <p style='text-align:center; max-width:850px; margin:auto;'>
-      The LexMinds Internship Program helps law students develop practical
-      legal research, drafting, article writing, and analytical skills.
-      Internship announcements, application updates, and student opportunities
-      are regularly published on our official LinkedIn page.
-    </p>
-
-    <div style='text-align:center; margin-top:28px;'>
-      <a href='internship.html' class='btn btn-primary'>Explore Internship Page</a>
-
-      <a href='https://www.linkedin.com/company/legal-school-notes/?viewAsMember=true'
-         target='_blank' class='btn btn-secondary'>
-         Follow on LinkedIn
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class='section'>
-  <div class='glass contact-box'>
-    <h3>📩 Contact LexMinds</h3>
-
-    <p><strong>Email:</strong> lexmindsindia@gmail.com</p>
-    <p><strong>Location:</strong> Jammu, India</p>
-    <p><strong>LinkedIn:</strong> Legal School Notes / LexMinds</p>
-
-    <div style='margin-top:24px;'>
-      <a href='contact.html' class='btn btn-primary'>Contact Us</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p><strong>LexMinds</strong></p>
-  <p>Know the Law, Empower the Mind</p>
-  <p>Email: lexmindsindia@gmail.com</p>
-  <p><a href='policy.html'>Privacy Policy</a></p>
-  <p>© 2026 LexMinds. All Rights Reserved.</p>
-</footer>
 
 </body>
+
 </html>
