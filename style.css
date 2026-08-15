@@ -1,12 +1,13 @@
 /* =========================================================
    LAW LEX MIND
-   PROFESSIONAL WEBSITE STYLESHEET
+   PROFESSIONAL WEBSITE CSS
+   Version: 2026
    ========================================================= */
 
 
-/* =========================
+/* =========================================================
    RESET
-   ========================= */
+   ========================================================= */
 
 * {
   margin: 0;
@@ -16,19 +17,23 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 20px;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   background: #f7f7f5;
+
   color: #202020;
-  line-height: 1.7;
+
+  line-height: 1.75;
+
+  overflow-x: hidden;
 }
-
-
-/* =========================
-   GLOBAL
-   ========================= */
 
 a {
   text-decoration: none;
@@ -36,26 +41,35 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
-.container {
-  width: 90%;
-  max-width: 1180px;
-  margin: auto;
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 main {
   overflow: hidden;
 }
 
+.container {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
 
 /* =========================================================
-   WEBSITE OPENING LOADER
+   WEBSITE LOADER
    ========================================================= */
 
 #website-loader {
   position: fixed;
+
   inset: 0;
 
   width: 100%;
@@ -65,19 +79,25 @@ main {
   background:
     radial-gradient(
       circle at center,
-      #1b1b1b 0%,
-      #101010 45%,
-      #080808 100%
+      #1c1c1c 0%,
+      #101010 48%,
+      #070707 100%
     );
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   z-index: 999999;
 
   animation:
-    loaderDisappear 0.9s ease 3.6s forwards;
+    loaderDisappear
+    0.9s
+    ease
+    3.6s
+    forwards;
 }
 
 
@@ -88,13 +108,12 @@ main {
   text-align: center;
 
   animation:
-    loaderContentAppear 0.9s ease forwards;
+    loaderContentAppear
+    0.9s
+    ease
+    forwards;
 }
 
-
-/* =========================
-   LOADER LOGO
-   ========================= */
 
 .loader-logo {
   width: 135px;
@@ -107,15 +126,13 @@ main {
   opacity: 0;
 
   animation:
-    loaderLogoAppear 1.2s
+    loaderLogoAppear
+    1.2s
     cubic-bezier(0.22, 1, 0.36, 1)
-    0.15s forwards;
+    0.15s
+    forwards;
 }
 
-
-/* =========================
-   LOADER WEBSITE NAME
-   ========================= */
 
 .loader-content h1 {
   margin: 0;
@@ -133,14 +150,13 @@ main {
   opacity: 0;
 
   animation:
-    loaderTitleAppear 1s
-    ease 0.65s forwards;
+    loaderTitleAppear
+    1s
+    ease
+    0.65s
+    forwards;
 }
 
-
-/* =========================
-   LOADER TAGLINE
-   ========================= */
 
 .loader-content p {
   margin: 12px 0 34px;
@@ -154,14 +170,13 @@ main {
   opacity: 0;
 
   animation:
-    loaderSubtitleAppear 1s
-    ease 0.95s forwards;
+    loaderSubtitleAppear
+    1s
+    ease
+    0.95s
+    forwards;
 }
 
-
-/* =========================
-   LOADING BAR
-   ========================= */
 
 .loader-line {
   width: 100%;
@@ -195,15 +210,12 @@ main {
   border-radius: 50px;
 
   animation:
-    loadingProgress 3s
+    loadingProgress
+    3s
     cubic-bezier(0.4, 0, 0.2, 1)
     forwards;
 }
 
-
-/* =========================
-   LOADING TEXT
-   ========================= */
 
 .loader-text {
   display: block;
@@ -221,8 +233,11 @@ main {
   opacity: 0;
 
   animation:
-    loaderTextAppear 1s
-    ease 1.15s forwards;
+    loaderTextAppear
+    1s
+    ease
+    1.15s
+    forwards;
 }
 
 
@@ -232,11 +247,11 @@ main {
 
 @keyframes loaderContentAppear {
 
-  0% {
+  from {
     opacity: 0;
   }
 
-  100% {
+  to {
     opacity: 1;
   }
 
@@ -265,12 +280,12 @@ main {
 
 @keyframes loaderTitleAppear {
 
-  0% {
+  from {
     opacity: 0;
     transform: translateY(22px);
   }
 
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -280,12 +295,12 @@ main {
 
 @keyframes loaderSubtitleAppear {
 
-  0% {
+  from {
     opacity: 0;
     transform: translateY(15px);
   }
 
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -295,11 +310,11 @@ main {
 
 @keyframes loaderTextAppear {
 
-  0% {
+  from {
     opacity: 0;
   }
 
-  100% {
+  to {
     opacity: 1;
   }
 
@@ -360,39 +375,9 @@ main {
 }
 
 
-/* =========================
-   ACCESSIBILITY
-   ========================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  #website-loader,
-  .loader-logo,
-  .loader-content h1,
-  .loader-content p,
-  .loader-text,
-  .loader-progress {
-
-    animation-duration: 0.01ms !important;
-
-    animation-delay: 0ms !important;
-
-    animation-iteration-count: 1 !important;
-
-  }
-
-  #website-loader {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
-}
-
-
-/* =========================
+/* =========================================================
    HEADER
-   ========================= */
+   ========================================================= */
 
 header {
   background: #101010;
@@ -406,6 +391,7 @@ header {
 
 
 .logo-area {
+  width: 90%;
   max-width: 1180px;
 
   margin: auto;
@@ -423,15 +409,19 @@ header {
   height: 75px;
 
   object-fit: contain;
+
+  flex-shrink: 0;
 }
 
 
 .logo-area h1 {
   font-size: 30px;
 
+  line-height: 1.2;
+
   letter-spacing: 1px;
 
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 
@@ -444,11 +434,13 @@ header {
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-   ========================= */
+   ========================================================= */
 
 nav {
+  width: 100%;
+
   background: #171717;
 
   display: flex;
@@ -460,6 +452,10 @@ nav {
   flex-wrap: wrap;
 
   border-bottom: 1px solid #333333;
+
+  position: relative;
+
+  z-index: 1000;
 }
 
 
@@ -472,7 +468,12 @@ nav a {
 
   font-weight: 600;
 
-  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 
@@ -486,26 +487,23 @@ nav a:hover {
 nav a.active {
   color: #d4c08a;
 
-  border-bottom: 2px solid #d4c08a;
+  border-bottom-color: #d4c08a;
 }
 
 
-/* =========================
-   NAVBAR VERSION
-   ========================= */
+/* =========================================================
+   OPTIONAL NAVBAR SYSTEM
+   ========================================================= */
 
 .navbar {
   background: #171717;
 
   border-bottom: 1px solid #333333;
-
-  display: block;
 }
 
 
 .nav-container {
   width: 90%;
-
   max-width: 1180px;
 
   margin: auto;
@@ -521,19 +519,19 @@ nav a.active {
 
 
 .nav-brand {
+  display: none;
+
   color: #ffffff;
 
   font-size: 18px;
 
   font-weight: 700;
-
-  letter-spacing: 0.5px;
-
-  display: none;
 }
 
 
 .nav-links {
+  width: 100%;
+
   display: flex;
 
   align-items: center;
@@ -541,8 +539,6 @@ nav a.active {
   justify-content: center;
 
   flex-wrap: wrap;
-
-  width: 100%;
 }
 
 
@@ -554,8 +550,6 @@ nav a.active {
   font-size: 14px;
 
   font-weight: 600;
-
-  transition: 0.3s ease;
 }
 
 
@@ -589,14 +583,12 @@ nav a.active {
   background: #ffffff;
 
   margin: 5px 0;
-
-  transition: 0.3s ease;
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-   ========================= */
+   ========================================================= */
 
 .hero {
   min-height: 560px;
@@ -604,6 +596,8 @@ nav a.active {
   display: flex;
 
   align-items: center;
+
+  justify-content: center;
 
   background:
     linear-gradient(
@@ -649,6 +643,8 @@ nav a.active {
   line-height: 1.1;
 
   margin-bottom: 25px;
+
+  font-weight: 700;
 }
 
 
@@ -668,6 +664,10 @@ nav a.active {
 }
 
 
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
 .hero-buttons {
   margin-top: 32px;
 
@@ -682,10 +682,6 @@ nav a.active {
   gap: 14px;
 }
 
-
-/* =========================
-   BUTTONS
-   ========================= */
 
 .btn {
   display: inline-block;
@@ -704,7 +700,8 @@ nav a.active {
 
   border: 1px solid #d4c08a;
 
-  transition: 0.3s ease;
+  transition:
+    0.3s ease;
 }
 
 
@@ -731,9 +728,9 @@ nav a.active {
 }
 
 
-/* =========================
+/* =========================================================
    SECTIONS
-   ========================= */
+   ========================================================= */
 
 section {
   padding: 80px 0;
@@ -752,6 +749,8 @@ section {
 .section-heading h2 {
   font-size: 38px;
 
+  line-height: 1.25;
+
   margin-bottom: 12px;
 
   color: #171717;
@@ -763,14 +762,16 @@ section {
 }
 
 
-/* =========================
-   SMALL HEADING
-   ========================= */
+/* =========================================================
+   SMALL HEADINGS
+   ========================================================= */
 
 .small-heading {
   color: #a28742 !important;
 
   font-size: 12px !important;
+
+  line-height: 1.4;
 
   font-weight: 800;
 
@@ -782,9 +783,9 @@ section {
 }
 
 
-/* =========================
+/* =========================================================
    CARDS
-   ========================= */
+   ========================================================= */
 
 .card {
   background: #ffffff;
@@ -800,12 +801,17 @@ section {
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.05);
 
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 
 .card:hover {
   transform: translateY(-5px);
+
+  border-color: #ded4b8;
 
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.09);
@@ -814,6 +820,8 @@ section {
 
 .card h2 {
   font-size: 30px;
+
+  line-height: 1.3;
 
   margin-bottom: 18px;
 
@@ -824,7 +832,9 @@ section {
 .card h3 {
   font-size: 21px;
 
-  margin: 12px 0;
+  line-height: 1.4;
+
+  margin: 22px 0 12px;
 
   color: #222222;
 }
@@ -837,9 +847,14 @@ section {
 }
 
 
-/* =========================
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
    INTRO CARD
-   ========================= */
+   ========================================================= */
 
 .intro-card {
   max-width: 950px;
@@ -850,9 +865,9 @@ section {
 }
 
 
-/* =========================
+/* =========================================================
    FEATURE GRID
-   ========================= */
+   ========================================================= */
 
 .feature-grid {
   display: grid;
@@ -866,12 +881,23 @@ section {
 
 .feature-card {
   position: relative;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.feature-card .card-button {
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 
 .feature-icon {
   width: 58px;
-
   height: 58px;
 
   display: flex;
@@ -893,15 +919,15 @@ section {
 .card-button {
   display: inline-block;
 
-  margin-top: 10px;
-
   color: #8a7132;
 
   font-weight: 700;
 
   font-size: 14px;
 
-  transition: 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 
@@ -912,9 +938,9 @@ section {
 }
 
 
-/* =========================
+/* =========================================================
    BENEFITS GRID
-   ========================= */
+   ========================================================= */
 
 .benefits-grid {
   display: grid;
@@ -937,7 +963,8 @@ section {
 
   padding: 25px;
 
-  transition: 0.3s ease;
+  transition:
+    0.3s ease;
 }
 
 
@@ -945,6 +972,9 @@ section {
   border-color: #d4c08a;
 
   transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -957,12 +987,14 @@ section {
 
 .benefit p {
   color: #666666;
+
+  margin: 0;
 }
 
 
-/* =========================
+/* =========================================================
    DARK SECTION
-   ========================= */
+   ========================================================= */
 
 .dark-section {
   background: #111111;
@@ -984,6 +1016,8 @@ section {
 
 .purpose-content h2 {
   font-size: 40px;
+
+  line-height: 1.25;
 
   margin-bottom: 20px;
 
@@ -1007,9 +1041,14 @@ section {
 }
 
 
-/* =========================
-   CTA
-   ========================= */
+.purpose-content strong {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   CTA SECTION
+   ========================================================= */
 
 .cta-section {
   background:
@@ -1028,6 +1067,8 @@ section {
 .cta-section h2 {
   font-size: 42px;
 
+  line-height: 1.25;
+
   margin-bottom: 15px;
 
   color: #171717;
@@ -1043,9 +1084,28 @@ section {
 }
 
 
-/* =========================
+/* =========================================================
+   POLICY / LONG CONTENT READABILITY
+   ========================================================= */
+
+.card h2 + h3 {
+  margin-top: 20px;
+}
+
+
+.card h3 + p {
+  margin-top: 0;
+}
+
+
+.card strong {
+  color: #222222;
+}
+
+
+/* =========================================================
    FOOTER
-   ========================= */
+   ========================================================= */
 
 footer {
   background: #0d0d0d;
@@ -1062,7 +1122,6 @@ footer {
 
 .footer-logo-img {
   width: 65px;
-
   height: 65px;
 
   object-fit: contain;
@@ -1132,6 +1191,13 @@ footer {
 
 .footer-contact a {
   color: #d4c08a;
+
+  transition: 0.3s ease;
+}
+
+
+.footer-contact a:hover {
+  color: #ffffff;
 }
 
 
@@ -1149,7 +1215,47 @@ footer {
 
 
 /* =========================================================
-   MOBILE NAVIGATION
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #d4c08a;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .hero {
+    min-height: 520px;
+  }
+
+
+  .hero h2 {
+    font-size: 50px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -1160,6 +1266,8 @@ footer {
 
 
   .logo-area {
+    width: 100%;
+
     justify-content: center;
 
     text-align: left;
@@ -1168,7 +1276,6 @@ footer {
 
   .site-logo {
     width: 60px;
-
     height: 60px;
   }
 
@@ -1180,10 +1287,32 @@ footer {
 
   .logo-area p {
     font-size: 11px;
+
+    letter-spacing: 0.7px;
   }
 
 
-  /* Mobile navbar */
+  /* -----------------------------------------
+     NORMAL NAV USED BY YOUR HTML
+     ----------------------------------------- */
+
+  nav {
+    justify-content: center;
+
+    padding: 0 5px;
+  }
+
+
+  nav a {
+    padding: 12px 10px;
+
+    font-size: 12px;
+  }
+
+
+  /* -----------------------------------------
+     OPTIONAL MOBILE NAV
+     ----------------------------------------- */
 
   .navbar {
     padding: 0;
@@ -1208,7 +1337,7 @@ footer {
   .nav-links {
     position: absolute;
 
-    top: auto;
+    top: 100%;
     left: 0;
 
     width: 100%;
@@ -1243,7 +1372,9 @@ footer {
   }
 
 
-  /* Hero */
+  /* -----------------------------------------
+     HERO
+     ----------------------------------------- */
 
   .hero {
     min-height: 500px;
@@ -1262,6 +1393,17 @@ footer {
   }
 
 
+  .hero-tag {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  /* -----------------------------------------
+     SECTIONS
+     ----------------------------------------- */
+
   section {
     padding: 60px 0;
   }
@@ -1272,13 +1414,8 @@ footer {
   }
 
 
-  .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  .benefits-grid {
-    grid-template-columns: 1fr;
+  .section-heading {
+    margin-bottom: 35px;
   }
 
 
@@ -1287,20 +1424,42 @@ footer {
   }
 
 
-  .purpose-content h2 {
-    font-size: 31px;
-  }
-
-
-  .cta-section h2 {
-    font-size: 32px;
-  }
-
+  /* -----------------------------------------
+     CARDS
+     ----------------------------------------- */
 
   .card {
     padding: 25px;
+
+    border-radius: 10px;
   }
 
+
+  .card h2 {
+    font-size: 27px;
+  }
+
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+
+  /* -----------------------------------------
+     GRIDS
+     ----------------------------------------- */
+
+  .feature-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  /* -----------------------------------------
+     BUTTONS
+     ----------------------------------------- */
 
   .hero-buttons {
     flex-direction: column;
@@ -1318,7 +1477,51 @@ footer {
   }
 
 
-  /* Loader mobile */
+  /* -----------------------------------------
+     DARK SECTION
+     ----------------------------------------- */
+
+  .dark-section {
+    padding: 65px 0;
+  }
+
+
+  .purpose-content h2 {
+    font-size: 31px;
+  }
+
+
+  /* -----------------------------------------
+     CTA
+     ----------------------------------------- */
+
+  .cta-section {
+    padding: 70px 20px;
+  }
+
+
+  .cta-section h2 {
+    font-size: 32px;
+  }
+
+
+  /* -----------------------------------------
+     FOOTER
+     ----------------------------------------- */
+
+  footer {
+    padding: 45px 18px 22px;
+  }
+
+
+  .footer-links {
+    gap: 13px;
+  }
+
+
+  /* -----------------------------------------
+     LOADER
+     ----------------------------------------- */
 
   .loader-logo {
     width: 105px;
@@ -1380,10 +1583,17 @@ footer {
   }
 
 
-  nav a {
-    padding: 8px 7px;
+  nav {
+    justify-content: center;
 
-    font-size: 11px;
+    padding: 2px;
+  }
+
+
+  nav a {
+    padding: 8px 6px;
+
+    font-size: 10px;
   }
 
 
@@ -1401,6 +1611,8 @@ footer {
 
   .hero-tag {
     font-size: 10px;
+
+    letter-spacing: 1.2px;
   }
 
 
@@ -1440,12 +1652,19 @@ footer {
 
 
   .footer-links {
-    gap: 12px;
+    gap: 10px;
   }
 
 
   .footer-links a {
     font-size: 12px;
+  }
+
+
+  .footer-contact p {
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
   }
 
 
@@ -1474,6 +1693,79 @@ footer {
     font-size: 9px;
 
     letter-spacing: 2px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+
+
+  #website-loader {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+  }
+
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  header,
+  nav,
+  footer,
+  .hero-buttons,
+  .cta-section {
+    display: none !important;
+  }
+
+
+  body {
+    background: #ffffff;
+
+    color: #000000;
+  }
+
+
+  .card {
+    box-shadow: none;
+
+    border: 1px solid #cccccc;
+
+    break-inside: avoid;
+  }
+
+
+  section {
+    padding: 20px 0;
   }
 
 }
