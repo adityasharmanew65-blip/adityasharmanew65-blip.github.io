@@ -1,505 +1,640 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>About | LexMinds</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name='description' content='Learn about LexMinds, its mission, vision, and commitment to legal education and student empowerment.'>
+    <title>About | Law Lex Mind</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+    <meta name="description"
+        content="Learn about Law Lex Mind, our mission, vision and commitment to legal education, research and opportunities.">
 
-    body{
-      font-family:'Segoe UI', Arial, sans-serif;
-      color:#1a1a1a;
-      line-height:1.8;
-      background:
-        radial-gradient(circle at top left, rgba(212,192,138,0.15), transparent 25%),
-        radial-gradient(circle at bottom right, rgba(8,27,58,0.08), transparent 25%),
-        #f7f5ef;
-      background-attachment:fixed;
-      animation:fadeIn 0.8s ease-in-out;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    @keyframes fadeIn{
-      from{opacity:0; transform:translateY(10px);}
-      to{opacity:1; transform:translateY(0);}
-    }
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #06152f, #0b1f5c, #132b7a);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
 
-    header{
-      background:linear-gradient(135deg,#081b3a,#102a56);
-      color:white;
-      text-align:center;
-      padding:60px 20px 50px;
-      position:relative;
-      overflow:hidden;
-    }
+        .page-hero h1 {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
 
-    header::before{
-      content:'';
-      position:absolute;
-      width:320px;
-      height:320px;
-      background:rgba(255,255,255,0.08);
-      border-radius:50%;
-      top:-140px;
-      left:-140px;
-      filter:blur(10px);
-    }
+        .page-hero p {
+            color: #d4c08a;
+            font-size: 17px;
+        }
 
-    header::after{
-      content:'';
-      position:absolute;
-      width:260px;
-      height:260px;
-      background:rgba(212,192,138,0.12);
-      border-radius:50%;
-      bottom:-120px;
-      right:-120px;
-      filter:blur(10px);
-    }
+        .about-content {
+            max-width: 950px;
+            margin: auto;
+        }
 
-    .logo{
-      width:160px;
-      background:white;
-      border-radius:50%;
-      padding:10px;
-      margin-bottom:18px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.25);
-      animation:floatLogo 4s ease-in-out infinite;
-      position:relative;
-      z-index:1;
-    }
+        .about-content h2 {
+            color: #0b1f5c;
+            margin-bottom: 15px;
+        }
 
-    @keyframes floatLogo{
-      0%,100%{transform:translateY(0);}
-      50%{transform:translateY(-8px);}
-    }
+        .about-content p {
+            margin-bottom: 16px;
+        }
 
-    header h1{
-      font-size:3rem;
-      margin-bottom:12px;
-      position:relative;
-      z-index:1;
-    }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
 
-    header p{
-      color:#d4c08a;
-      font-size:1.15rem;
-      max-width:850px;
-      margin:auto;
-      position:relative;
-      z-index:1;
-    }
+        .mission-card {
+            background: white;
+            padding: 32px;
+            border-radius: 14px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #d4c08a;
+            transition: 0.3s ease;
+        }
 
-    nav{
-      background:#102a56;
-      text-align:center;
-      padding:14px;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    }
+        .mission-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+        }
 
-    nav a{
-      color:white;
-      text-decoration:none;
-      margin:0 15px;
-      font-weight:600;
-      position:relative;
-    }
+        .mission-card h3 {
+            color: #0b1f5c;
+            margin-bottom: 12px;
+        }
 
-    nav a::after{
-      content:'';
-      position:absolute;
-      left:0;
-      bottom:-6px;
-      width:0;
-      height:2px;
-      background:#d4c08a;
-      transition:width 0.3s ease;
-    }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
 
-    nav a:hover::after{
-      width:100%;
-    }
+        .value-card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            transition: 0.3s ease;
+        }
 
-    .container{
-      max-width:1100px;
-      margin:60px auto;
-      padding:0 20px;
-    }
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
 
-    .section{
-      background:rgba(255,255,255,0.78);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,0.35);
-      border-radius:18px;
-      padding:40px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.08);
-      margin-bottom:32px;
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .value-icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
 
-    .section:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 28px rgba(8,27,58,0.12);
-    }
+        .value-card h3 {
+            color: #0b1f5c;
+            margin-bottom: 8px;
+        }
 
-    h2{
-      color:#081b3a;
-      margin-bottom:18px;
-      font-size:2rem;
-      position:relative;
-    }
+        .founder-section {
+            background: #081a3b;
+            color: white;
+            text-align: center;
+        }
 
-    h2::after{
-      content:'';
-      display:block;
-      width:70px;
-      height:3px;
-      background:#d4c08a;
-      margin-top:10px;
-      border-radius:2px;
-    }
+        .founder-section h2 {
+            color: #d4c08a;
+            margin-bottom: 18px;
+        }
 
-    p{
-      margin-bottom:16px;
-      color:#333;
-    }
+        .founder-section p {
+            max-width: 850px;
+            margin: 0 auto 15px;
+            color: #e4e4e4;
+        }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:24px;
-      margin-top:24px;
-    }
+        .about-cta {
+            text-align: center;
+            background: #f7f3e8;
+            border-top: 1px solid #d4c08a;
+            border-bottom: 1px solid #d4c08a;
+        }
 
-    .card{
-      background:rgba(255,255,255,0.82);
-      border:1px solid rgba(255,255,255,0.4);
-      border-top:4px solid #d4c08a;
-      border-radius:16px;
-      padding:26px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
-      transition:transform 0.35s ease, box-shadow 0.35s ease;
-    }
+        .about-cta h2 {
+            color: #0b1f5c;
+            margin-bottom: 12px;
+        }
 
-    .card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 16px 30px rgba(8,27,58,0.16);
-    }
+        @media (max-width: 800px) {
 
-    .card h3{
-      color:#081b3a;
-      margin-bottom:12px;
-      font-size:1.2rem;
-    }
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .highlight{
-      background:linear-gradient(135deg,#081b3a,#102a56);
-      color:white;
-      border-radius:18px;
-      padding:42px;
-      text-align:center;
-      box-shadow:0 12px 28px rgba(8,27,58,0.22);
-      position:relative;
-      overflow:hidden;
-    }
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-    .highlight::before{
-      content:'';
-      position:absolute;
-      top:-50%;
-      left:-50%;
-      width:200%;
-      height:200%;
-      background:radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 60%);
-      animation:rotateGlow 8s linear infinite;
-    }
+            .page-hero h1 {
+                font-size: 36px;
+            }
+        }
 
-    @keyframes rotateGlow{
-      from{transform:rotate(0deg);}
-      to{transform:rotate(360deg);}
-    }
+        @media (max-width: 500px) {
 
-    .highlight h2{
-      color:white;
-      position:relative;
-      z-index:1;
-    }
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .highlight h2::after{
-      background:#d4c08a;
-    }
+            .page-hero h1 {
+                font-size: 31px;
+            }
+        }
+    </style>
 
-    .highlight p{
-      color:#f5f5f5;
-      position:relative;
-      z-index:1;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:20px;
-      padding:14px 28px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      transition:0.3s;
-      position:relative;
-      z-index:1;
-      background:#d4c08a;
-      color:#081b3a;
-      box-shadow:0 6px 16px rgba(0,0,0,0.18);
-    }
-
-    .btn:hover{
-      background:white;
-      transform:translateY(-3px);
-    }
-
-    .founder{
-      font-style:italic;
-      border-left:4px solid #d4c08a;
-      padding-left:20px;
-      margin-top:20px;
-      color:#444;
-    }
-
-    footer{
-      background:#081b3a;
-      color:white;
-      text-align:center;
-      padding:35px 20px;
-      margin-top:70px;
-      border-top:3px solid #d4c08a;
-    }
-
-    footer p{
-      margin:6px 0;
-      color:white;
-    }
-
-    footer a{
-      color:#d4c08a;
-      text-decoration:none;
-    }
-
-    @media(max-width:768px){
-      header h1{
-        font-size:2.2rem;
-      }
-
-      nav a{
-        display:inline-block;
-        margin:8px 10px;
-      }
-
-      .section{
-        padding:28px;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
-<header>
-  <img src='logo.png' alt='LexMinds Logo' class='logo'>
-  <h1>About LexMinds</h1>
-  <p>
-    Building a student-friendly legal learning platform that simplifies law,
-    encourages research, and empowers future legal professionals.
-  </p>
-</header>
+    <!-- HEADER -->
 
-<nav>
-  <a href='index.html'>Home</a>
-  <a href='about.html'>About</a>
-  <a href='publications.html'>Publications</a>
-  <a href='notes.html'>Notes</a>
-  <a href='articles.html'>Articles</a>
-  <a href='internship.html'>Internship</a>
-  <a href='contact.html'>Contact</a>
-  <a href='policy.html'>Policy</a>
-</nav>
+    <header>
 
-<div class='container'>
+        <div class="logo-area">
 
-  <!-- About -->
-  <section class='section'>
-    <h2>Who We Are</h2>
+            <img src="logo.png"
+                alt="Law Lex Mind Logo"
+                class="site-logo">
 
-    <p>
-      <strong>LexMinds</strong> is an independent legal education initiative created for
-      law students, researchers, and aspiring legal professionals across India.
-      Our objective is to provide reliable, well-structured, and easy-to-understand
-      legal resources in one accessible platform.
-    </p>
+            <div>
 
-    <p>
-      We understand that legal education can often feel overwhelming. LexMinds was
-      founded to bridge the gap between complex legal concepts and student-friendly
-      learning by offering concise notes, articles, case analyses, and academic guidance.
-    </p>
-  </section>
+                <h1>Law Lex Mind</h1>
 
-  <!-- Mission & Vision -->
-  <section class='section'>
-    <h2>Our Mission & Vision</h2>
+                <p>
+                    Know the Law • Shape the Mind
+                </p>
 
-    <div class='grid'>
+            </div>
 
-      <div class='card'>
-        <h3>🎯 Mission</h3>
+        </div>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="publications.html">Publications</a>
+
+        <a href="notes.html">Notes</a>
+
+        <a href="articles.html">Articles</a>
+
+        <a href="internship.html">Internship</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="policy.html">Policy</a>
+
+    </nav>
+
+
+    <!-- PAGE HERO -->
+
+    <section class="page-hero">
+
+        <h1>About Law Lex Mind</h1>
+
         <p>
-          To make legal education accessible, affordable, organized, and understandable
-          for every law student, regardless of their background.
+            Building a space for legal learning, research and opportunities.
         </p>
-      </div>
 
-      <div class='card'>
-        <h3>🌟 Vision</h3>
-        <p>
-          To become a trusted digital legal learning platform that promotes academic
-          excellence, legal awareness, and research culture among students.
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <main>
+
+        <section class="container">
+
+            <div class="card about-content">
+
+                <h2>Who We Are</h2>
+
+                <p>
+                    Law Lex Mind is a legal education and knowledge platform
+                    created to make legal learning more accessible,
+                    structured and student-friendly.
+                </p>
+
+                <p>
+                    The platform brings together legal notes, articles,
+                    case laws, publications and opportunities in one
+                    accessible digital space.
+                </p>
+
+                <p>
+                    Our goal is to encourage students to go beyond
+                    memorising legal provisions and develop a deeper
+                    understanding of legal principles, judicial decisions,
+                    research and legal writing.
+                </p>
+
+                <p>
+                    Law Lex Mind is intended to serve as a useful resource
+                    for law students, legal researchers and anyone
+                    interested in understanding the law.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MISSION AND VISION -->
+
+        <section class="container">
+
+            <div class="section-heading">
+
+                <p class="small-heading">
+                    OUR DIRECTION
+                </p>
+
+                <h2>Mission & Vision</h2>
+
+            </div>
+
+
+            <div class="mission-grid">
+
+                <div class="mission-card">
+
+                    <h3>🎯 Our Mission</h3>
+
+                    <p>
+                        To provide accessible and useful legal educational
+                        resources that help students understand legal
+                        concepts, analyse case laws and develop research
+                        and writing skills.
+                    </p>
+
+                    <p>
+                        We aim to create an environment where students can
+                        learn, explore and engage with legal knowledge.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-card">
+
+                    <h3>🔭 Our Vision</h3>
+
+                    <p>
+                        To develop Law Lex Mind into a trusted digital
+                        destination for legal education, student
+                        publications, legal research and academic
+                        opportunities.
+                    </p>
+
+                    <p>
+                        We envision a platform where legal knowledge is
+                        easier to discover, understand and share.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VALUES -->
+
+        <section class="container">
+
+            <div class="section-heading">
+
+                <p class="small-heading">
+                    WHAT WE VALUE
+                </p>
+
+                <h2>Our Core Values</h2>
+
+            </div>
+
+
+            <div class="values-grid">
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        ⚖️
+                    </div>
+
+                    <h3>Accuracy</h3>
+
+                    <p>
+                        We value clear and responsible presentation
+                        of legal information.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        📚
+                    </div>
+
+                    <h3>Learning</h3>
+
+                    <p>
+                        We encourage continuous learning and
+                        deeper engagement with law.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🔎
+                    </div>
+
+                    <h3>Research</h3>
+
+                    <p>
+                        We encourage students to research,
+                        analyse and question legal issues.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-icon">
+                        🚀
+                    </div>
+
+                    <h3>Growth</h3>
+
+                    <p>
+                        We aim to help students develop their
+                        academic and professional skills.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT WE OFFER -->
+
+        <section class="container">
+
+            <div class="section-heading">
+
+                <p class="small-heading">
+                    EXPLORE LAW LEX MIND
+                </p>
+
+                <h2>What We Provide</h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="card feature-card">
+
+                    <div class="feature-icon">
+                        📚
+                    </div>
+
+                    <h3>Legal Notes</h3>
+
+                    <p>
+                        Structured study material covering important
+                        legal subjects and concepts.
+                    </p>
+
+                    <a href="notes.html" class="card-button">
+                        Explore Notes →
+                    </a>
+
+                </div>
+
+
+                <div class="card feature-card">
+
+                    <div class="feature-icon">
+                        📝
+                    </div>
+
+                    <h3>Publications</h3>
+
+                    <p>
+                        Legal publications, research and opportunities
+                        for student contributors.
+                    </p>
+
+                    <a href="publications.html" class="card-button">
+                        View Publications →
+                    </a>
+
+                </div>
+
+
+                <div class="card feature-card">
+
+                    <div class="feature-icon">
+                        ⚖️
+                    </div>
+
+                    <h3>Articles</h3>
+
+                    <p>
+                        Student-friendly legal articles and
+                        analysis of important legal topics.
+                    </p>
+
+                    <a href="articles.html" class="card-button">
+                        Read Articles →
+                    </a>
+
+                </div>
+
+
+                <div class="card feature-card">
+
+                    <div class="feature-icon">
+                        🎓
+                    </div>
+
+                    <h3>Internships</h3>
+
+                    <p>
+                        Information and updates regarding
+                        internship opportunities.
+                    </p>
+
+                    <a href="internship.html" class="card-button">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOUNDER -->
+
+        <section class="founder-section">
+
+            <div class="container">
+
+                <p class="small-heading">
+                    OUR JOURNEY
+                </p>
+
+                <h2>Building Law Lex Mind</h2>
+
+                <p>
+                    Law Lex Mind is being developed with the aim of
+                    creating a practical and accessible digital space
+                    for students interested in law and legal research.
+                </p>
+
+                <p>
+                    The platform seeks to bring together educational
+                    resources and opportunities while encouraging
+                    students to participate in legal writing,
+                    research and academic activities.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="about-cta">
+
+            <div class="container">
+
+                <h2>
+                    Explore Law Lex Mind
+                </h2>
+
+                <p>
+                    Discover legal resources, articles, publications
+                    and opportunities.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="publications.html" class="btn">
+                        Explore Publications
+                    </a>
+
+                    <a href="contact.html" class="btn secondary-btn">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <img src="logo.png"
+                alt="Law Lex Mind"
+                class="footer-logo-img">
+
+            <h3>Law Lex Mind</h3>
+
+            <p>
+                Know the Law, Shape the Mind
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="publications.html">Publications</a>
+
+            <a href="notes.html">Notes</a>
+
+            <a href="articles.html">Articles</a>
+
+            <a href="internship.html">Internship</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="policy.html">Privacy Policy</a>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <p>
+                📧 Email:
+                <a href="mailto:lexmindsindia@gmail.com">
+                    lexmindsindia@gmail.com
+                </a>
+            </p>
+
+            <p>
+                🔗 LinkedIn:
+                <a
+                    href="https://www.linkedin.com/company/legal-school-notes/"
+                    target="_blank">
+                    Law Lex Mind
+                </a>
+            </p>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Law Lex Mind. All Rights Reserved.
         </p>
-      </div>
 
-    </div>
-  </section>
-
-  <!-- What Makes Us Different -->
-  <section class='section'>
-    <h2>What Makes LexMinds Different?</h2>
-
-    <div class='grid'>
-
-      <div class='card'>
-        <h3>📚 Student-Centric Content</h3>
-        <p>Notes written in simple language with examination-oriented structure.</p>
-      </div>
-
-      <div class='card'>
-        <h3>⚖️ Practical Legal Learning</h3>
-        <p>Focus on case law analysis, legal reasoning, and real legal issues.</p>
-      </div>
-
-      <div class='card'>
-        <h3>📝 Publication Opportunities</h3>
-        <p>Students can publish original legal articles and research work.</p>
-      </div>
-
-      <div class='card'>
-        <h3>🎓 Skill Development</h3>
-        <p>Internship guidance, legal writing practice, and research support.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Who It Is For -->
-  <section class='section'>
-    <h2>Who Can Benefit from LexMinds?</h2>
-
-    <p>LexMinds is designed for:</p>
-
-    <ul style='padding-left:22px; margin-top:12px;'>
-      <li>LL.B. students</li>
-      <li>B.A. LL.B., B.Com. LL.B., and BBA LL.B. students</li>
-      <li>Judiciary aspirants</li>
-      <li>Legal researchers and academicians</li>
-      <li>Moot court participants</li>
-      <li>Students preparing assignments and projects</li>
-    </ul>
-  </section>
-
-  <!-- What We Publish -->
-  <section class='section'>
-    <h2>What We Publish</h2>
-
-    <div class='grid'>
-
-      <div class='card'>
-        <h3>📖 Law Notes</h3>
-        <p>Semester-wise and subject-wise study material.</p>
-      </div>
-
-      <div class='card'>
-        <h3>⚖️ Case Commentaries</h3>
-        <p>Important judgments explained with facts, issues, and ratio.</p>
-      </div>
-
-      <div class='card'>
-        <h3>📝 Legal Articles</h3>
-        <p>Research-oriented articles on constitutional law, torts, contracts, and more.</p>
-      </div>
-
-      <div class='card'>
-        <h3>🎓 Internship Resources</h3>
-        <p>Updates, guidance, and opportunities for law students.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Founder Note -->
-  <section class='section'>
-    <h2>Founder’s Note</h2>
-
-    <div class='founder'>
-      “LexMinds started as a student initiative with a simple belief: legal knowledge
-      should be shared, simplified, and made accessible to everyone. As a law student,
-      I experienced the challenges of finding organized study material and reliable
-      academic guidance. This platform is my effort to help fellow students learn
-      law with confidence and clarity.”
-      <br><br>
-      <strong>— Aditya Sharma, Founder, LexMinds</strong>
-    </div>
-  </section>
-
-  <!-- Future Goals -->
-  <section class='section'>
-    <h2>Our Future Goals</h2>
-
-    <ul style='padding-left:22px; margin-top:12px;'>
-      <li>Expand publication categories across all major law subjects.</li>
-      <li>Provide downloadable PDF notes and revision material.</li>
-      <li>Launch student research and mentorship initiatives.</li>
-      <li>Organize webinars, workshops, and legal awareness programs.</li>
-      <li>Build a strong academic community of law students and researchers.</li>
-    </ul>
-  </section>
-
-  <!-- CTA -->
-  <section class='highlight'>
-    <h2>Join the LexMinds Community</h2>
-
-    <p>
-      Explore publications, contribute articles, stay updated with internship
-      opportunities, and become part of a growing community of law learners.
-    </p>
-
-    <a href='publications.html' class='btn'>Explore Publications</a>
-  </section>
-
-</div>
-
-<footer>
-  <p><strong>LexMinds</strong></p>
-  <p>Know the Law, Empower the Mind</p>
-  <p>Email: lexmindsindia@gmail.com</p>
-  <p><a href='policy.html'>Privacy Policy</a></p>
-  <p>© 2026 LexMinds. All Rights Reserved.</p>
-</footer>
+    </footer>
 
 </body>
+
 </html>
