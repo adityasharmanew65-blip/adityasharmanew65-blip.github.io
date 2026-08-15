@@ -1,38 +1,477 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Articles | LexMinds</title>
-  <link rel='stylesheet' href='style.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Articles | Law Lex Mind</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .articles-hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #06152f, #102d5c);
+            color: white;
+        }
+
+        .articles-hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .articles-hero p {
+            font-size: 18px;
+            color: #d4c08a;
+        }
+
+        .articles-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 40px auto;
+        }
+
+        .articles-intro h2 {
+            color: #0b1f5c;
+            font-size: 30px;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .article-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+            border-top: 4px solid #d4c08a;
+            transition: 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
+        }
+
+        .article-card h3 {
+            color: #0b1f5c;
+            margin-bottom: 12px;
+        }
+
+        .article-card p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .read-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #0b1f5c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .read-btn:hover {
+            background: #d4c08a;
+            color: #071a35;
+        }
+
+        .submit-section {
+            margin: 50px auto;
+            padding: 35px;
+            max-width: 800px;
+            text-align: center;
+            background: #f7f3e8;
+            border-radius: 12px;
+            border: 1px solid #d4c08a;
+        }
+
+        .submit-section h2 {
+            color: #0b1f5c;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 13px 25px;
+            background: #0b1f5c;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background: #d4c08a;
+            color: #071a35;
+        }
+
+        footer {
+            margin-top: 50px;
+        }
+    </style>
 </head>
+
 <body>
 
-<header><h1>Legal Articles</h1></header>
+    <!-- HEADER -->
 
-<nav>
-  <a href='index.html'>Home</a>
-  <a href='about.html'>About</a>
-  <a href='publications.html'>Publications</a>
-  <a href='notes.html'>Notes</a>
-  <a href='articles.html'>Articles</a>
-  <a href='internship.html'>Internship</a>
-  <a href='contact.html'>Contact</a>
-</nav>
+    <header class="articles-hero">
 
-<div class='container'>
-  <div class='card'>
-    <h3>Defamation in Tort</h3>
-    <p>Meaning, essentials, defenses, and case laws.</p>
-  </div>
+        <h1>Law Lex Mind</h1>
 
-  <div class='card'>
-    <h3>Negligence in Tort</h3>
-    <p>Duty of care and landmark judgments.</p>
-  </div>
-</div>
+        <p>
+            Legal Articles • Analysis • Case Laws • Legal Awareness
+        </p>
 
-<footer>© 2026 LexMinds</footer>
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="publications.html">Publications</a>
+
+        <a href="notes.html">Notes</a>
+
+        <a href="articles.html">Articles</a>
+
+        <a href="internship.html">Internship</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="policy.html">Policy</a>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <section class="articles-intro">
+
+            <h2>Legal Articles</h2>
+
+            <p>
+                Welcome to the Articles section of Law Lex Mind.
+                Explore informative and student-friendly articles on
+                important areas of law, legal principles, landmark
+                judgments, and contemporary legal developments.
+            </p>
+
+        </section>
+
+
+        <!-- ARTICLE GRID -->
+
+        <section class="articles-grid">
+
+
+            <!-- ARTICLE 1 -->
+
+            <article class="article-card">
+
+                <h3>Defamation in Tort</h3>
+
+                <p>
+                    Understand the meaning and essentials of defamation,
+                    its different forms, available defenses, and important
+                    judicial decisions.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 2 -->
+
+            <article class="article-card">
+
+                <h3>Negligence in Tort</h3>
+
+                <p>
+                    Learn about duty of care, breach of duty, causation,
+                    damages, and important principles developed through
+                    landmark cases.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 3 -->
+
+            <article class="article-card">
+
+                <h3>Strict Liability</h3>
+
+                <p>
+                    Explore the principle of strict liability, its essential
+                    elements, exceptions, and the famous decision in
+                    Rylands v. Fletcher.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 4 -->
+
+            <article class="article-card">
+
+                <h3>Absolute Liability</h3>
+
+                <p>
+                    Understand the development of the absolute liability
+                    principle in India and its significance in cases
+                    involving hazardous activities.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 5 -->
+
+            <article class="article-card">
+
+                <h3>Formation of Contract</h3>
+
+                <p>
+                    Learn the fundamental requirements for creating a valid
+                    contract, including offer, acceptance, consideration,
+                    capacity, and free consent.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 6 -->
+
+            <article class="article-card">
+
+                <h3>Specific Performance of Contract</h3>
+
+                <p>
+                    Explore the concept of specific performance, its
+                    importance as a contractual remedy, and the relevant
+                    provisions of the Specific Relief Act.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 7 -->
+
+            <article class="article-card">
+
+                <h3>Fundamental Rights</h3>
+
+                <p>
+                    An introduction to the Fundamental Rights guaranteed
+                    under the Constitution of India and their importance
+                    in protecting individual liberty.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 8 -->
+
+            <article class="article-card">
+
+                <h3>Constitutional Law</h3>
+
+                <p>
+                    Explore important constitutional concepts, principles,
+                    judicial decisions, and the relationship between
+                    constitutional institutions.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 9 -->
+
+            <article class="article-card">
+
+                <h3>Consumer Protection Law</h3>
+
+                <p>
+                    Understand consumer rights, consumer disputes,
+                    available remedies, and the importance of consumer
+                    protection legislation.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 10 -->
+
+            <article class="article-card">
+
+                <h3>Law of Nuisance</h3>
+
+                <p>
+                    Study public and private nuisance, their essential
+                    requirements, defenses, remedies, and important
+                    judicial decisions.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 11 -->
+
+            <article class="article-card">
+
+                <h3>Breach of Contract</h3>
+
+                <p>
+                    Learn about breach of contract, available remedies,
+                    damages, specific performance, and other legal
+                    consequences.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+
+            <!-- ARTICLE 12 -->
+
+            <article class="article-card">
+
+                <h3>Judicial Review</h3>
+
+                <p>
+                    Understand the concept of judicial review and its role
+                    in maintaining constitutional supremacy and protecting
+                    fundamental rights.
+                </p>
+
+                <a href="#" class="read-btn">
+                    Read Article
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- SUBMIT ARTICLE -->
+
+        <section class="submit-section">
+
+            <h2>Want to Publish Your Article?</h2>
+
+            <p>
+                Law Lex Mind welcomes students, researchers and legal
+                enthusiasts to contribute informative and original legal
+                articles.
+            </p>
+
+            <p>
+                Share your legal research, case commentary, academic
+                analysis or article with our platform.
+            </p>
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdq1WJe2Bf7KPv8Z0A_dmuxyAe0lhClqGQJQ75b89bi0JYFQg/viewform"
+                target="_blank"
+                class="submit-btn">
+                Submit Your Article
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            <strong>Law Lex Mind</strong>
+        </p>
+
+        <p>
+            Know the Law, Shape the Mind
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:lexmindsindia@gmail.com">
+                lexmindsindia@gmail.com
+            </a>
+        </p>
+
+        <p>
+            <a href="policy.html" style="color:#d4c08a;">
+                Privacy Policy
+            </a>
+        </p>
+
+        <p>
+            © 2026 Law Lex Mind. All Rights Reserved.
+        </p>
+
+    </footer>
+
 
 </body>
 </html>
