@@ -1,270 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Policies & Disclaimers | Law Lex Mind</title>
+
+  <meta name="description"
+        content="Read the Privacy Policy, Website Disclaimer, Publication Policy, Internship Disclaimer, Intellectual Property Policy and other policies of Law Lex Mind.">
+
+  <meta name="keywords"
+        content="Law Lex Mind privacy policy, legal website disclaimer, publication policy, internship disclaimer, intellectual property policy">
+
+  <meta name="author" content="Law Lex Mind">
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- YOUR NORMAL WEBSITE CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- POLICY PAGE ONLY CSS -->
+  <style>
+
 /* =========================================================
-   LAW LEX MIND
-   COMPLETE WEBSITE STYLESHEET
-   VERSION 2026
+   LAW LEX MIND — POLICY PAGE
+   PAGE-SPECIFIC CSS
    ========================================================= */
 
+/* RESET ONLY INSIDE POLICY PAGE */
 
-/* =========================================================
-   01. RESET
-   ========================================================= */
-
-* {
-  margin: 0;
-  padding: 0;
+.policy-page,
+.policy-page * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.policy-page {
+  margin: 0;
+  padding: 0;
   background: #f7f7f5;
   color: #202020;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.7;
-  overflow-x: hidden;
 }
 
-a {
+.policy-page a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-}
-
-main {
-  width: 100%;
-  overflow: hidden;
-}
-
 
 /* =========================================================
-   02. HEADER
+   POLICY HEADER
    ========================================================= */
 
-.site-header {
-  width: 100%;
-
+.policy-header {
   background: #101010;
-
   color: #ffffff;
-
-  padding: 22px 5%;
-
+  padding: 18px 5%;
   border-bottom: 1px solid #333333;
-
-  position: relative;
-
-  z-index: 9000;
 }
 
-.logo-area {
+.policy-header-inner {
   width: 90%;
   max-width: 1180px;
-
   margin: 0 auto;
 
   display: flex;
-
   align-items: center;
-
-  gap: 18px;
+  gap: 15px;
 }
 
-.site-logo {
-  width: 75px;
-  height: 75px;
-
+.policy-logo {
+  width: 58px;
+  height: 58px;
   object-fit: contain;
-
   flex-shrink: 0;
 }
 
-.brand-text h1 {
-  font-size: 30px;
-
+.policy-brand h1 {
+  margin: 0 0 2px;
+  font-size: 27px;
   line-height: 1.2;
-
   letter-spacing: 1px;
-
   color: #ffffff;
-
-  margin: 0 0 3px;
 }
 
-.brand-text p {
-  color: #d4c08a;
-
-  font-size: 14px;
-
-  letter-spacing: 1px;
-
+.policy-brand p {
   margin: 0;
+  color: #d4c08a;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
 
 /* =========================================================
-   03. MAIN NAVIGATION
+   POLICY NAVIGATION
    ========================================================= */
 
-/*
-   IMPORTANT:
-   This navigation uses .main-navigation specifically.
-   !important is intentionally used so other website CSS
-   does not accidentally hide or override the navigation.
-*/
+.policy-navigation {
+  width: 100%;
 
-.main-navigation {
-  width: 100% !important;
+  background: #171717;
 
-  min-height: 52px;
-
-  background: #171717 !important;
-
-  display: flex !important;
-
-  justify-content: center !important;
-
-  align-items: center !important;
-
-  flex-wrap: wrap !important;
-
-  gap: 0 !important;
-
-  padding: 0 !important;
-
-  margin: 0 !important;
-
-  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 
   border-bottom: 1px solid #333333;
 
   position: relative;
-
-  z-index: 99999;
-
-  visibility: visible !important;
-
-  opacity: 1 !important;
-
-  transform: none !important;
+  z-index: 100;
 }
 
-.main-navigation a {
-  display: inline-flex !important;
-
-  align-items: center;
-
-  justify-content: center;
-
+.policy-navigation a {
   position: relative;
 
-  min-height: 52px;
+  display: block;
 
-  padding: 16px 18px !important;
+  color: #ffffff;
 
-  margin: 0 !important;
+  padding: 15px 18px;
 
-  color: #ffffff !important;
-
-  background: transparent !important;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-size: 14px !important;
-
+  font-size: 14px;
   font-weight: 600;
 
-  line-height: 1.2;
-
-  text-decoration: none !important;
-
-  white-space: nowrap;
-
-  visibility: visible !important;
-
-  opacity: 1 !important;
-
-  transform: none !important;
-
   transition:
-    color 0.3s ease,
-    background 0.3s ease;
+    color 0.25s ease,
+    background 0.25s ease;
 }
 
-.main-navigation a:hover {
-  color: #d4c08a !important;
-
-  background: #222222 !important;
+.policy-navigation a:hover {
+  color: #d4c08a;
+  background: #222222;
 }
 
-.main-navigation a.active {
-  color: #d4c08a !important;
-
-  background: transparent !important;
+.policy-navigation a.policy-active {
+  color: #d4c08a;
 }
 
-
-/* Active gold line */
-
-.main-navigation a.active::after {
+.policy-navigation a.policy-active::after {
   content: "";
 
   position: absolute;
 
   left: 18px;
-
   right: 18px;
-
   bottom: 0;
-
-  width: auto;
 
   height: 2px;
 
   background: #d4c08a;
 
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 
 /* =========================================================
-   04. POLICY HERO
+   POLICY HERO
    ========================================================= */
 
 .policy-hero {
-  width: 100%;
-
-  min-height: 560px;
+  min-height: 460px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   position: relative;
-
   overflow: hidden;
 
-  padding: 90px 5%;
+  padding: 80px 5%;
+
+  color: #ffffff;
 
   background:
     linear-gradient(
@@ -273,8 +181,6 @@ main {
       #181818 55%,
       #242424 100%
     );
-
-  color: #ffffff;
 }
 
 .policy-hero::before {
@@ -283,7 +189,6 @@ main {
   position: absolute;
 
   width: 420px;
-
   height: 420px;
 
   border-radius: 50%;
@@ -291,7 +196,6 @@ main {
   background: rgba(212, 192, 138, 0.05);
 
   top: -180px;
-
   right: -120px;
 
   pointer-events: none;
@@ -303,97 +207,91 @@ main {
   position: absolute;
 
   width: 300px;
-
   height: 300px;
 
   border-radius: 50%;
 
   background: rgba(212, 192, 138, 0.035);
 
-  bottom: -150px;
-
-  left: -100px;
+  bottom: -160px;
+  left: -120px;
 
   pointer-events: none;
 }
 
 .policy-hero-content {
   width: 90%;
-
-  max-width: 900px;
+  max-width: 850px;
 
   margin: 0 auto;
 
   text-align: center;
 
   position: relative;
-
   z-index: 2;
 }
 
-.hero-tag {
+.policy-tag {
+  margin: 0 0 15px;
+
   color: #d4c08a;
 
-  font-size: 13px;
-
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
 
   letter-spacing: 2px;
-
-  margin-bottom: 18px;
 }
 
 .policy-hero h2 {
-  font-size: clamp(38px, 6vw, 68px);
-
-  line-height: 1.1;
-
-  margin: 0 0 25px;
+  margin: 0 0 22px;
 
   color: #ffffff;
+
+  font-size: clamp(38px, 6vw, 64px);
+
+  line-height: 1.1;
 }
 
 .policy-hero h2 span {
   color: #d4c08a;
 }
 
-.hero-text {
-  max-width: 780px;
+.policy-hero-text {
+  max-width: 760px;
 
-  margin: 0 auto 15px;
+  margin: 0 auto 12px;
 
   color: #dddddd;
 
-  font-size: 17px;
+  font-size: 16px;
 }
 
 
 /* =========================================================
-   05. POLICY SECTIONS
+   POLICY MAIN
    ========================================================= */
 
-.policy-section {
+.policy-main {
   width: 100%;
 
-  padding: 80px 0;
+  background: #f7f7f5;
+
+  padding: 20px 0 70px;
 }
 
 .policy-container {
   width: 90%;
-
-  max-width: 1180px;
+  max-width: 1100px;
 
   margin: 0 auto;
 }
 
 
 /* =========================================================
-   06. POLICY CARDS
+   POLICY CARD
    ========================================================= */
 
 .policy-card {
-  width: 100%;
-
   background: #ffffff;
 
   border: 1px solid #e5e5e5;
@@ -402,58 +300,66 @@ main {
 
   padding: 32px;
 
-  margin-bottom: 25px;
+  margin: 35px 0;
 
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.05);
 
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .policy-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 
   border-color: #ded2b3;
 
   box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.09);
+    0 14px 32px rgba(0, 0, 0, 0.08);
 }
 
-.policy-card.intro-card {
-  max-width: 950px;
+.policy-small-heading {
+  margin: 0 0 9px;
 
-  margin-left: auto;
+  color: #a28742;
 
-  margin-right: auto;
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
 }
 
 .policy-card h2 {
-  font-size: 30px;
-
-  line-height: 1.25;
-
   margin: 0 0 18px;
 
   color: #171717;
+
+  font-size: 30px;
+
+  line-height: 1.25;
 }
 
 .policy-card h3 {
-  font-size: 21px;
-
-  line-height: 1.35;
-
-  margin: 18px 0 10px;
+  margin: 22px 0 9px;
 
   color: #222222;
+
+  font-size: 20px;
+
+  line-height: 1.35;
 }
 
 .policy-card p {
+  margin: 0 0 14px;
+
   color: #555555;
 
-  margin: 0 0 14px;
+  font-size: 15px;
 }
 
 .policy-card p:last-child {
@@ -462,41 +368,28 @@ main {
 
 
 /* =========================================================
-   07. SMALL HEADINGS
+   INTRO CARD
    ========================================================= */
 
-.small-heading {
-  color: #a28742 !important;
-
-  font-size: 12px !important;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin: 0 0 10px !important;
+.policy-intro {
+  margin-top: 0;
 }
 
 
 /* =========================================================
-   08. CONTACT SECTION
+   DARK CONTACT SECTION
    ========================================================= */
 
 .policy-contact {
-  width: 100%;
-
   background: #111111;
 
   color: #ffffff;
 
-  padding: 85px 0;
+  padding: 75px 20px;
 }
 
-.contact-content {
-  width: 100%;
-
+.policy-contact-inner {
+  width: 90%;
   max-width: 850px;
 
   margin: 0 auto;
@@ -504,33 +397,30 @@ main {
   text-align: center;
 }
 
-.contact-content h2 {
-  font-size: 40px;
+.policy-contact h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: 38px;
 
   line-height: 1.2;
-
-  margin: 0 0 20px;
-
-  color: #ffffff;
 }
 
-.contact-content p {
+.policy-contact p {
   color: #cccccc;
 
-  margin: 0 0 15px;
+  margin: 0 auto 14px;
+
+  max-width: 750px;
 }
 
-.contact-content strong {
+.policy-contact strong {
   color: #ffffff;
 }
 
-
-/* =========================================================
-   09. BUTTONS
-   ========================================================= */
-
-.hero-buttons {
-  margin-top: 32px;
+.policy-contact-buttons {
+  margin-top: 28px;
 
   display: flex;
 
@@ -540,196 +430,47 @@ main {
 
   flex-wrap: wrap;
 
-  gap: 14px;
+  gap: 12px;
 }
 
-.btn {
+.policy-button {
   display: inline-block;
+
+  padding: 12px 22px;
+
+  border-radius: 6px;
+
+  border: 1px solid #d4c08a;
 
   background: #d4c08a;
 
-  color: #111111 !important;
-
-  padding: 13px 24px;
-
-  border-radius: 6px;
+  color: #111111;
 
   font-size: 14px;
 
   font-weight: 700;
 
-  border: 1px solid #d4c08a;
-
-  text-decoration: none !important;
-
   transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.btn:hover {
+.policy-button:hover {
   background: transparent;
 
-  color: #d4c08a !important;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.secondary-btn {
-  background: transparent;
-
-  color: #d4c08a !important;
-}
-
-.secondary-btn:hover {
-  background: #d4c08a;
-
-  color: #111111 !important;
-}
-
-
-/* =========================================================
-   10. FOOTER
-   ========================================================= */
-
-.site-footer {
-  width: 100%;
-
-  background: #0d0d0d;
-
-  color: #ffffff;
-
-  text-align: center;
-
-  padding: 55px 20px 25px;
-
-  border-top: 1px solid #333333;
-}
-
-.footer-logo-img {
-  width: 65px;
-
-  height: 65px;
-
-  object-fit: contain;
-
-  margin: 0 auto 12px;
-}
-
-.footer-logo h3 {
-  font-size: 23px;
-
-  margin: 0 0 5px;
-
-  color: #ffffff;
-}
-
-.footer-logo p {
   color: #d4c08a;
 
-  font-size: 14px;
-
-  margin: 0 0 25px;
+  transform: translateY(-2px);
 }
 
+.policy-button-outline {
+  background: transparent;
 
-/* =========================================================
-   11. FOOTER LINKS
-   ========================================================= */
-
-.footer-links {
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 18px;
-
-  margin: 25px auto;
+  color: #d4c08a;
 }
 
-.footer-links a {
-  color: #cccccc !important;
-
-  font-size: 14px;
-
-  text-decoration: none !important;
-
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #d4c08a !important;
-
-  transform: translateY(-1px);
-}
-
-.footer-links a.active {
-  color: #d4c08a !important;
-}
-
-
-/* =========================================================
-   12. FOOTER CONTACT
-   ========================================================= */
-
-.footer-contact {
-  margin-top: 25px;
-}
-
-.footer-contact p {
-  color: #aaaaaa;
-
-  margin: 7px 0;
-
-  font-size: 14px;
-}
-
-.footer-contact a {
-  color: #d4c08a !important;
-
-  text-decoration: none !important;
-
-  transition: color 0.3s ease;
-}
-
-.footer-contact a:hover {
-  color: #ffffff !important;
-}
-
-
-/* =========================================================
-   13. COPYRIGHT
-   ========================================================= */
-
-.copyright {
-  margin-top: 30px !important;
-
-  padding-top: 20px;
-
-  border-top: 1px solid #292929;
-
-  color: #777777 !important;
-
-  font-size: 13px;
-}
-
-
-/* =========================================================
-   14. TEXT SELECTION
-   ========================================================= */
-
-::selection {
+.policy-button-outline:hover {
   background: #d4c08a;
 
   color: #111111;
@@ -737,337 +478,1030 @@ main {
 
 
 /* =========================================================
-   15. FOCUS
+   POLICY FOOTER
    ========================================================= */
 
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #d4c08a;
+.policy-footer {
+  background: #0d0d0d;
 
-  outline-offset: 3px;
+  color: #ffffff;
+
+  text-align: center;
+
+  padding: 50px 20px 25px;
+
+  border-top: 1px solid #333333;
+}
+
+.policy-footer-logo {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+
+  margin: 0 auto 12px;
+}
+
+.policy-footer h3 {
+  margin: 0 0 4px;
+
+  font-size: 22px;
+
+  color: #ffffff;
+}
+
+.policy-footer-tagline {
+  margin: 0 0 22px;
+
+  color: #d4c08a;
+
+  font-size: 13px;
+}
+
+.policy-footer-links {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 17px;
+
+  margin: 22px auto;
+}
+
+.policy-footer-links a {
+  color: #cccccc;
+
+  font-size: 13px;
+
+  transition: color 0.25s ease;
+}
+
+.policy-footer-links a:hover {
+  color: #d4c08a;
+}
+
+.policy-footer-contact {
+  margin-top: 22px;
+}
+
+.policy-footer-contact p {
+  margin: 6px 0;
+
+  color: #aaaaaa;
+
+  font-size: 13px;
+}
+
+.policy-footer-contact a {
+  color: #d4c08a;
+}
+
+.policy-copyright {
+  margin: 28px 0 0;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #292929;
+
+  color: #777777;
+
+  font-size: 12px;
 }
 
 
 /* =========================================================
-   16. MOBILE — 768px
+   MOBILE
    ========================================================= */
 
 @media (max-width: 768px) {
 
-  /* HEADER */
-
-  .site-header {
-    padding: 18px 5%;
+  .policy-header {
+    padding: 15px 4%;
   }
 
-  .logo-area {
-    width: 100%;
-
-    justify-content: center;
-
-    text-align: left;
-
-    gap: 12px;
+  .policy-header-inner {
+    width: 92%;
+    gap: 11px;
   }
 
-  .site-logo {
-    width: 60px;
-
-    height: 60px;
+  .policy-logo {
+    width: 50px;
+    height: 50px;
   }
 
-  .brand-text h1 {
-    font-size: 24px;
+  .policy-brand h1 {
+    font-size: 22px;
   }
 
-  .brand-text p {
-    font-size: 11px;
-
-    letter-spacing: 0.7px;
+  .policy-brand p {
+    font-size: 10px;
   }
 
-
-  /* NAVIGATION */
-
-  .main-navigation {
-    width: 100% !important;
-
-    min-height: 0;
-
-    padding: 4px 2% !important;
-
-    justify-content: center !important;
-
-    align-items: center !important;
-
-    flex-wrap: wrap !important;
+  .policy-navigation {
+    padding: 3px 2%;
   }
 
-  .main-navigation a {
-    min-height: 0;
-
-    padding: 12px 10px !important;
-
-    font-size: 12px !important;
+  .policy-navigation a {
+    padding: 11px 9px;
+    font-size: 12px;
   }
 
-  .main-navigation a.active::after {
-    left: 10px;
-
-    right: 10px;
+  .policy-navigation a.policy-active::after {
+    left: 9px;
+    right: 9px;
   }
-
-
-  /* HERO */
 
   .policy-hero {
-    min-height: 500px;
-
-    padding: 70px 5%;
+    min-height: 430px;
+    padding: 65px 5%;
   }
 
   .policy-hero h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
-  .hero-text {
-    font-size: 15px;
-  }
-
-  .hero-tag {
-    font-size: 11px;
-  }
-
-
-  /* SECTIONS */
-
-  .policy-section {
-    padding: 60px 0;
+  .policy-hero-text {
+    font-size: 14px;
   }
 
   .policy-container {
     width: 92%;
   }
 
-
-  /* CARDS */
-
   .policy-card {
-    padding: 25px;
-  }
-
-
-  /* CONTACT */
-
-  .contact-content h2 {
-    font-size: 31px;
-  }
-
-
-  /* BUTTONS */
-
-  .hero-buttons {
-    flex-direction: column;
-
-    width: 100%;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-
-    max-width: 320px;
-
-    text-align: center;
-  }
-
-}
-
-
-/* =========================================================
-   17. MOBILE — 480px
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-  .logo-area {
-    gap: 10px;
-  }
-
-  .site-logo {
-    width: 50px;
-
-    height: 50px;
-  }
-
-  .brand-text h1 {
-    font-size: 20px;
-  }
-
-  .brand-text p {
-    font-size: 9px;
-
-    letter-spacing: 0.5px;
-  }
-
-
-  /* NAVIGATION */
-
-  .main-navigation {
-    padding: 3px 1% !important;
-  }
-
-  .main-navigation a {
-    padding: 9px 7px !important;
-
-    font-size: 11px !important;
-  }
-
-  .main-navigation a.active::after {
-    left: 7px;
-
-    right: 7px;
-  }
-
-
-  /* HERO */
-
-  .policy-hero {
-    min-height: 480px;
-
-    padding: 60px 5%;
-  }
-
-  .policy-hero h2 {
-    font-size: 34px;
-  }
-
-  .hero-tag {
-    font-size: 10px;
-
-    letter-spacing: 1.5px;
-  }
-
-  .hero-text {
-    font-size: 14px;
-  }
-
-
-  /* CARDS */
-
-  .policy-card {
-    padding: 22px;
+    padding: 24px;
+    margin: 25px 0;
   }
 
   .policy-card h2 {
-    font-size: 25px;
+    font-size: 26px;
   }
 
   .policy-card h3 {
     font-size: 19px;
   }
 
-
-  /* CONTACT */
-
-  .contact-content h2 {
-    font-size: 27px;
+  .policy-card p {
+    font-size: 14px;
   }
 
-
-  /* FOOTER */
-
-  .footer-links {
-    gap: 12px;
+  .policy-contact {
+    padding: 60px 20px;
   }
 
-  .footer-links a {
-    font-size: 12px;
+  .policy-contact h2 {
+    font-size: 31px;
   }
 
-  .footer-contact p {
-    font-size: 12px;
+  .policy-contact-buttons {
+    flex-direction: column;
   }
 
+  .policy-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
 }
 
 
 /* =========================================================
-   18. VERY SMALL PHONES — 360px
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .policy-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .policy-brand h1 {
+    font-size: 19px;
+  }
+
+  .policy-brand p {
+    font-size: 9px;
+  }
+
+  .policy-navigation a {
+    padding: 9px 7px;
+    font-size: 11px;
+  }
+
+  .policy-navigation a.policy-active::after {
+    left: 7px;
+    right: 7px;
+  }
+
+  .policy-hero {
+    min-height: 410px;
+    padding: 55px 5%;
+  }
+
+  .policy-hero h2 {
+    font-size: 33px;
+  }
+
+  .policy-tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .policy-card {
+    padding: 21px;
+  }
+
+  .policy-card h2 {
+    font-size: 24px;
+  }
+
+  .policy-card h3 {
+    font-size: 18px;
+  }
+
+  .policy-footer-links {
+    gap: 11px;
+  }
+
+  .policy-footer-links a {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
    ========================================================= */
 
 @media (max-width: 360px) {
 
-  .brand-text h1 {
-    font-size: 18px;
+  .policy-brand h1 {
+    font-size: 17px;
   }
 
-  .brand-text p {
+  .policy-brand p {
     font-size: 8px;
   }
 
-  .main-navigation a {
-    padding: 8px 5px !important;
-
-    font-size: 10px !important;
+  .policy-navigation a {
+    padding: 8px 5px;
+    font-size: 10px;
   }
 
   .policy-hero h2 {
-    font-size: 30px;
-  }
-
-  .hero-text {
-    font-size: 13px;
+    font-size: 29px;
   }
 
   .policy-card {
-    padding: 19px;
+    padding: 18px;
   }
-
-  .policy-card h2 {
-    font-size: 23px;
-  }
-
 }
 
-
-/* =========================================================
-   19. ODOO / EMBED OVERRIDE
-   =========================================================
-   These rules help if the page is being displayed inside
-   an environment that applies generic navigation rules.
-========================================================= */
-
-.main-navigation,
-.main-navigation * {
-  visibility: visible !important;
-}
-
-.main-navigation {
-  opacity: 1 !important;
-
-  display: flex !important;
-
-  position: relative !important;
-
-  z-index: 99999 !important;
-}
-
-.main-navigation a {
-  opacity: 1 !important;
-
-  display: inline-flex !important;
-
-  visibility: visible !important;
-}
+  </style>
+</head>
 
 
-/* Prevent generic Odoo/page rules from making links disappear */
+<body class="policy-page">
 
-.main-navigation a[href] {
-  visibility: visible !important;
 
-  pointer-events: auto !important;
-}
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="policy-header">
+
+  <div class="policy-header-inner">
+
+    <img
+      src="logo.png"
+      alt="Law Lex Mind Logo"
+      class="policy-logo"
+    >
+
+    <div class="policy-brand">
+
+      <h1>Law Lex Mind</h1>
+
+      <p>Research • Write • Learn • Grow</p>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav class="policy-navigation">
+
+  <a href="index.html">Home</a>
+
+  <a href="about.html">About</a>
+
+  <a href="internship.html">Internship</a>
+
+  <a href="publications.html">Publications</a>
+
+  <a href="articles.html">Articles</a>
+
+  <a href="contact.html">Contact</a>
+
+  <a href="policy.html" class="policy-active">Policy</a>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="policy-hero">
+
+  <div class="policy-hero-content">
+
+    <p class="policy-tag">
+      WEBSITE POLICIES • TERMS • DISCLAIMERS
+    </p>
+
+    <h2>
+      Policies &
+      <span>Disclaimers</span>
+    </h2>
+
+    <p class="policy-hero-text">
+      Welcome to the policies and disclaimers section
+      of Law Lex Mind.
+    </p>
+
+    <p class="policy-hero-text">
+      This page explains important information regarding
+      privacy, website content, publications, internships,
+      user submissions and intellectual property.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="policy-main">
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<div class="policy-container">
+
+  <section class="policy-card policy-intro">
+
+    <p class="policy-small-heading">
+      IMPORTANT INFORMATION
+    </p>
+
+    <h2>
+      About Law Lex Mind Policies
+    </h2>
+
+    <p>
+      Law Lex Mind is a student-focused platform intended
+      to support legal education, research, writing,
+      academic development and access to information
+      relating to internships and publication opportunities.
+    </p>
+
+    <p>
+      These policies explain the general manner in which
+      the website operates and how users should understand
+      the information, content and opportunities available
+      through the platform.
+    </p>
+
+    <p>
+      By accessing or using this website, users are
+      encouraged to read and understand the policies
+      applicable to their interaction with Law Lex Mind.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     01 PRIVACY POLICY
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      01 — PRIVACY
+    </p>
+
+    <h2>Privacy Policy</h2>
+
+    <h3>Information We May Collect</h3>
+
+    <p>
+      Law Lex Mind may receive personal information that
+      users voluntarily provide when communicating with us,
+      submitting academic work, applying through a form or
+      interacting with services associated with the website.
+    </p>
+
+    <p>
+      Depending on the nature of the interaction, such
+      information may include a name, email address,
+      educational information, contact details,
+      publication information or other information
+      voluntarily provided by the user.
+    </p>
+
+    <h3>How Information May Be Used</h3>
+
+    <p>
+      Information voluntarily provided by users may be
+      used for purposes such as responding to enquiries,
+      processing submissions, communicating regarding
+      publications, communicating regarding internships
+      and managing activities associated with Law Lex Mind.
+    </p>
+
+    <h3>Protection of Information</h3>
+
+    <p>
+      Law Lex Mind takes reasonable steps to handle
+      voluntarily provided information responsibly.
+      However, no method of electronic transmission or
+      storage can be guaranteed to be completely secure.
+    </p>
+
+    <h3>Information Sharing</h3>
+
+    <p>
+      Law Lex Mind does not intend to sell users'
+      personal information.
+    </p>
+
+    <p>
+      Information may be shared where reasonably necessary
+      to process a request, operate an associated service,
+      communicate with a user or comply with applicable
+      legal requirements.
+    </p>
+
+    <h3>External Services and Forms</h3>
+
+    <p>
+      Certain activities, including research submissions,
+      may use external services such as Google Forms or
+      other third-party platforms.
+    </p>
+
+    <p>
+      Information submitted through an external service
+      may also be subject to the privacy policy and terms
+      of that service provider.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     02 WEBSITE DISCLAIMER
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      02 — WEBSITE DISCLAIMER
+    </p>
+
+    <h2>Website Disclaimer</h2>
+
+    <p>
+      The content available on Law Lex Mind is provided
+      primarily for educational, informational and academic
+      purposes.
+    </p>
+
+    <p>
+      Information published on this website should not be
+      considered legal advice or a substitute for advice
+      from a qualified legal professional.
+    </p>
+
+    <p>
+      Laws, statutes, regulations, judicial decisions and
+      legal interpretations may change over time.
+    </p>
+
+    <p>
+      Users should independently verify important legal
+      information and, where necessary, seek professional
+      legal advice regarding their individual circumstances.
+    </p>
+
+    <p>
+      Law Lex Mind does not guarantee that every article,
+      note, explanation or resource available on the website
+      will always be complete, current or applicable to
+      every individual situation.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     03 LEGAL CONTENT
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      03 — LEGAL CONTENT
+    </p>
+
+    <h2>
+      Legal Information & Educational Content
+    </h2>
+
+    <p>
+      Articles, notes, explanations and other legal
+      resources published on Law Lex Mind are intended
+      to assist students and learners in understanding
+      legal concepts.
+    </p>
+
+    <p>
+      Such content may discuss legislation, judicial
+      decisions, legal principles, academic opinions
+      and contemporary legal developments.
+    </p>
+
+    <p>
+      Educational content should not be relied upon as
+      a definitive statement of law for a particular
+      legal dispute or individual matter.
+    </p>
+
+    <p>
+      Readers should consult authoritative legal sources,
+      including applicable legislation and judicial
+      decisions, when conducting formal legal research.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     04 PUBLICATION POLICY
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      04 — PUBLICATIONS
+    </p>
+
+    <h2>Publication Policy</h2>
+
+    <h3>Submission of Work</h3>
+
+    <p>
+      Law Lex Mind may accept submissions including
+      research papers, legal articles, case commentaries
+      and other suitable academic or legal writing.
+    </p>
+
+    <h3>No Guarantee of Publication</h3>
+
+    <p>
+      Submission of an article, research paper or case
+      commentary does not guarantee publication.
+    </p>
+
+    <p>
+      Submitted material may be considered on the basis
+      of relevance, originality, quality, structure,
+      legal reasoning, research and suitability for the
+      platform.
+    </p>
+
+    <h3>Originality</h3>
+
+    <p>
+      Contributors should submit original work and should
+      not knowingly submit plagiarised material or material
+      belonging to another author without appropriate
+      permission.
+    </p>
+
+    <h3>Citations</h3>
+
+    <p>
+      Contributors are responsible for appropriately
+      acknowledging and citing legal authorities,
+      academic sources and other material relied upon
+      in their submission.
+    </p>
+
+    <h3>Editorial Decision</h3>
+
+    <p>
+      Law Lex Mind may accept, request modifications to,
+      defer or decline a submission at its discretion
+      according to the applicable editorial process.
+    </p>
+
+    <h3>Author Responsibility</h3>
+
+    <p>
+      Authors remain responsible for the accuracy,
+      originality and proper attribution of the work
+      submitted by them.
+    </p>
+
+    <p>
+      Publication of an article does not necessarily mean
+      that Law Lex Mind endorses every opinion, argument
+      or conclusion expressed by the author.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     05 INTERNSHIP
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      05 — INTERNSHIPS
+    </p>
+
+    <h2>Internship Disclaimer</h2>
+
+    <p>
+      Law Lex Mind may share information about internship
+      opportunities to help students discover educational
+      and professional opportunities.
+    </p>
+
+    <p>
+      Internship opportunities may be offered or managed
+      by independent organisations, institutions,
+      individuals or other entities.
+    </p>
+
+    <p>
+      Eligibility requirements, application procedures,
+      duration, responsibilities, selection criteria,
+      remuneration and certification are determined by
+      the respective internship provider unless expressly
+      stated otherwise.
+    </p>
+
+    <p>
+      Law Lex Mind does not guarantee selection,
+      acceptance, remuneration, certification or
+      completion of an internship unless expressly
+      stated for a particular opportunity.
+    </p>
+
+    <p>
+      Students should independently verify the details
+      and legitimacy of an opportunity before submitting
+      personal information or applying.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     06 USER SUBMISSIONS
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      06 — USER SUBMISSIONS
+    </p>
+
+    <h2>User-Submitted Content</h2>
+
+    <p>
+      Users may submit research papers, articles, case
+      commentaries or other academic material through
+      available submission channels.
+    </p>
+
+    <p>
+      By submitting material, the contributor represents
+      that they have the necessary rights or authority
+      to submit the material.
+    </p>
+
+    <p>
+      Contributors should not knowingly submit plagiarised,
+      unlawful, defamatory or otherwise inappropriate
+      material.
+    </p>
+
+    <p>
+      Law Lex Mind may decline to publish or remove
+      submitted material where it considers such action
+      appropriate.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     07 INTELLECTUAL PROPERTY
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      07 — INTELLECTUAL PROPERTY
+    </p>
+
+    <h2>Intellectual Property</h2>
+
+    <p>
+      The Law Lex Mind name, logo, website design,
+      original graphics and original website content
+      may be protected by applicable intellectual
+      property laws.
+    </p>
+
+    <p>
+      Users should not reproduce, copy, distribute,
+      modify or commercially exploit original website
+      material without appropriate permission, except
+      where permitted by applicable law.
+    </p>
+
+    <p>
+      Copyright and other rights in user-submitted
+      material remain subject to the rights of the
+      respective author or rights holder.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     08 EXTERNAL LINKS
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      08 — EXTERNAL LINKS
+    </p>
+
+    <h2>Third-Party Websites</h2>
+
+    <p>
+      The Law Lex Mind website may contain links to
+      external websites, platforms, forms, social media
+      pages or other resources.
+    </p>
+
+    <p>
+      These third-party services operate independently
+      from Law Lex Mind and may have their own terms,
+      privacy policies and practices.
+    </p>
+
+    <p>
+      Law Lex Mind is not responsible for the content,
+      availability, privacy practices or policies of
+      independent third-party websites.
+    </p>
+
+    <p>
+      Users should review the applicable policies of
+      external services before using them or providing
+      personal information.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     09 USER CONDUCT
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      09 — USER CONDUCT
+    </p>
+
+    <h2>Responsible Use of the Website</h2>
+
+    <p>
+      Users are expected to use the Law Lex Mind website
+      responsibly and for lawful purposes.
+    </p>
+
+    <p>
+      Users should not knowingly use the website to submit
+      unlawful, misleading, plagiarised, defamatory,
+      abusive or otherwise inappropriate material.
+    </p>
+
+    <p>
+      Users should not attempt to interfere with the
+      operation, security or availability of the website.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     10 POLICY UPDATES
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      10 — POLICY UPDATES
+    </p>
+
+    <h2>Changes to These Policies</h2>
+
+    <p>
+      Law Lex Mind may update or modify these policies
+      from time to time to reflect changes in the website,
+      services, practices or applicable requirements.
+    </p>
+
+    <p>
+      Updated versions of the policies may be published
+      on this page.
+    </p>
+
+    <p>
+      Users are encouraged to review this page periodically
+      for any changes.
+    </p>
+
+  </section>
+
+
+<!-- =====================================================
+     LAST UPDATED
+===================================================== -->
+
+  <section class="policy-card">
+
+    <p class="policy-small-heading">
+      LAST UPDATED
+    </p>
+
+    <h3>August 2026</h3>
+
+    <p>
+      These policies are provided to explain the general
+      operation of the Law Lex Mind website and should be
+      read together with the information provided on the
+      relevant pages of the website.
+    </p>
+
+  </section>
+
+</div>
+
+</main>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="policy-contact">
+
+  <div class="policy-contact-inner">
+
+    <p class="policy-small-heading">
+      QUESTIONS ABOUT OUR POLICIES?
+    </p>
+
+    <h2>Contact Law Lex Mind</h2>
+
+    <p>
+      If you have questions regarding these policies,
+      publications, internships, website content or
+      other matters relating to Law Lex Mind, you can
+      contact us.
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      lexmindsindia@gmail.com
+    </p>
+
+    <div class="policy-contact-buttons">
+
+      <a
+        href="mailto:lexmindsindia@gmail.com?subject=Policy%20Enquiry"
+        class="policy-button">
+        Contact Us →
+      </a>
+
+      <a
+        href="contact.html"
+        class="policy-button policy-button-outline">
+        Contact Page →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="policy-footer">
+
+  <img
+    src="logo.png"
+    alt="Law Lex Mind Logo"
+    class="policy-footer-logo"
+  >
+
+  <h3>Law Lex Mind</h3>
+
+  <p class="policy-footer-tagline">
+    Research • Write • Learn • Grow
+  </p>
+
+
+  <div class="policy-footer-links">
+
+    <a href="index.html">Home</a>
+
+    <a href="about.html">About</a>
+
+    <a href="internship.html">Internship</a>
+
+    <a href="publications.html">Publications</a>
+
+    <a href="articles.html">Articles</a>
+
+    <a href="contact.html">Contact</a>
+
+    <a href="policy.html">Policy</a>
+
+  </div>
+
+
+  <div class="policy-footer-contact">
+
+    <p>
+      📧 Email:
+      <a href="mailto:lexmindsindia@gmail.com">
+        lexmindsindia@gmail.com
+      </a>
+    </p>
+
+    <p>
+      🔗 LinkedIn:
+      <a
+        href="https://www.linkedin.com/company/legal-school-notes/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Law Lex Mind
+      </a>
+    </p>
+
+  </div>
+
+
+  <p class="policy-copyright">
+    © 2026 Law Lex Mind. All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>
