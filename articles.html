@@ -6,13 +6,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Legal Articles | Law Lex Mind</title>
+  <title>Legal Articles & Resources | Law Lex Mind</title>
 
   <meta name="description"
-        content="Explore legal articles, concepts, case laws, contract law, tort law and research-based legal resources on Law Lex Mind.">
+        content="Explore legal articles and research resources on Contract Law, Law of Torts, Specific Relief and other areas of legal study through Law Lex Mind.">
 
   <meta name="keywords"
-        content="legal articles, law articles, negligence, defamation, strict liability, contract law, specific relief, legal research, Law Lex Mind">
+        content="legal articles, law students, contract law, tort law, negligence, defamation, strict liability, specific relief, legal research, Law Lex Mind">
 
   <meta name="author" content="Law Lex Mind">
 
@@ -57,33 +57,19 @@
 
 <nav class="main-navigation" aria-label="Main Navigation">
 
-  <a href="index.html">
-    Home
-  </a>
+  <a href="index.html">Home</a>
 
-  <a href="about.html">
-    About
-  </a>
+  <a href="about.html">About</a>
 
-  <a href="internship.html">
-    Internship
-  </a>
+  <a href="internship.html">Internship</a>
 
-  <a href="publications.html">
-    Publications
-  </a>
+  <a href="publications.html">Publications</a>
 
-  <a href="articles.html" class="active">
-    Articles
-  </a>
+  <a href="articles.html" class="active">Articles</a>
 
-  <a href="contact.html">
-    Contact
-  </a>
+  <a href="contact.html">Contact</a>
 
-  <a href="policy.html">
-    Policy
-  </a>
+  <a href="policy.html">Policy</a>
 
 </nav>
 
@@ -101,29 +87,36 @@
     </p>
 
     <h2>
-      Explore <span>Legal Articles</span>
+      Legal <span>Articles & Resources</span>
     </h2>
 
     <p class="hero-text">
-      Explore research-based legal content covering
-      important concepts, principles, case laws and
-      academic topics useful for law students and
-      aspiring legal professionals.
+      Explore structured legal resources covering
+      important concepts, principles, doctrines,
+      remedies and case laws.
     </p>
 
     <p class="hero-text">
-      Browse articles on Contract Law, Law of Torts,
-      Specific Relief and other important areas of law.
+      Designed to help law students understand
+      important legal topics and begin further research.
     </p>
+
+    <div class="hero-buttons">
+
+      <a href="#articles" class="btn">
+        Explore Articles →
+      </a>
+
+      <a href="publications.html" class="btn secondary-btn">
+        Publish Your Research
+      </a>
+
+    </div>
 
   </div>
 
 </section>
 
-
-<!-- =====================================================
-     MAIN CONTENT
-===================================================== -->
 
 <main>
 
@@ -139,29 +132,29 @@
     <div class="policy-card">
 
       <p class="small-heading">
-        LEGAL LEARNING
+        LAW LEX MIND RESOURCES
       </p>
 
       <h2>
-        Learn Through Research
+        Learn. Research. Understand.
       </h2>
 
       <p>
-        Law Lex Mind aims to make legal learning more
-        accessible through structured articles and
-        research-oriented resources.
+        Law Lex Mind provides students with structured
+        legal learning resources covering important
+        areas of law.
       </p>
 
       <p>
-        These resources cover important legal concepts,
-        principles, doctrines and case laws and can be
-        used by students as a starting point for further
-        academic research.
+        Browse the articles below to explore topics
+        relating to Contract Law, Law of Torts and
+        Specific Relief.
       </p>
 
       <p>
-        Select an article below to explore the
-        corresponding legal topic.
+        These resources are intended for educational
+        and academic purposes and can serve as a
+        starting point for further research.
       </p>
 
     </div>
@@ -172,45 +165,148 @@
 
 
 <!-- =====================================================
-     FEATURED ARTICLES
+     SEARCH
 ===================================================== -->
 
-<section class="policy-section">
+<section class="policy-section article-library-section">
+
+  <div class="policy-container">
+
+    <div class="policy-card">
+
+      <p class="small-heading">
+        FIND A RESOURCE
+      </p>
+
+      <h2>
+        Search Legal Articles
+      </h2>
+
+      <p>
+        Search by topic, subject or legal concept.
+      </p>
+
+      <div class="article-search">
+
+        <input
+          type="search"
+          id="articleSearch"
+          placeholder="Search articles e.g. negligence, contract, defamation..."
+          aria-label="Search legal articles">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORY FILTER
+===================================================== -->
+
+<section class="policy-section category-section">
 
   <div class="policy-container">
 
     <p class="small-heading">
-      FEATURED ARTICLES
+      BROWSE BY SUBJECT
     </p>
 
     <h2>
-      Explore Our Legal Articles
+      Legal Categories
+    </h2>
+
+    <br>
+
+    <div class="category-buttons">
+
+      <button
+        type="button"
+        class="category-btn active"
+        data-category="all">
+        All Articles
+      </button>
+
+      <button
+        type="button"
+        class="category-btn"
+        data-category="torts">
+        Law of Torts
+      </button>
+
+      <button
+        type="button"
+        class="category-btn"
+        data-category="contract">
+        Contract Law
+      </button>
+
+      <button
+        type="button"
+        class="category-btn"
+        data-category="relief">
+        Specific Relief
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ARTICLE LIBRARY
+===================================================== -->
+
+<section
+  class="policy-section"
+  id="articles">
+
+  <div class="policy-container">
+
+    <p class="small-heading">
+      ARTICLE LIBRARY
+    </p>
+
+    <h2>
+      Explore Legal Articles
     </h2>
 
     <br>
 
 
-    <div class="feature-grid">
+    <div class="feature-grid" id="articleGrid">
 
 
       <!-- =================================================
-           1. NEGLIGENCE
+           NEGLIGENCE
       ================================================== -->
 
-      <div class="card feature-card">
+      <article
+        class="card feature-card article-card"
+        data-category="torts"
+        data-title="negligence tort law">
 
         <div class="feature-icon">
-          ⚖️
+          ⚠️
         </div>
+
+        <p class="article-category">
+          LAW OF TORTS
+        </p>
 
         <h3>
           Negligence
         </h3>
 
         <p>
-          Understand the concept of negligence,
-          its essential elements, legal principles
-          and its importance under the Law of Torts.
+          Explore the concept of negligence, its
+          essential elements and important principles
+          relating to liability under tort law.
         </p>
 
         <a
@@ -223,27 +319,34 @@
 
         </a>
 
-      </div>
+      </article>
 
 
       <!-- =================================================
-           2. DEFAMATION
+           DEFAMATION
       ================================================== -->
 
-      <div class="card feature-card">
+      <article
+        class="card feature-card article-card"
+        data-category="torts"
+        data-title="defamation tort law">
 
         <div class="feature-icon">
           🗣️
         </div>
+
+        <p class="article-category">
+          LAW OF TORTS
+        </p>
 
         <h3>
           Defamation
         </h3>
 
         <p>
-          Explore the meaning of defamation, its
-          essential elements, forms and important
-          legal principles relating to reputation.
+          Learn about defamation, its essential
+          elements, forms and important legal
+          principles relating to reputation.
         </p>
 
         <a
@@ -256,27 +359,34 @@
 
         </a>
 
-      </div>
+      </article>
 
 
       <!-- =================================================
-           3. STRICT LIABILITY
+           STRICT LIABILITY
       ================================================== -->
 
-      <div class="card feature-card">
+      <article
+        class="card feature-card article-card"
+        data-category="torts"
+        data-title="strict liability rylands fletcher tort law">
 
         <div class="feature-icon">
-          ⚠️
+          ⚖️
         </div>
+
+        <p class="article-category">
+          LAW OF TORTS
+        </p>
 
         <h3>
           Strict Liability
         </h3>
 
         <p>
-          Study the principle of strict liability
-          based on the landmark case of
-          Rylands v. Fletcher.
+          Study strict liability and the important
+          principle associated with the landmark
+          decision in Rylands v. Fletcher.
         </p>
 
         <a
@@ -289,126 +399,34 @@
 
         </a>
 
-      </div>
+      </article>
 
 
       <!-- =================================================
-           4. PERFORMANCE OF CONTRACT
+           FORMATION OF CONTRACT
       ================================================== -->
 
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          📜
-        </div>
-
-        <h3>
-          Performance of Contract
-        </h3>
-
-        <p>
-          Explore the legal principles governing
-          performance of contracts and the duties
-          of parties under contract law.
-        </p>
-
-        <a
-          href="https://legal-school-notes.odoo.com/performance-of-contract"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card-button">
-
-          Read Article →
-
-        </a>
-
-      </div>
-
-
-      <!-- =================================================
-           5. SPECIFIC RELIEF ACT
-      ================================================== -->
-
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          ⚖️
-        </div>
-
-        <h3>
-          Specific Relief Act
-        </h3>
-
-        <p>
-          Explore important concepts and remedies
-          available under the Specific Relief Act
-          and the principles governing specific relief.
-        </p>
-
-        <a
-          href="https://legal-school-notes.odoo.com/specific-relief-act"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card-button">
-
-          Read Article →
-
-        </a>
-
-      </div>
-
-
-      <!-- =================================================
-           6. RECOVERY OF POSSESSION
-      ================================================== -->
-
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          🏛️
-        </div>
-
-        <h3>
-          Recovery of Possession
-        </h3>
-
-        <p>
-          Learn about the legal principles relating
-          to recovery of possession and the remedies
-          available in law.
-        </p>
-
-        <a
-          href="https://legal-school-notes.odoo.com/recovery-of-possession"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="card-button">
-
-          Read Article →
-
-        </a>
-
-      </div>
-
-
-      <!-- =================================================
-           7. FORMATION OF CONTRACT
-      ================================================== -->
-
-      <div class="card feature-card">
+      <article
+        class="card feature-card article-card"
+        data-category="contract"
+        data-title="formation of contract contract law agreement">
 
         <div class="feature-icon">
           📝
         </div>
 
+        <p class="article-category">
+          CONTRACT LAW
+        </p>
+
         <h3>
-          Unit 1 – Formation of Contract
+          Formation of Contract
         </h3>
 
         <p>
-          Explore the foundational principles of
-          contract formation, including important
-          concepts relating to agreements and contracts.
+          Explore foundational concepts relating to
+          the formation of contracts and important
+          principles of Contract Law.
         </p>
 
         <a
@@ -421,27 +439,74 @@
 
         </a>
 
-      </div>
+      </article>
 
 
       <!-- =================================================
-           8. QUASI CONTRACTS
+           PERFORMANCE OF CONTRACT
       ================================================== -->
 
-      <div class="card feature-card">
+      <article
+        class="card feature-card article-card"
+        data-category="contract"
+        data-title="performance of contract contract law">
+
+        <div class="feature-icon">
+          📜
+        </div>
+
+        <p class="article-category">
+          CONTRACT LAW
+        </p>
+
+        <h3>
+          Performance of Contract
+        </h3>
+
+        <p>
+          Understand important principles governing
+          performance of contractual obligations and
+          the duties of parties.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/performance-of-contract"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+      <!-- =================================================
+           QUASI CONTRACTS
+      ================================================== -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="contract"
+        data-title="quasi contracts contract law">
 
         <div class="feature-icon">
           🤝
         </div>
 
+        <p class="article-category">
+          CONTRACT LAW
+        </p>
+
         <h3>
-          Quasi Contracts
+          Quasi-Contracts
         </h3>
 
         <p>
-          Understand the concept of quasi contracts
-          and the legal obligations that may arise
-          even without a traditional contractual agreement.
+          Explore legal obligations that may arise
+          by operation of law even without a
+          conventional contractual agreement.
         </p>
 
         <a
@@ -454,27 +519,34 @@
 
         </a>
 
-      </div>
+      </article>
 
 
       <!-- =================================================
-           9. LIMITATION ON FREEDOM OF CONTRACT
+           LIMITATION ON FREEDOM
       ================================================== -->
 
-      <div class="card feature-card">
+      <article
+        class="card feature-card article-card"
+        data-category="contract"
+        data-title="limitation freedom contract contract law">
 
         <div class="feature-icon">
           🔐
         </div>
+
+        <p class="article-category">
+          CONTRACT LAW
+        </p>
 
         <h3>
           Limitation on Freedom of Contract
         </h3>
 
         <p>
-          Explore the legal limitations placed on
-          contractual freedom and the principles
-          governing enforceability of agreements.
+          Examine the legal limitations placed on
+          contractual freedom and related principles
+          governing agreements.
         </p>
 
         <a
@@ -487,8 +559,108 @@
 
         </a>
 
-      </div>
+      </article>
 
+
+      <!-- =================================================
+           SPECIFIC RELIEF ACT
+      ================================================== -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="relief"
+        data-title="specific relief act specific relief">
+
+        <div class="feature-icon">
+          ⚖️
+        </div>
+
+        <p class="article-category">
+          SPECIFIC RELIEF
+        </p>
+
+        <h3>
+          Specific Relief Act
+        </h3>
+
+        <p>
+          Explore important concepts and remedies
+          relating to specific relief and the legal
+          principles governing such remedies.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/specific-relief-act"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+      <!-- =================================================
+           RECOVERY OF POSSESSION
+      ================================================== -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="relief"
+        data-title="recovery possession specific relief">
+
+        <div class="feature-icon">
+          🏛️
+        </div>
+
+        <p class="article-category">
+          SPECIFIC RELIEF
+        </p>
+
+        <h3>
+          Recovery of Possession
+        </h3>
+
+        <p>
+          Learn about legal remedies and principles
+          relating to recovery of possession under
+          the law of specific relief.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/recovery-of-possession"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+    </div>
+
+
+    <!-- NO RESULTS -->
+
+    <div
+      id="noResults"
+      class="policy-card no-results"
+      style="display: none;">
+
+      <h3>
+        No Articles Found
+      </h3>
+
+      <p>
+        We could not find an article matching your
+        search. Try another keyword or select
+        "All Articles".
+      </p>
 
     </div>
 
@@ -498,106 +670,40 @@
 
 
 <!-- =====================================================
-     AREAS OF LEGAL CONTENT
+     RESOURCE NOTE
 ===================================================== -->
 
 <section class="policy-section">
 
   <div class="policy-container">
 
-    <p class="small-heading">
-      EXPLORE
-    </p>
+    <div class="policy-card">
 
-    <h2>
-      Areas of Legal Content
-    </h2>
+      <p class="small-heading">
+        IMPORTANT INFORMATION
+      </p>
 
-    <br>
+      <h2>
+        Using Our Legal Resources
+      </h2>
 
-    <div class="feature-grid">
+      <p>
+        The articles available through Law Lex Mind
+        are intended for educational and academic
+        purposes.
+      </p>
 
+      <p>
+        Students should consult relevant legislation,
+        judicial decisions and authoritative legal
+        sources when conducting academic or
+        professional research.
+      </p>
 
-      <!-- CONSTITUTIONAL LAW -->
-
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          🏛️
-        </div>
-
-        <h3>
-          Constitutional Law
-        </h3>
-
-        <p>
-          Explore constitutional principles,
-          rights, institutions and important
-          constitutional developments.
-        </p>
-
-      </div>
-
-
-      <!-- CONTRACT LAW -->
-
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          📜
-        </div>
-
-        <h3>
-          Contract Law
-        </h3>
-
-        <p>
-          Study important principles, provisions,
-          doctrines and cases relating to contracts.
-        </p>
-
-      </div>
-
-
-      <!-- TORT LAW -->
-
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          ⚔️
-        </div>
-
-        <h3>
-          Law of Torts
-        </h3>
-
-        <p>
-          Explore negligence, nuisance, defamation,
-          liability and important tort cases.
-        </p>
-
-      </div>
-
-
-      <!-- CASE LAW -->
-
-      <div class="card feature-card">
-
-        <div class="feature-icon">
-          🔎
-        </div>
-
-        <h3>
-          Case Laws
-        </h3>
-
-        <p>
-          Understand judicial decisions, legal
-          reasoning and important principles.
-        </p>
-
-      </div>
-
+      <p>
+        These resources should not be treated as a
+        substitute for professional legal advice.
+      </p>
 
     </div>
 
@@ -607,7 +713,7 @@
 
 
 <!-- =====================================================
-     CALL TO ACTION
+     PUBLICATION CTA
 ===================================================== -->
 
 <section class="policy-contact">
@@ -617,22 +723,21 @@
     <div class="contact-content">
 
       <p class="small-heading">
-        KEEP LEARNING
+        HAVE SOMETHING TO SHARE?
       </p>
 
       <h2>
-        Research. Write. Learn. Grow.
+        Publish Your Legal Research
       </h2>
 
       <p>
-        Use our articles as a starting point for your
-        academic exploration and legal research.
+        Have you written a legal article, research
+        paper or case commentary?
       </p>
 
       <p>
-        Have your own research or legal article?
-        You can also submit your work for publication
-        through Law Lex Mind.
+        Submit your work through the Law Lex Mind
+        publication platform.
       </p>
 
       <div class="hero-buttons">
@@ -641,7 +746,7 @@
           href="publications.html"
           class="btn">
 
-          Publish Your Research →
+          Submit Your Research →
 
         </a>
 
@@ -707,8 +812,12 @@
       Publications
     </a>
 
-    <a href="articles.html">
+    <a
+      href="articles.html"
+      class="active">
+
       Articles
+
     </a>
 
     <a href="contact.html">
@@ -763,5 +872,129 @@
 </footer>
 
 
+<!-- =====================================================
+     ARTICLE SEARCH & FILTER SCRIPT
+===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchInput =
+    document.getElementById("articleSearch");
+
+  const articles =
+    document.querySelectorAll(".article-card");
+
+  const categoryButtons =
+    document.querySelectorAll(".category-btn");
+
+  const noResults =
+    document.getElementById("noResults");
+
+  let selectedCategory = "all";
+
+
+  function filterArticles() {
+
+    const searchTerm =
+      searchInput.value
+        .toLowerCase()
+        .trim();
+
+    let visibleCount = 0;
+
+
+    articles.forEach(function (article) {
+
+      const title =
+        article.dataset.title.toLowerCase();
+
+      const text =
+        article.innerText.toLowerCase();
+
+      const category =
+        article.dataset.category;
+
+
+      const matchesSearch =
+        searchTerm === "" ||
+        title.includes(searchTerm) ||
+        text.includes(searchTerm);
+
+
+      const matchesCategory =
+        selectedCategory === "all" ||
+        category === selectedCategory;
+
+
+      if (matchesSearch && matchesCategory) {
+
+        article.style.display = "";
+
+        visibleCount++;
+
+      } else {
+
+        article.style.display = "none";
+
+      }
+
+    });
+
+
+    if (visibleCount === 0) {
+
+      noResults.style.display = "block";
+
+    } else {
+
+      noResults.style.display = "none";
+
+    }
+
+  }
+
+
+  searchInput.addEventListener(
+    "input",
+    filterArticles
+  );
+
+
+  categoryButtons.forEach(function (button) {
+
+    button.addEventListener(
+      "click",
+      function () {
+
+
+        categoryButtons.forEach(function (btn) {
+
+          btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        selectedCategory =
+          button.dataset.category;
+
+
+        filterArticles();
+
+      }
+    );
+
+  });
+
+});
+
+</script>
+
+
 </body>
+
 </html>
