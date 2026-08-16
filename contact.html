@@ -6,24 +6,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact Law Lex Mind</title>
+  <title>Contact Law Lex Mind | Student Enquiries</title>
 
   <meta name="description"
-        content="Contact Law Lex Mind regarding legal research, publications, internships and other enquiries.">
+        content="Contact Law Lex Mind regarding legal internships, publications, legal research, articles and other student enquiries.">
 
   <meta name="keywords"
-        content="contact Law Lex Mind, legal research, internships, publications">
+        content="contact Law Lex Mind, legal internship enquiry, law student contact, legal research, legal publications">
 
   <meta name="author" content="Law Lex Mind">
 
   <link rel="icon" type="image/png" href="./logo.png">
 
-  <link rel="stylesheet" href="./style.css?v=2">
+  <link rel="stylesheet" href="./style.css?v=3">
 
 </head>
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="site-header">
 
@@ -47,18 +51,46 @@
 </header>
 
 
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
 <nav class="main-navigation" aria-label="Main Navigation">
 
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="internship.html">Internship</a>
-  <a href="publications.html">Publications</a>
-  <a href="articles.html">Articles</a>
-  <a href="contact.html" class="active">Contact</a>
-  <a href="policy.html">Policy</a>
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="about.html">
+    About
+  </a>
+
+  <a href="internship.html">
+    Internship
+  </a>
+
+  <a href="publications.html">
+    Publications
+  </a>
+
+  <a href="articles.html">
+    Articles
+  </a>
+
+  <a href="contact.html" class="active">
+    Contact
+  </a>
+
+  <a href="policy.html">
+    Policy
+  </a>
 
 </nav>
 
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="policy-hero">
 
@@ -74,7 +106,8 @@
 
     <p class="hero-text">
       Have a question about internships, publications,
-      legal articles or research? Get in touch with us.
+      legal articles or research? Send us a message
+      directly through the form below.
     </p>
 
   </div>
@@ -82,8 +115,237 @@
 </section>
 
 
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
+
+<!-- =====================================================
+     CONTACT FORM
+===================================================== -->
+
+<section class="policy-section">
+
+  <div class="policy-container">
+
+    <div class="policy-card">
+
+      <p class="small-heading">
+        STUDENT ENQUIRY
+      </p>
+
+      <h2>
+        Send Us a Message
+      </h2>
+
+      <p>
+        Students can use the form below for internship
+        enquiries, publication questions, legal research
+        queries and other matters relating to Law Lex Mind.
+      </p>
+
+
+      <!-- =================================================
+           FORM
+      ================================================= -->
+
+      <form
+        action="https://formsubmit.co/lexmindsindia@gmail.com"
+        method="POST"
+        class="contact-form">
+
+
+        <!-- EMAIL SUBJECT -->
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Student Enquiry - Law Lex Mind">
+
+
+        <!-- DISABLE CAPTCHA -->
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false">
+
+
+        <!-- SUCCESS PAGE -->
+
+        <input
+          type="hidden"
+          name="_next"
+          value="https://YOUR-WEBSITE-URL/contact.html?success=true">
+
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+          <label for="name">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required>
+
+        </div>
+
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+          <label for="email">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
+
+        </div>
+
+
+        <!-- PHONE -->
+
+        <div class="form-group">
+
+          <label for="phone">
+            Phone Number
+            <span class="optional">
+              (Optional)
+            </span>
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number">
+
+        </div>
+
+
+        <!-- COURSE -->
+
+        <div class="form-group">
+
+          <label for="course">
+            Course / Year
+          </label>
+
+          <input
+            type="text"
+            id="course"
+            name="course"
+            placeholder="Example: B.A. LL.B. 2nd Year"
+            required>
+
+        </div>
+
+
+        <!-- ENQUIRY TYPE -->
+
+        <div class="form-group">
+
+          <label for="enquiry">
+            Enquiry Type
+          </label>
+
+          <select
+            id="enquiry"
+            name="enquiry"
+            required>
+
+            <option value="">
+              Select an enquiry type
+            </option>
+
+            <option value="Internship">
+              Internship
+            </option>
+
+            <option value="Publication">
+              Publication
+            </option>
+
+            <option value="Legal Research">
+              Legal Research
+            </option>
+
+            <option value="Article Submission">
+              Article Submission
+            </option>
+
+            <option value="Case Commentary">
+              Case Commentary
+            </option>
+
+            <option value="General Enquiry">
+              General Enquiry
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="form-group">
+
+          <label for="message">
+            Your Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="7"
+            placeholder="Write your message here..."
+            required></textarea>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+
+        <div class="form-submit">
+
+          <button
+            type="submit"
+            class="btn">
+
+            Send Message →
+
+          </button>
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT INFORMATION
+===================================================== -->
 
 <section class="policy-section">
 
@@ -102,31 +364,41 @@
       <p>
         For general enquiries, publication-related
         questions, internship information or other
-        matters relating to Law Lex Mind, you can contact
-        us through email.
+        matters relating to Law Lex Mind, you can
+        contact us directly.
       </p>
+
 
       <h3>
         Email
       </h3>
 
       <p>
+
         <a href="mailto:lexmindsindia@gmail.com">
+
           lexmindsindia@gmail.com
+
         </a>
+
       </p>
+
 
       <h3>
         LinkedIn
       </h3>
 
       <p>
+
         <a
           href="https://www.linkedin.com/company/legal-school-notes/"
           target="_blank"
           rel="noopener noreferrer">
+
           Law Lex Mind on LinkedIn
+
         </a>
+
       </p>
 
     </div>
@@ -135,6 +407,10 @@
 
 </section>
 
+
+<!-- =====================================================
+     COMMON ENQUIRIES
+===================================================== -->
 
 <section class="policy-section">
 
@@ -150,23 +426,39 @@
         How Can We Help?
       </h2>
 
+
       <h3>
         Internship Enquiries
       </h3>
 
       <p>
         Contact us regarding internship opportunities,
-        application information and related questions.
+        application information, eligibility and
+        internship-related questions.
       </p>
+
 
       <h3>
         Publication Enquiries
       </h3>
 
       <p>
-        Contact us regarding research papers, articles,
-        case commentaries and publication submissions.
+        Contact us regarding research papers, legal
+        articles, case commentaries and publication
+        submissions.
       </p>
+
+
+      <h3>
+        Legal Research
+      </h3>
+
+      <p>
+        Contact us regarding legal research,
+        academic resources and research-oriented
+        opportunities.
+      </p>
+
 
       <h3>
         General Questions
@@ -177,18 +469,35 @@
         feel free to contact us.
       </p>
 
+
       <div class="hero-buttons">
 
         <a
           href="mailto:lexmindsindia@gmail.com?subject=Law%20Lex%20Mind%20Enquiry"
           class="btn">
+
           Send Email →
+
         </a>
+
+
+        <a
+          href="https://www.linkedin.com/company/legal-school-notes/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn secondary-btn">
+
+          🔗 LinkedIn
+
+        </a>
+
 
         <a
           href="policy.html"
           class="btn secondary-btn">
+
           View Policies
+
         </a>
 
       </div>
@@ -203,6 +512,10 @@
 </main>
 
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
 
   <div class="footer-logo">
@@ -212,50 +525,97 @@
       alt="Law Lex Mind Logo"
       class="footer-logo-img">
 
-    <h3>Law Lex Mind</h3>
+    <h3>
+      Law Lex Mind
+    </h3>
 
-    <p>Research • Write • Learn • Grow</p>
+    <p>
+      Research • Write • Learn • Grow
+    </p>
 
   </div>
+
 
   <div class="footer-links">
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="internship.html">Internship</a>
-    <a href="publications.html">Publications</a>
-    <a href="articles.html">Articles</a>
-    <a href="contact.html">Contact</a>
-    <a href="policy.html">Policy</a>
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
+    <a href="internship.html">
+      Internship
+    </a>
+
+    <a href="publications.html">
+      Publications
+    </a>
+
+    <a href="articles.html">
+      Articles
+    </a>
+
+    <a
+      href="contact.html"
+      class="active">
+
+      Contact
+
+    </a>
+
+    <a href="policy.html">
+      Policy
+    </a>
 
   </div>
+
 
   <div class="footer-contact">
 
     <p>
+
       📧 Email:
+
       <a href="mailto:lexmindsindia@gmail.com">
+
         lexmindsindia@gmail.com
+
       </a>
+
     </p>
 
+
     <p>
+
       🔗 LinkedIn:
+
       <a
         href="https://www.linkedin.com/company/legal-school-notes/"
         target="_blank"
         rel="noopener noreferrer">
+
         Law Lex Mind
+
       </a>
+
     </p>
 
   </div>
 
+
   <p class="copyright">
-    © 2026 Law Lex Mind. All Rights Reserved.
+
+    © 2026 Law Lex Mind.
+    All Rights Reserved.
+
   </p>
 
 </footer>
 
+
 </body>
+
 </html>
