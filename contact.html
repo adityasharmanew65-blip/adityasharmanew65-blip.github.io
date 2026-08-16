@@ -4,23 +4,30 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact Law Lex Mind | Student Enquiries</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Law Lex Mind | Legal Enquiries & Internships</title>
 
   <meta name="description"
-        content="Contact Law Lex Mind regarding legal internships, publications, legal research, articles and other student enquiries.">
+        content="Contact Law Lex Mind for legal internships, publications, articles, research and student enquiries. Send your message directly through our contact form.">
 
   <meta name="keywords"
-        content="contact Law Lex Mind, legal internship enquiry, law student contact, legal research, legal publications">
+        content="Law Lex Mind contact, legal internship enquiry, law student contact, legal publications, legal research">
 
-  <meta name="author" content="Law Lex Mind">
+  <meta name="author"
+        content="Law Lex Mind">
 
-  <link rel="icon" type="image/png" href="./logo.png">
+  <link rel="icon"
+        type="image/png"
+        href="./logo.png">
 
-  <link rel="stylesheet" href="./style.css?v=3">
+  <link rel="stylesheet"
+        href="./style.css?v=3">
 
 </head>
+
 
 <body>
 
@@ -40,9 +47,13 @@
 
     <div class="brand-text">
 
-      <h1>Law Lex Mind</h1>
+      <h1>
+        Law Lex Mind
+      </h1>
 
-      <p>Research • Write • Learn • Grow</p>
+      <p>
+        Research • Write • Learn • Grow
+      </p>
 
     </div>
 
@@ -55,7 +66,9 @@
      NAVIGATION
 ===================================================== -->
 
-<nav class="main-navigation" aria-label="Main Navigation">
+<nav
+  class="main-navigation"
+  aria-label="Main Navigation">
 
   <a href="index.html">
     Home
@@ -77,7 +90,9 @@
     Articles
   </a>
 
-  <a href="contact.html" class="active">
+  <a
+    href="contact.html"
+    class="active">
     Contact
   </a>
 
@@ -106,8 +121,8 @@
 
     <p class="hero-text">
       Have a question about internships, publications,
-      legal articles or research? Send us a message
-      directly through the form below.
+      legal articles, research or student opportunities?
+      Send us a message directly.
     </p>
 
   </div>
@@ -123,7 +138,69 @@
 
 
 <!-- =====================================================
-     CONTACT FORM
+     CONTACT INFORMATION
+===================================================== -->
+
+<section class="policy-section">
+
+  <div class="policy-container">
+
+    <div class="policy-card">
+
+      <p class="small-heading">
+        CONTACT INFORMATION
+      </p>
+
+      <h2>
+        We'd Like to Hear From You
+      </h2>
+
+      <p>
+        Law students, researchers and aspiring legal
+        professionals can contact Law Lex Mind regarding
+        internships, publications, articles, research
+        opportunities and general enquiries.
+      </p>
+
+      <h3>
+        Email
+      </h3>
+
+      <p>
+
+        <a href="mailto:lexmindsindia@gmail.com">
+          lexmindsindia@gmail.com
+        </a>
+
+      </p>
+
+
+      <h3>
+        LinkedIn
+      </h3>
+
+      <p>
+
+        <a
+          href="https://www.linkedin.com/company/legal-school-notes/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Law Lex Mind on LinkedIn
+
+        </a>
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     DIRECT MESSAGE FORM
 ===================================================== -->
 
 <section class="policy-section">
@@ -141,15 +218,15 @@
       </h2>
 
       <p>
-        Students can use the form below for internship
-        enquiries, publication questions, legal research
-        queries and other matters relating to Law Lex Mind.
+        Students can use the form below to contact
+        Law Lex Mind directly. Your message will be
+        sent to our official email.
       </p>
 
 
       <!-- =================================================
-           FORM
-      ================================================= -->
+           FORMSUBMIT FORM
+      ================================================== -->
 
       <form
         action="https://formsubmit.co/lexmindsindia@gmail.com"
@@ -165,6 +242,14 @@
           value="New Student Enquiry - Law Lex Mind">
 
 
+        <!-- EMAIL TEMPLATE -->
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table">
+
+
         <!-- DISABLE CAPTCHA -->
 
         <input
@@ -173,12 +258,13 @@
           value="false">
 
 
-        <!-- SUCCESS PAGE -->
+        <!-- IMPORTANT:
+             THIS FIXES YOUR REDIRECT PROBLEM -->
 
         <input
           type="hidden"
           name="_next"
-          value="https://YOUR-WEBSITE-URL/contact.html?success=true">
+          value="https://adityasharmanew65-blip.github.io/contact.html?success=true">
 
 
         <!-- NAME -->
@@ -223,9 +309,6 @@
 
           <label for="phone">
             Phone Number
-            <span class="optional">
-              (Optional)
-            </span>
           </label>
 
           <input
@@ -249,8 +332,7 @@
             type="text"
             id="course"
             name="course"
-            placeholder="Example: B.A. LL.B. 2nd Year"
-            required>
+            placeholder="Example: B.A. LL.B. 2nd Year">
 
         </div>
 
@@ -280,20 +362,20 @@
               Publication
             </option>
 
+            <option value="Article">
+              Article
+            </option>
+
             <option value="Legal Research">
               Legal Research
             </option>
 
-            <option value="Article Submission">
-              Article Submission
-            </option>
-
-            <option value="Case Commentary">
-              Case Commentary
-            </option>
-
             <option value="General Enquiry">
               General Enquiry
+            </option>
+
+            <option value="Other">
+              Other
             </option>
 
           </select>
@@ -344,62 +426,51 @@
 
 
 <!-- =====================================================
-     CONTACT INFORMATION
+     SUCCESS MESSAGE
 ===================================================== -->
 
-<section class="policy-section">
+<section
+  class="policy-section"
+  id="success-message"
+  style="display:none;">
 
   <div class="policy-container">
 
     <div class="policy-card">
 
       <p class="small-heading">
-        CONTACT INFORMATION
+        MESSAGE SENT
       </p>
 
       <h2>
-        We'd Like to Hear From You
+        Thank You for Contacting Us!
       </h2>
 
       <p>
-        For general enquiries, publication-related
-        questions, internship information or other
-        matters relating to Law Lex Mind, you can
-        contact us directly.
+        Your message has been successfully submitted
+        to Law Lex Mind. We will review your enquiry
+        and respond through the email address you provided.
       </p>
 
-
-      <h3>
-        Email
-      </h3>
-
-      <p>
-
-        <a href="mailto:lexmindsindia@gmail.com">
-
-          lexmindsindia@gmail.com
-
-        </a>
-
-      </p>
-
-
-      <h3>
-        LinkedIn
-      </h3>
-
-      <p>
+      <div class="hero-buttons">
 
         <a
-          href="https://www.linkedin.com/company/legal-school-notes/"
-          target="_blank"
-          rel="noopener noreferrer">
+          href="index.html"
+          class="btn">
 
-          Law Lex Mind on LinkedIn
+          Back to Home →
 
         </a>
 
-      </p>
+        <a
+          href="internship.html"
+          class="btn secondary-btn">
+
+          View Internships
+
+        </a>
+
+      </div>
 
     </div>
 
@@ -450,13 +521,13 @@
 
 
       <h3>
-        Legal Research
+        Article & Research Enquiries
       </h3>
 
       <p>
-        Contact us regarding legal research,
-        academic resources and research-oriented
-        opportunities.
+        Students can contact us regarding legal
+        research, academic articles and research-based
+        legal content.
       </p>
 
 
@@ -466,37 +537,26 @@
 
       <p>
         For other questions relating to Law Lex Mind,
-        feel free to contact us.
+        feel free to send us a message using the form
+        above.
       </p>
 
 
       <div class="hero-buttons">
 
         <a
-          href="mailto:lexmindsindia@gmail.com?subject=Law%20Lex%20Mind%20Enquiry"
+          href="internship.html"
           class="btn">
 
-          Send Email →
+          Explore Internships →
 
         </a>
 
-
         <a
-          href="https://www.linkedin.com/company/legal-school-notes/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="publications.html"
           class="btn secondary-btn">
 
-          🔗 LinkedIn
-
-        </a>
-
-
-        <a
-          href="policy.html"
-          class="btn secondary-btn">
-
-          View Policies
+          Publication Opportunities
 
         </a>
 
@@ -518,6 +578,9 @@
 
 <footer class="site-footer">
 
+
+  <!-- LOGO -->
+
   <div class="footer-logo">
 
     <img
@@ -535,6 +598,8 @@
 
   </div>
 
+
+  <!-- LINKS -->
 
   <div class="footer-links">
 
@@ -558,12 +623,8 @@
       Articles
     </a>
 
-    <a
-      href="contact.html"
-      class="active">
-
+    <a href="contact.html">
       Contact
-
     </a>
 
     <a href="policy.html">
@@ -572,6 +633,8 @@
 
   </div>
 
+
+  <!-- CONTACT -->
 
   <div class="footer-contact">
 
@@ -606,6 +669,8 @@
   </div>
 
 
+  <!-- COPYRIGHT -->
+
   <p class="copyright">
 
     © 2026 Law Lex Mind.
@@ -613,7 +678,40 @@
 
   </p>
 
+
 </footer>
+
+
+<!-- =====================================================
+     SUCCESS URL SCRIPT
+===================================================== -->
+
+<script>
+
+  const urlParams =
+    new URLSearchParams(window.location.search);
+
+  const success =
+    urlParams.get("success");
+
+  if (success === "true") {
+
+    const successMessage =
+      document.getElementById("success-message");
+
+    if (successMessage) {
+
+      successMessage.style.display = "block";
+
+      successMessage.scrollIntoView({
+        behavior: "smooth"
+      });
+
+    }
+
+  }
+
+</script>
 
 
 </body>
