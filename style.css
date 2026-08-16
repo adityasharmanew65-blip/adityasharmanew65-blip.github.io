@@ -1,13 +1,11 @@
 /* =========================================================
    LAW LEX MIND
-   MASTER WEBSITE STYLESHEET
-   HOME + ABOUT + INTERNSHIP + PUBLICATIONS
-   + ARTICLES + CONTACT + POLICY
+   COMPLETE MASTER STYLE.CSS
    ========================================================= */
 
 
 /* =========================================================
-   1. RESET
+   1. RESET & GLOBAL
 ========================================================= */
 
 * {
@@ -45,6 +43,10 @@ select {
   font-family: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 
 /* =========================================================
    2. GLOBAL CONTAINER
@@ -58,7 +60,44 @@ select {
 
 
 /* =========================================================
-   3. HEADER
+   3. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+.small-heading,
+.hero-tag {
+  color: #b58a2b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   4. HEADER
 ========================================================= */
 
 .site-header,
@@ -105,15 +144,15 @@ header {
 
 .brand-text p {
   margin-top: 5px;
+  margin-bottom: 0;
 
   font-size: 14px;
-
   color: #d7b45d;
 }
 
 
 /* =========================================================
-   4. NAVIGATION
+   5. NAVIGATION
 ========================================================= */
 
 .main-navigation,
@@ -122,15 +161,13 @@ header {
 
   background: #0b1b2a;
 
-  border-bottom:
-    1px solid rgba(201, 159, 60, 0.25);
+  border-bottom: 1px solid rgba(201, 159, 60, 0.25);
 }
 
 .main-navigation {
   min-height: 58px;
 
   display: flex;
-
   justify-content: center;
   align-items: center;
 
@@ -173,18 +210,16 @@ header {
 
 
 /* =========================================================
-   5. OLD NAVIGATION SUPPORT
+   6. OLD NAVIGATION SUPPORT
 ========================================================= */
 
 .nav-container {
   width: min(1120px, calc(100% - 40px));
-
   min-height: 58px;
 
   margin: 0 auto;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 }
@@ -195,15 +230,12 @@ header {
   font-family: Georgia, "Times New Roman", serif;
 
   font-weight: 700;
-
   font-size: 18px;
 }
 
 .nav-links {
   display: flex;
-
   align-items: center;
-
   gap: 5px;
 }
 
@@ -216,13 +248,14 @@ header {
   font-weight: 600;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #d7b45d;
 }
 
 
 /* =========================================================
-   6. MOBILE MENU BUTTON
+   7. MOBILE MENU
 ========================================================= */
 
 .menu-toggle {
@@ -231,14 +264,10 @@ header {
   width: 44px;
   height: 40px;
 
-  border:
-    1px solid rgba(215, 180, 93, 0.45);
-
+  border: 1px solid rgba(215, 180, 93, 0.45);
   border-radius: 6px;
 
   background: transparent;
-
-  cursor: pointer;
 
   padding: 8px;
 }
@@ -256,9 +285,10 @@ header {
 
 
 /* =========================================================
-   7. HOME PAGE LOADER
+   8. HOMEPAGE LOADER
 ========================================================= */
 
+#website-loader,
 .page-loader {
   position: fixed;
 
@@ -266,300 +296,145 @@ header {
 
   z-index: 99999;
 
-  display: flex;
+  background: #071522;
 
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #102b40 0%,
-      #071522 55%,
-      #050e17 100%
-    );
-
-  opacity: 1;
-
-  visibility: visible;
+  text-align: center;
 
   transition:
-    opacity 0.7s ease,
-    visibility 0.7s ease;
+    opacity 0.6s ease,
+    visibility 0.6s ease;
 }
 
-
-/* Hidden loader */
-
-.page-loader.hide {
-  opacity: 0;
-
-  visibility: hidden;
-
-  pointer-events: none;
-}
-
-
-/* Loader box */
-
+.loader-content,
 .page-loader-box {
-  width: min(420px, calc(100% - 40px));
+  width: min(90%, 500px);
 
   text-align: center;
 
-  animation:
-    loaderBoxAppear 0.8s ease both;
+  color: #ffffff;
+
+  animation: loaderAppear 0.8s ease forwards;
 }
 
-
-/* Loader logo */
-
+.loader-logo,
 .page-loader-logo {
-  width: 105px;
-  height: 105px;
+  width: 90px;
+  height: 90px;
 
   object-fit: contain;
 
-  margin: 0 auto 22px;
+  margin: 0 auto 18px;
 
-  animation:
-    loaderLogoAppear 1s ease both,
-    loaderLogoFloat 2.5s ease-in-out 1s infinite;
+  animation: loaderLogo 1.5s ease-in-out infinite alternate;
 }
 
-
-/* Loader name */
-
+.loader-content h1,
 .page-loader-name {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 28px;
+
   color: #ffffff;
 
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size: 34px;
-
-  font-weight: 700;
-
-  line-height: 1.2;
-
-  margin-bottom: 8px;
-
-  letter-spacing: 0.5px;
+  margin-bottom: 6px;
 }
 
-
-/* Loader tagline */
-
+.loader-content p,
 .page-loader-tagline {
   color: #d7b45d;
 
   font-size: 14px;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 30px;
 }
 
-
-/* Loader bar */
-
+.loader-line,
 .page-loader-bar {
-  width: 240px;
-  height: 4px;
+  width: 220px;
+  height: 3px;
 
-  margin: 0 auto 14px;
+  margin: 25px auto 12px;
+
+  background: rgba(255, 255, 255, 0.15);
 
   overflow: hidden;
-
-  border-radius: 20px;
-
-  background:
-    rgba(255, 255, 255, 0.15);
 }
 
+.loader-progress,
 .page-loader-bar span {
   display: block;
 
   width: 0;
-
   height: 100%;
-
-  border-radius: 20px;
 
   background: #d7b45d;
 
-  animation:
-    pageLoaderProgress 1.8s
-    ease-in-out
-    forwards;
+  animation: loading 1.8s ease forwards;
 }
 
-
-/* Loading text */
+.loader-text,
+.page-loader-loading {
+  font-size: 12px;
+  color: #cbd5e1;
+}
 
 .page-loader-loading {
-  color: #94a3b8;
-
-  font-size: 12px;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  animation:
-    loaderTextPulse 1.2s
-    ease-in-out
-    infinite;
+  animation: loadingText 1s ease-in-out infinite alternate;
 }
 
-
-/* =========================================================
-   8. LOADER ANIMATIONS
-========================================================= */
-
-@keyframes pageLoaderProgress {
-
-  0% {
+@keyframes loading {
+  from {
     width: 0;
   }
 
-  70% {
-    width: 78%;
-  }
-
-  100% {
+  to {
     width: 100%;
   }
-
 }
 
-
-@keyframes loaderBoxAppear {
-
+@keyframes loaderAppear {
   from {
     opacity: 0;
-
-    transform:
-      translateY(20px)
-      scale(0.96);
+    transform: translateY(20px);
   }
 
   to {
     opacity: 1;
-
-    transform:
-      translateY(0)
-      scale(1);
-  }
-
-}
-
-
-@keyframes loaderLogoAppear {
-
-  from {
-    opacity: 0;
-
-    transform: scale(0.7);
-  }
-
-  to {
-    opacity: 1;
-
-    transform: scale(1);
-  }
-
-}
-
-
-@keyframes loaderLogoFloat {
-
-  0%,
-  100% {
     transform: translateY(0);
   }
-
-  50% {
-    transform: translateY(-6px);
-  }
-
 }
 
+@keyframes loaderLogo {
+  from {
+    transform: scale(0.96);
+  }
 
-@keyframes loaderTextPulse {
+  to {
+    transform: scale(1.04);
+  }
+}
 
-  0%,
-  100% {
+@keyframes loadingText {
+  from {
     opacity: 0.45;
   }
 
-  50% {
+  to {
     opacity: 1;
   }
-
 }
 
 
 /* =========================================================
-   9. GLOBAL TYPOGRAPHY
-========================================================= */
-
-h1,
-h2,
-h3,
-h4 {
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  line-height: 1.25;
-}
-
-h2 {
-  font-size: 38px;
-}
-
-h3 {
-  font-size: 23px;
-}
-
-p {
-  margin-bottom: 16px;
-}
-
-
-/* =========================================================
-   10. SMALL GOLD HEADINGS
-========================================================= */
-
-.small-heading,
-.hero-tag {
-  color: #b58a2b;
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 15px;
-}
-
-
-/* =========================================================
-   11. HERO
+   9. HERO
 ========================================================= */
 
 .hero {
   min-height: 610px;
 
   display: flex;
-
   align-items: center;
 
   background:
@@ -582,8 +457,7 @@ p {
 }
 
 .hero h2 {
-  font-size:
-    clamp(42px, 6vw, 70px);
+  font-size: clamp(42px, 6vw, 70px);
 
   margin-bottom: 25px;
 }
@@ -601,9 +475,56 @@ p {
   font-size: 17px;
 }
 
+
+/* =========================================================
+   10. POLICY / INNER PAGE HERO
+========================================================= */
+
+.policy-hero {
+  min-height: 440px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071522 0%,
+      #0d2234 60%,
+      #162f43 100%
+    );
+
+  color: #ffffff;
+}
+
+.policy-hero-content {
+  width: min(1120px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  max-width: 850px;
+}
+
+.policy-hero h2 {
+  font-size: clamp(42px, 5vw, 62px);
+
+  margin-bottom: 25px;
+
+  color: #ffffff;
+}
+
+.policy-hero .hero-text {
+  color: #cbd5e1;
+  max-width: 760px;
+}
+
+
+/* =========================================================
+   11. BUTTONS
+========================================================= */
+
 .hero-buttons {
   display: flex;
-
   flex-wrap: wrap;
 
   gap: 12px;
@@ -611,16 +532,10 @@ p {
   margin-top: 30px;
 }
 
-
-/* =========================================================
-   12. BUTTONS
-========================================================= */
-
 .btn {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   min-height: 48px;
@@ -630,17 +545,12 @@ p {
   border-radius: 5px;
 
   background: #d7b45d;
-
   color: #071522;
 
-  border:
-    1px solid #d7b45d;
+  border: 1px solid #d7b45d;
 
   font-size: 14px;
-
   font-weight: 700;
-
-  cursor: pointer;
 
   transition:
     transform 0.2s ease,
@@ -655,45 +565,39 @@ p {
   background: #e3c875;
 
   box-shadow:
-    0 6px 18px rgba(7, 21, 34, 0.15);
+    0 6px 18px rgba(7, 21, 34, 0.18);
 }
 
 .secondary-btn {
   background: transparent;
-
   color: #d7b45d;
 }
 
 .secondary-btn:hover {
   background: #d7b45d;
-
   color: #071522;
 }
 
 
 /* =========================================================
-   13. LINKEDIN BUTTON
+   12. LINKEDIN BUTTON
 ========================================================= */
 
 .linkedin-btn {
   background: #0a66c2;
-
   border-color: #0a66c2;
-
   color: #ffffff;
 }
 
 .linkedin-btn:hover {
   background: #084f96;
-
   border-color: #084f96;
-
   color: #ffffff;
 }
 
 
 /* =========================================================
-   14. GENERAL SECTIONS
+   13. GENERAL SECTIONS
 ========================================================= */
 
 main {
@@ -706,28 +610,47 @@ section {
 
 section.container {
   padding-top: 80px;
-
   padding-bottom: 80px;
+}
+
+.policy-section {
+  padding: 70px 0;
+}
+
+.policy-section:nth-child(even) {
+  background: #f2efe7;
 }
 
 
 /* =========================================================
-   15. CARDS
+   14. CARDS
 ========================================================= */
 
 .card {
   background: #ffffff;
 
-  border:
-    1px solid #e6e0d1;
+  border: 1px solid #e6e0d1;
 
   border-radius: 8px;
 
   padding: 35px;
 
   box-shadow:
-    0 8px 30px
-    rgba(7, 21, 34, 0.06);
+    0 8px 30px rgba(7, 21, 34, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 35px rgba(7, 21, 34, 0.10);
+
+  border-color: #d7b45d;
 }
 
 .intro-card {
@@ -744,7 +667,58 @@ section.container {
 
 
 /* =========================================================
-   16. SECTION HEADING
+   15. POLICY CARD
+========================================================= */
+
+.policy-card {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  padding: 45px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4ddcd;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 8px 28px rgba(7, 21, 34, 0.05);
+}
+
+.policy-card h2 {
+  color: #071522;
+
+  font-size: 32px;
+
+  margin-bottom: 22px;
+}
+
+.policy-card h3 {
+  color: #13283a;
+
+  font-size: 20px;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.policy-card p {
+  color: #475569;
+
+  font-size: 15.5px;
+
+  margin-bottom: 16px;
+}
+
+.policy-card .small-heading {
+  color: #b58a2b;
+}
+
+
+/* =========================================================
+   16. SECTION HEADINGS
 ========================================================= */
 
 .section-heading {
@@ -773,7 +747,6 @@ section.container {
   height: 100%;
 
   display: flex;
-
   flex-direction: column;
 }
 
@@ -801,6 +774,8 @@ section.container {
   font-weight: 700;
 
   font-size: 14px;
+
+  transition: color 0.2s ease;
 }
 
 .card-button:hover {
@@ -809,7 +784,176 @@ section.container {
 
 
 /* =========================================================
-   18. DARK SECTION
+   18. ARTICLE CARDS
+========================================================= */
+
+.article-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+
+  margin-top: 30px;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e4ddcd;
+
+  border-radius: 8px;
+
+  padding: 30px;
+
+  box-shadow:
+    0 8px 25px rgba(7, 21, 34, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #d7b45d;
+
+  box-shadow:
+    0 14px 35px rgba(7, 21, 34, 0.10);
+}
+
+.article-icon {
+  font-size: 32px;
+
+  margin-bottom: 15px;
+}
+
+.article-card h3 {
+  color: #071522;
+
+  margin-bottom: 12px;
+}
+
+.article-card p {
+  color: #475569;
+
+  font-size: 15px;
+
+  flex-grow: 1;
+}
+
+.article-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-top: 15px;
+
+  color: #9a721e;
+
+  font-weight: 700;
+
+  font-size: 14px;
+}
+
+.article-link:hover {
+  color: #071522;
+}
+
+
+/* =========================================================
+   19. ARTICLE CATEGORY BADGE
+========================================================= */
+
+.article-category {
+  display: inline-block;
+
+  width: fit-content;
+
+  margin-bottom: 12px;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #f1ead9;
+
+  color: #8b681d;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   20. ARTICLE LIST
+========================================================= */
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-top: 30px;
+}
+
+.article-list-item {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 22px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #e4ddcd;
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.article-list-item:hover {
+  transform: translateX(4px);
+
+  border-color: #d7b45d;
+}
+
+.article-list-item h3 {
+  margin-bottom: 6px;
+}
+
+.article-list-item p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   21. DARK SECTION
 ========================================================= */
 
 .dark-section {
@@ -834,7 +978,7 @@ section.container {
 
 
 /* =========================================================
-   19. CTA
+   22. CTA
 ========================================================= */
 
 .cta-section {
@@ -855,124 +999,8 @@ section.container {
 
 
 /* =========================================================
-   20. POLICY HERO
+   23. CONTACT SECTION
 ========================================================= */
-
-.policy-hero {
-  min-height: 440px;
-
-  display: flex;
-
-  align-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #071522 0%,
-      #0d2234 60%,
-      #162f43 100%
-    );
-
-  color: #ffffff;
-}
-
-.policy-hero-content {
-  width: min(1120px, calc(100% - 40px));
-
-  margin: 0 auto;
-
-  max-width: 850px;
-}
-
-.policy-hero h2 {
-  font-size:
-    clamp(42px, 5vw, 62px);
-
-  margin-bottom: 25px;
-
-  color: #ffffff;
-}
-
-.policy-hero .hero-text {
-  color: #cbd5e1;
-
-  max-width: 760px;
-}
-
-
-/* =========================================================
-   21. POLICY SECTIONS
-========================================================= */
-
-.policy-section {
-  padding: 70px 0;
-}
-
-.policy-section:nth-child(even) {
-  background: #f2efe7;
-}
-
-.policy-card {
-  max-width: 950px;
-
-  margin: 0 auto;
-
-  padding: 45px;
-
-  background: #ffffff;
-
-  border:
-    1px solid #e4ddcd;
-
-  border-radius: 8px;
-
-  box-shadow:
-    0 8px 28px
-    rgba(7, 21, 34, 0.05);
-}
-
-.policy-card h2 {
-  color: #071522;
-
-  font-size: 32px;
-
-  margin-bottom: 22px;
-}
-
-.policy-card h3 {
-  color: #13283a;
-
-  font-size: 20px;
-
-  margin-top: 30px;
-
-  margin-bottom: 10px;
-}
-
-.policy-card p {
-  color: #475569;
-
-  font-size: 15.5px;
-
-  margin-bottom: 16px;
-}
-
-.policy-card .small-heading {
-  color: #b58a2b;
-}
-
-
-/* =========================================================
-   22. CONTACT / POLICY DARK SECTION
-========================================================= */
-
-.policy-contact {
-  padding: 90px 0;
-
-  background: #071522;
-
-  color: #ffffff;
-}
 
 .contact-content {
   max-width: 850px;
@@ -992,81 +1020,54 @@ section.container {
   color: #ffffff;
 }
 
-.contact-content .hero-buttons {
-  margin-top: 25px;
-}
-
 
 /* =========================================================
-   23. CONTACT FORM
+   24. CONTACT FORM
 ========================================================= */
 
-.contact-form-card {
-  max-width: 950px;
+.contact-form {
+  max-width: 850px;
 
-  margin: 0 auto;
+  margin: 35px auto 0;
 
-  padding: 45px;
+  padding: 35px;
 
   background: #ffffff;
 
-  border:
-    1px solid #e4ddcd;
+  border: 1px solid #e4ddcd;
 
   border-radius: 8px;
 
   box-shadow:
-    0 8px 28px
-    rgba(7, 21, 34, 0.06);
+    0 8px 28px rgba(7, 21, 34, 0.06);
 }
-
-.contact-form-card h2 {
-  color: #071522;
-
-  font-size: 32px;
-
-  margin-bottom: 10px;
-}
-
-.contact-form-intro {
-  color: #64748b;
-
-  margin-bottom: 30px;
-}
-
-
-/* Form group */
 
 .form-group {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
 
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 
-  color: #13283a;
+  color: #071522;
 
   font-size: 14px;
 
   font-weight: 700;
 }
 
-
-/* Inputs */
-
 .form-group input,
 .form-group textarea,
 .form-group select {
   width: 100%;
 
-  padding: 13px 15px;
+  padding: 13px 14px;
 
-  border:
-    1px solid #d7d1c3;
+  border: 1px solid #d8d4ca;
 
-  border-radius: 6px;
+  border-radius: 5px;
 
   background: #ffffff;
 
@@ -1081,24 +1082,11 @@ section.container {
     box-shadow 0.2s ease;
 }
 
-
-/* Textarea */
-
 .form-group textarea {
   min-height: 150px;
 
   resize: vertical;
 }
-
-
-/* Select */
-
-.form-group select {
-  cursor: pointer;
-}
-
-
-/* Focus */
 
 .form-group input:focus,
 .form-group textarea:focus,
@@ -1106,76 +1094,126 @@ section.container {
   border-color: #d7b45d;
 
   box-shadow:
-    0 0 0 3px
-    rgba(215, 180, 93, 0.15);
+    0 0 0 3px rgba(215, 180, 93, 0.15);
+}
+
+.form-note {
+  margin-top: 10px;
+
+  color: #64748b;
+
+  font-size: 13px;
 }
 
 
-/* Placeholder */
+/* =========================================================
+   25. GOOGLE FORM / PUBLICATION SUBMISSION
+========================================================= */
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: #94a3b8;
+.submission-box {
+  margin-top: 30px;
+
+  padding: 28px;
+
+  background: #f8f7f3;
+
+  border: 1px solid #e4ddcd;
+
+  border-radius: 8px;
+}
+
+.submission-box h3 {
+  margin-bottom: 12px;
+}
+
+.submission-box p {
+  color: #475569;
+}
+
+.google-form-btn {
+  background: #d7b45d;
+  color: #071522;
+}
+
+.google-form-btn:hover {
+  background: #e3c875;
 }
 
 
-/* Form two-column layout */
+/* =========================================================
+   26. APPLICATION / CONTACT DARK AREA
+========================================================= */
 
-.form-row {
+.policy-contact {
+  padding: 90px 0;
+
+  background: #071522;
+
+  color: #ffffff;
+}
+
+.policy-contact .contact-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.policy-contact .hero-buttons {
+  margin-top: 25px;
+}
+
+
+/* =========================================================
+   27. PUBLICATION INFORMATION
+========================================================= */
+
+.publication-info {
   display: grid;
 
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(3, minmax(0, 1fr));
 
-  gap: 20px;
+  gap: 18px;
+
+  margin-top: 30px;
 }
 
+.publication-info-box {
+  padding: 25px;
 
-/* Form submit */
+  background: #ffffff;
 
-.form-submit {
-  margin-top: 10px;
+  border: 1px solid #e4ddcd;
+
+  border-radius: 8px;
 }
 
-.form-submit .btn {
-  border: none;
-
-  min-width: 180px;
+.publication-info-box h3 {
+  margin-bottom: 10px;
 }
 
+.publication-info-box p {
+  color: #475569;
 
-/* Required mark */
-
-.required {
-  color: #b91c1c;
+  font-size: 14px;
 }
 
 
 /* =========================================================
-   24. CONTACT INFO LINKS
+   28. POLICY CONTACT
 ========================================================= */
 
-.policy-card a {
-  color: #9a721e;
-
-  font-weight: 600;
-}
-
-.policy-card a:hover {
-  color: #071522;
-
-  text-decoration: underline;
+.policy-contact h2 {
+  margin-bottom: 20px;
 }
 
 
 /* =========================================================
-   25. FOOTER
+   29. FOOTER
 ========================================================= */
 
 .site-footer,
 footer {
-  padding:
-    65px 20px 25px;
+  padding: 65px 20px 25px;
 
   background: #050e17;
 
@@ -1183,8 +1221,7 @@ footer {
 
   text-align: center;
 
-  border-top:
-    1px solid rgba(215, 180, 93, 0.25);
+  border-top: 1px solid rgba(215, 180, 93, 0.25);
 }
 
 .footer-logo {
@@ -1228,6 +1265,8 @@ footer {
   color: #cbd5e1;
 
   font-size: 14px;
+
+  transition: color 0.2s ease;
 }
 
 .footer-links a:hover,
@@ -1247,13 +1286,16 @@ footer {
   color: #d7b45d;
 }
 
+.footer-contact a:hover {
+  color: #ffffff;
+}
+
 .copyright {
   margin-top: 35px;
 
   padding-top: 20px;
 
-  border-top:
-    1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 
   color: #94a3b8;
 
@@ -1262,12 +1304,139 @@ footer {
 
 
 /* =========================================================
-   26. TABLET
+   30. LINKS INSIDE CONTENT
 ========================================================= */
 
-@media (max-width: 900px) {
+.policy-card a:not(.btn),
+.card a:not(.btn),
+.contact-content a:not(.btn) {
+  color: #9a721e;
+
+  font-weight: 600;
+}
+
+.policy-card a:not(.btn):hover,
+.card a:not(.btn):hover,
+.contact-content a:not(.btn):hover {
+  color: #071522;
+
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   31. HORIZONTAL DIVIDER
+========================================================= */
+
+.section-divider {
+  width: 70px;
+  height: 3px;
+
+  margin: 18px 0 25px;
+
+  background: #d7b45d;
+}
+
+
+/* =========================================================
+   32. BACK TO TOP
+========================================================= */
+
+.back-to-top {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d7b45d;
+
+  color: #071522;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 18px rgba(0, 0, 0, 0.18);
+
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: #e3c875;
+}
+
+
+/* =========================================================
+   33. ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #d7b45d;
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   34. PREVENT HUGE LOGOS
+========================================================= */
+
+header img,
+.site-header img,
+.logo-area img,
+.footer-logo img,
+.loader-content img,
+.page-loader img {
+  max-width: 100%;
+}
+
+.site-header .site-logo {
+  width: 72px !important;
+  height: 72px !important;
+}
+
+.footer-logo .footer-logo-img {
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.loader-content .loader-logo,
+.page-loader .page-loader-logo {
+  width: 90px !important;
+  height: 90px !important;
+}
+
+
+/* =========================================================
+   35. TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
 
   .feature-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .article-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .publication-info {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
@@ -1277,19 +1446,18 @@ footer {
   }
 
   .hero h2 {
-    font-size: 48px;
+    font-size: 52px;
   }
-
 }
 
 
 /* =========================================================
-   27. MOBILE
+   36. MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 700px) {
 
-  /* Header */
+  /* HEADER */
 
   .site-header {
     padding: 13px 0;
@@ -1315,7 +1483,7 @@ footer {
   }
 
 
-  /* Navigation */
+  /* NAVIGATION */
 
   .main-navigation {
     display: grid;
@@ -1338,14 +1506,12 @@ footer {
 
   .main-navigation a.active::after {
     left: 20%;
-
     right: 20%;
-
     bottom: 5px;
   }
 
 
-  /* Old navigation */
+  /* OLD NAVIGATION */
 
   .nav-container {
     width: calc(100% - 30px);
@@ -1361,21 +1527,17 @@ footer {
     position: absolute;
 
     top: 100%;
-
     left: 0;
-
     right: 0;
 
     z-index: 1000;
 
     flex-direction: column;
-
     align-items: stretch;
 
     background: #071522;
 
-    border-top:
-      1px solid rgba(215, 180, 93, 0.25);
+    border-top: 1px solid rgba(215, 180, 93, 0.25);
   }
 
   .nav-links.active {
@@ -1392,7 +1554,7 @@ footer {
   }
 
 
-  /* Hero */
+  /* HERO */
 
   .hero {
     min-height: 560px;
@@ -1413,7 +1575,7 @@ footer {
   }
 
 
-  /* Policy hero */
+  /* POLICY HERO */
 
   .policy-hero {
     min-height: 430px;
@@ -1430,7 +1592,7 @@ footer {
   }
 
 
-  /* Containers */
+  /* CONTAINERS */
 
   .container,
   .policy-container {
@@ -1438,16 +1600,14 @@ footer {
   }
 
 
-  /* Cards */
+  /* CARDS */
 
   .card,
-  .policy-card,
-  .contact-form-card {
+  .policy-card {
     padding: 25px;
   }
 
-  .policy-card h2,
-  .contact-form-card h2 {
+  .policy-card h2 {
     font-size: 28px;
   }
 
@@ -1456,35 +1616,31 @@ footer {
   }
 
 
-  /* Feature grid */
+  /* FEATURE GRID */
 
   .feature-grid {
     grid-template-columns: 1fr;
   }
 
 
-  /* Contact form */
+  /* ARTICLE GRID */
 
-  .form-row {
+  .article-grid {
     grid-template-columns: 1fr;
-
-    gap: 0;
-  }
-
-  .form-group {
-    margin-bottom: 18px;
-  }
-
-  .form-submit .btn {
-    width: 100%;
   }
 
 
-  /* Sections */
+  /* PUBLICATION INFO */
+
+  .publication-info {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* SECTIONS */
 
   section.container {
     padding-top: 55px;
-
     padding-bottom: 55px;
   }
 
@@ -1502,7 +1658,7 @@ footer {
   }
 
 
-  /* Buttons */
+  /* BUTTONS */
 
   .hero-buttons {
     flex-direction: column;
@@ -1515,39 +1671,34 @@ footer {
   }
 
 
-  /* Footer */
+  /* CONTACT FORM */
+
+  .contact-form {
+    padding: 25px;
+  }
+
+
+  /* ARTICLE LIST */
+
+  .article-list-item {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  /* FOOTER */
 
   .footer-links {
     flex-direction: column;
 
     gap: 10px;
   }
-
-
-  /* Loader */
-
-  .page-loader-logo {
-    width: 85px;
-    height: 85px;
-  }
-
-  .page-loader-name {
-    font-size: 28px;
-  }
-
-  .page-loader-tagline {
-    font-size: 12px;
-  }
-
-  .page-loader-bar {
-    width: 200px;
-  }
-
 }
 
 
 /* =========================================================
-   28. SMALL MOBILE
+   37. SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 430px) {
@@ -1586,13 +1737,11 @@ footer {
     letter-spacing: 1.5px;
   }
 
-  .policy-card,
-  .contact-form-card {
+  .policy-card {
     padding: 20px;
   }
 
-  .policy-card h2,
-  .contact-form-card h2 {
+  .policy-card h2 {
     font-size: 25px;
   }
 
@@ -1600,67 +1749,58 @@ footer {
     font-size: 15px;
   }
 
+  .contact-form {
+    padding: 20px;
+  }
 
-  /* Smaller loader */
+  .article-card {
+    padding: 22px;
+  }
 
+  .submission-box {
+    padding: 20px;
+  }
+
+  .loader-logo,
   .page-loader-logo {
-    width: 75px;
-    height: 75px;
+    width: 75px !important;
+    height: 75px !important;
   }
 
+  .loader-content h1,
   .page-loader-name {
-    font-size: 25px;
+    font-size: 24px;
   }
 
-  .page-loader-tagline {
-    font-size: 11px;
-  }
-
+  .loader-line,
   .page-loader-bar {
-    width: 180px;
+    width: 190px;
+  }
+}
+
+
+/* =========================================================
+   38. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
   }
 
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
 }
 
 
 /* =========================================================
-   29. ACCESSIBILITY
-========================================================= */
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline:
-    2px solid #d7b45d;
-
-  outline-offset: 3px;
-}
-
-
-/* =========================================================
-   30. LOGO SIZE PROTECTION
-========================================================= */
-
-header img,
-.site-header img,
-.logo-area img,
-.footer-logo img {
-  max-width: 100%;
-}
-
-.site-header .site-logo {
-  width: 72px !important;
-  height: 72px !important;
-}
-
-.footer-logo .footer-logo-img {
-  width: 70px !important;
-  height: 70px !important;
-}
-
-
-/* =========================================================
-   END OF STYLE.CSS
+   END OF LAW LEX MIND STYLE.CSS
 ========================================================= */
