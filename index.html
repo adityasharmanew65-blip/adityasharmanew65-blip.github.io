@@ -1,94 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
 
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-  <title>Law Lex Mind | Legal Research, Publications & Internships</title>
-
   <meta name="description"
-        content="Law Lex Mind is a student-focused platform for legal research, publications, articles and internship opportunities.">
+        content="LexMinds India - Legal education, research, articles, publications and internship opportunities for law students.">
 
   <meta name="keywords"
-        content="Law Lex Mind, legal research, law students, legal articles, legal publications, law internships">
+        content="LexMinds India, legal education, law students, legal research, law articles, internships, legal publications">
 
   <meta name="author"
-        content="Law Lex Mind">
+        content="LexMinds India">
 
-  <link rel="icon"
-        type="image/png"
-        href="./logo.png">
+  <title>LexMinds India | Legal Education & Research</title>
 
-  <link rel="stylesheet"
-        href="./style.css?v=3">
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-<!-- =========================================================
-     HOME PAGE LOADER
-========================================================= -->
-
-<div class="page-loader" id="pageLoader">
-
-  <div class="page-loader-box">
-
-    <img
-      src="./logo.png"
-      alt="Law Lex Mind"
-      class="page-loader-logo"
-    >
-
-    <div class="page-loader-name">
-      Law Lex Mind
-    </div>
-
-    <div class="page-loader-tagline">
-      Research • Write • Learn • Grow
-    </div>
-
-    <div class="page-loader-bar">
-      <span></span>
-    </div>
-
-    <div class="page-loader-loading">
-      Loading...
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+===================================================== -->
 
 <header class="site-header">
 
   <div class="logo-area">
 
-    <img
-      src="./logo.png"
-      alt="Law Lex Mind Logo"
-      class="site-logo"
-    >
+    <a href="index.html">
+      <img
+        src="logo.png"
+        alt="LexMinds India Logo"
+        class="site-logo">
+    </a>
 
     <div class="brand-text">
 
-      <h1>
-        Law Lex Mind
-      </h1>
+      <h1>LexMinds India</h1>
 
       <p>
-        Research • Write • Learn • Grow
+        Legal Research • Education • Publications
       </p>
 
     </div>
@@ -98,46 +52,61 @@
 </header>
 
 
-<!-- =========================================================
+<!-- =====================================================
      NAVIGATION
-========================================================= -->
+===================================================== -->
 
 <nav class="main-navigation">
 
   <div class="nav-inner">
 
     <div class="nav-brand">
-      <a href="/">
-        Law Lex Mind
+
+      <a href="index.html">
+        LexMinds India
       </a>
+
     </div>
 
-    <!-- Three Dot Button -->
-    <button class="dots-menu-btn"
-            type="button"
-            aria-label="Open navigation menu"
-            onclick="toggleDotsMenu()">
+
+    <!-- THREE DOT BUTTON -->
+
+    <button
+      class="dots-menu-btn"
+      id="dotsMenuBtn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
-    <!-- Dropdown Navigation -->
-    <div class="dots-menu" id="dotsMenu">
 
-      <a href="/">Home</a>
+    <!-- DROPDOWN -->
 
-      <a href="/about">About</a>
+    <div
+      class="dots-menu"
+      id="dotsMenu">
 
-      <a href="/publications">Publications</a>
+      <a href="index.html"
+         class="active">
+        Home
+      </a>
 
-      <a href="/articles">Articles</a>
+      <a href="articles.html">
+        Articles
+      </a>
 
-      <a href="/internship">Internship</a>
+      <a href="publications.html">
+        Publications
+      </a>
 
-      <a href="/contact">Contact</a>
-
-      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="internship.html">
+        Internship
+      </a>
 
     </div>
 
@@ -146,62 +115,46 @@
 </nav>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+===================================================== -->
+
+<main>
 
 <section class="hero">
 
   <div class="hero-content">
 
-    <p class="hero-tag">
-      LEGAL RESEARCH • PUBLICATION • OPPORTUNITIES
-    </p>
+    <span class="hero-tag">
+      LEXMINDS INDIA
+    </span>
 
     <h2>
-
-      Research.
-      <span>Write.</span>
-      Learn.<br>
-      Grow.
-
+      Empowering the
+      <span>Next Generation</span>
+      of Legal Minds
     </h2>
 
     <p class="hero-text">
-
-      Law Lex Mind is a student-focused platform created
-      to support aspiring legal professionals through
-      research, academic writing, publication opportunities
-      and internships.
-
-    </p>
-
-    <p class="hero-text">
-
-      Explore opportunities, publish your legal research
-      and develop the skills that help you grow beyond
-      the classroom.
-
+      LexMinds India is a student-focused legal platform
+      dedicated to legal education, research, writing,
+      publications and opportunities for aspiring legal
+      professionals.
     </p>
 
 
     <div class="hero-buttons">
 
       <a
-        href="internship.html"
+        href="articles.html"
         class="btn">
-
-        Apply for Internship
-
+        Explore Articles
       </a>
-
 
       <a
         href="publications.html"
         class="btn secondary-btn">
-
-        Submit Your Research
-
+        View Publications
       </a>
 
     </div>
@@ -211,44 +164,33 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      INTRODUCTION
-========================================================= -->
+===================================================== -->
 
 <section class="container">
 
   <div class="card intro-card">
 
-    <p class="small-heading">
-
-      WELCOME TO LAW LEX MIND
-
-    </p>
-
+    <span class="small-heading">
+      ABOUT LEXMINDS
+    </span>
 
     <h2>
-
-      A Platform for Legal Research & Opportunities
-
+      A Platform for Legal Learning
     </h2>
 
-
     <p>
-
-      Law Lex Mind is dedicated to creating a useful
-      digital space for law students and aspiring legal
-      professionals.
-
+      LexMinds India aims to make legal knowledge
+      accessible, structured and useful for law students,
+      researchers and aspiring legal professionals.
     </p>
 
-
     <p>
-
-      The platform provides opportunities for students
-      to develop their legal research, writing and
-      analytical skills while exploring internships
-      and publication opportunities.
-
+      The platform provides educational resources,
+      legal articles, case commentaries, research
+      materials, publication opportunities and
+      internship-related information.
     </p>
 
   </div>
@@ -256,25 +198,20 @@
 </section>
 
 
-<!-- =========================================================
-     WHAT WE OFFER
-========================================================= -->
+<!-- =====================================================
+     FEATURES
+===================================================== -->
 
 <section class="container">
 
   <div class="section-heading">
 
-    <p class="small-heading">
-
-      EXPLORE LAW LEX MIND
-
-    </p>
-
+    <span class="small-heading">
+      WHAT WE OFFER
+    </span>
 
     <h2>
-
-      What We Offer
-
+      Explore LexMinds
     </h2>
 
   </div>
@@ -283,7 +220,74 @@
   <div class="feature-grid">
 
 
-    <!-- INTERNSHIP -->
+    <div class="card feature-card">
+
+      <div class="feature-icon">
+        ⚖
+      </div>
+
+      <h3>
+        Legal Education
+      </h3>
+
+      <p>
+        Structured legal learning resources designed
+        to help students understand important legal
+        concepts and subjects.
+      </p>
+
+    </div>
+
+
+    <div class="card feature-card">
+
+      <div class="feature-icon">
+        ✍
+      </div>
+
+      <h3>
+        Legal Articles
+      </h3>
+
+      <p>
+        Read informative articles, legal explanations,
+        case discussions and student-oriented legal
+        content.
+      </p>
+
+      <a
+        href="articles.html"
+        class="article-link">
+        Read Articles →
+      </a>
+
+    </div>
+
+
+    <div class="card feature-card">
+
+      <div class="feature-icon">
+        📚
+      </div>
+
+      <h3>
+        Publications
+      </h3>
+
+      <p>
+        Explore opportunities to contribute legal
+        articles, blogs, case commentaries and
+        research-based work.
+      </p>
+
+      <a
+        href="publications.html"
+        class="article-link">
+        View Publications →
+      </a>
+
+    </div>
+
 
     <div class="card feature-card">
 
@@ -291,127 +295,20 @@
         🎓
       </div>
 
-
       <h3>
-        Internship Opportunities
+        Internships
       </h3>
 
-
       <p>
-
-        Discover internship opportunities designed
-        to help students gain practical exposure,
-        research experience and professional skills.
-
+        Discover internship-related opportunities
+        and information for students interested in
+        legal research and drafting.
       </p>
-
 
       <a
         href="internship.html"
-        class="card-button">
-
-        Explore Internships →
-
-      </a>
-
-    </div>
-
-
-    <!-- PUBLICATIONS -->
-
-    <div class="card feature-card">
-
-      <div class="feature-icon">
-        📝
-      </div>
-
-
-      <h3>
-        Research Publications
-      </h3>
-
-
-      <p>
-
-        Submit your legal research, articles and
-        academic work for publication opportunities.
-
-      </p>
-
-
-      <a
-        href="publications.html"
-        class="card-button">
-
-        Submit Research →
-
-      </a>
-
-    </div>
-
-
-    <!-- ARTICLES -->
-
-    <div class="card feature-card">
-
-      <div class="feature-icon">
-        ⚖️
-      </div>
-
-
-      <h3>
-        Legal Articles
-      </h3>
-
-
-      <p>
-
-        Explore legal articles covering important
-        concepts, principles and areas of law.
-
-      </p>
-
-
-      <a
-        href="articles.html"
-        class="card-button">
-
-        Explore Articles →
-
-      </a>
-
-    </div>
-
-
-    <!-- RESEARCH -->
-
-    <div class="card feature-card">
-
-      <div class="feature-icon">
-        🔎
-      </div>
-
-
-      <h3>
-        Legal Research
-      </h3>
-
-
-      <p>
-
-        Develop your ability to research, analyse
-        and understand legal issues through
-        structured resources.
-
-      </p>
-
-
-      <a
-        href="articles.html"
-        class="card-button">
-
-        Start Exploring →
-
+        class="article-link">
+        Explore Internship →
       </a>
 
     </div>
@@ -421,9 +318,9 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      PURPOSE
-========================================================= -->
+===================================================== -->
 
 <section class="dark-section">
 
@@ -431,36 +328,19 @@
 
     <div class="purpose-content">
 
-      <p class="small-heading">
-
+      <span class="small-heading">
         OUR PURPOSE
-
-      </p>
-
+      </span>
 
       <h2>
-
-        Research. Write. Learn. Grow.
-
+        Learn. Research. Write. Grow.
       </h2>
 
-
       <p>
-
-        Law Lex Mind aims to encourage students to
-        move beyond classroom learning by engaging
-        with legal research, academic writing,
-        publication and professional opportunities.
-
-      </p>
-
-
-      <p>
-
-        We believe that research and writing can
-        help students develop stronger analytical
-        and communication skills.
-
+        LexMinds India is built around the idea that
+        legal education should go beyond textbooks.
+        Students should have opportunities to research,
+        write, publish and develop practical legal skills.
       </p>
 
     </div>
@@ -470,49 +350,42 @@
 </section>
 
 
-<!-- =========================================================
+<!-- =====================================================
      CTA
-========================================================= -->
+===================================================== -->
 
 <section class="cta-section">
 
   <div class="container">
 
+    <span class="small-heading">
+      START EXPLORING
+    </span>
+
     <h2>
-
-      Ready to Begin?
-
+      Build Your Legal Knowledge
     </h2>
 
-
     <p>
-
-      Explore internship opportunities or submit
-      your legal research for publication.
-
+      Explore legal articles, publications and
+      opportunities available through LexMinds India.
     </p>
 
+    <div class="hero-buttons"
+         style="justify-content:center;">
 
-    <div class="hero-buttons">
-
+      <a
+        href="articles.html"
+        class="btn">
+        Explore Articles
+      </a>
 
       <a
         href="internship.html"
-        class="btn">
-
-        Internship Opportunities
-
-      </a>
-
-
-      <a
-        href="publications.html"
         class="btn secondary-btn">
-
-        Submit Your Research
+        Internship
 
       </a>
-
 
     </div>
 
@@ -520,34 +393,28 @@
 
 </section>
 
+</main>
 
-<!-- =========================================================
+
+<!-- =====================================================
      FOOTER
-========================================================= -->
+===================================================== -->
 
 <footer class="site-footer">
-
 
   <div class="footer-logo">
 
     <img
-      src="./logo.png"
-      alt="Law Lex Mind Logo"
-      class="footer-logo-img"
-    >
-
+      src="logo.png"
+      alt="LexMinds India"
+      class="footer-logo-img">
 
     <h3>
-
-      Law Lex Mind
-
+      LexMinds India
     </h3>
 
-
     <p>
-
-      Research • Write • Learn • Grow
-
+      Legal Research • Education • Publications
     </p>
 
   </div>
@@ -559,125 +426,119 @@
       Home
     </a>
 
-    <a href="about.html">
-      About
-    </a>
-
-    <a href="internship.html">
-      Internship
+    <a href="articles.html">
+      Articles
     </a>
 
     <a href="publications.html">
       Publications
     </a>
 
-    <a href="articles.html">
-      Articles
-    </a>
-
-    <a href="contact.html">
-      Contact
-    </a>
-
-    <a href="policy.html">
-      Policy
+    <a href="internship.html">
+      Internship
     </a>
 
   </div>
 
 
-  <div class="footer-contact">
+  <div class="copyright">
 
-
-    <p>
-
-      📧 Email:
-
-      <a
-        href="mailto:lexmindsindia@gmail.com">
-
-        lexmindsindia@gmail.com
-
-      </a>
-
-    </p>
-
-
-    <p>
-
-      🔗 LinkedIn:
-
-      <a
-        href="https://www.linkedin.com/company/legal-school-notes/"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        Law Lex Mind
-
-      </a>
-
-    </p>
-
+    © 2026 LexMinds India.
+    All Rights Reserved.
 
   </div>
-
-
-  <p class="copyright">
-
-    © 2026 Law Lex Mind. All Rights Reserved.
-
-  </p>
-
 
 </footer>
 
 
-
-<!-- =========================================================
-     PAGE LOADER JAVASCRIPT
-========================================================= -->
+<!-- =====================================================
+     NAVIGATION SCRIPT
+===================================================== -->
 
 <script>
 
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const loader =
-      document.getElementById("pageLoader");
+  const button =
+    document.getElementById("dotsMenuBtn");
 
-    if (!loader) {
-      return;
-    }
+  const menu =
+    document.getElementById("dotsMenu");
 
 
-    window.addEventListener(
-      "load",
-      function () {
+  if (!button || !menu) {
+    return;
+  }
 
-        /*
-         * Wait for the animation to finish,
-         * then smoothly hide the loader.
-         */
 
-        setTimeout(
-          function () {
+  button.addEventListener("click", function (event) {
 
-            loader.classList.add("hide");
+    event.stopPropagation();
 
-          },
-          1800
+    const isOpen =
+      menu.classList.toggle("active");
+
+    button.classList.toggle(
+      "active",
+      isOpen
+    );
+
+    button.setAttribute(
+      "aria-expanded",
+      isOpen ? "true" : "false"
+    );
+
+  });
+
+
+  document.addEventListener(
+    "click",
+    function (event) {
+
+      if (
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+      ) {
+
+        menu.classList.remove("active");
+
+        button.classList.remove("active");
+
+        button.setAttribute(
+          "aria-expanded",
+          "false"
         );
 
       }
-    );
 
-  }
-);
+    }
+  );
+
+
+  menu.querySelectorAll("a")
+    .forEach(function (link) {
+
+      link.addEventListener(
+        "click",
+        function () {
+
+          menu.classList.remove("active");
+
+          button.classList.remove("active");
+
+          button.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    });
+
+});
 
 </script>
 
-
 </body>
-
 </html>
