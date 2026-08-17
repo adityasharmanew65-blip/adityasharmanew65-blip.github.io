@@ -33,6 +33,73 @@
 
 
 <!-- =====================================================
+     MOBILE THREE-DOT MENU SCRIPT
+===================================================== -->
+
+<script>
+
+function toggleDotsMenu() {
+
+  const menu = document.getElementById("dotsMenu");
+
+  if (menu) {
+    menu.classList.toggle("show");
+  }
+
+}
+
+
+/* Close menu when clicking outside */
+
+document.addEventListener("click", function(event) {
+
+  const menu =
+    document.getElementById("dotsMenu");
+
+  const button =
+    document.querySelector(".dots-menu-btn");
+
+  if (!menu || !button) return;
+
+  if (
+    !menu.contains(event.target) &&
+    !button.contains(event.target)
+  ) {
+
+    menu.classList.remove("show");
+
+  }
+
+});
+
+
+/* Close menu after selecting a link */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  document
+    .querySelectorAll(".dots-menu a")
+    .forEach(function(link) {
+
+      link.addEventListener("click", function() {
+
+        const menu =
+          document.getElementById("dotsMenu");
+
+        if (menu) {
+          menu.classList.remove("show");
+        }
+
+      });
+
+    });
+
+});
+
+</script>
+
+
+<!-- =====================================================
      HEADER
 ===================================================== -->
 
@@ -71,43 +138,70 @@
   <div class="nav-inner">
 
     <div class="nav-brand">
+
       <a href="/">
         Law Lex Mind
       </a>
+
     </div>
 
-    <!-- Three Dot Button -->
-    <button class="dots-menu-btn"
-            type="button"
-            aria-label="Open navigation menu"
-            onclick="toggleDotsMenu()">
+
+    <!-- THREE DOT BUTTON -->
+
+    <button
+      class="dots-menu-btn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      onclick="toggleDotsMenu()">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
-    <!-- Dropdown Navigation -->
-    <div class="dots-menu" id="dotsMenu">
 
-      <a href="/">Home</a>
+    <!-- DROPDOWN NAVIGATION -->
 
-      <a href="/about">About</a>
+    <div
+      class="dots-menu"
+      id="dotsMenu">
 
-      <a href="/publications">Publications</a>
+      <a href="/">
+        Home
+      </a>
 
-      <a href="/articles">Articles</a>
+      <a href="/about">
+        About
+      </a>
 
-      <a href="/internship">Internship</a>
+      <a href="/publications">
+        Publications
+      </a>
 
-      <a href="/contact">Contact</a>
+      <a href="/articles">
+        Articles
+      </a>
 
-      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/internship">
+        Internship
+      </a>
+
+      <a href="/contact">
+        Contact
+      </a>
+
+      <a href="/privacy-policy">
+        Privacy Policy
+      </a>
 
     </div>
 
   </div>
 
 </nav>
+
 
 <!-- =====================================================
      HERO
@@ -126,9 +220,11 @@
     </h2>
 
     <p class="hero-text">
+
       Have a question about internships, publications,
       legal articles, research or student opportunities?
       Send us a message directly.
+
     </p>
 
   </div>
@@ -162,11 +258,14 @@
       </h2>
 
       <p>
+
         Law students, researchers and aspiring legal
         professionals can contact Law Lex Mind regarding
         internships, publications, articles, research
         opportunities and general enquiries.
+
       </p>
+
 
       <h3>
         Email
@@ -175,7 +274,9 @@
       <p>
 
         <a href="mailto:lexmindsindia@gmail.com">
+
           lexmindsindia@gmail.com
+
         </a>
 
       </p>
@@ -224,9 +325,11 @@
       </h2>
 
       <p>
+
         Students can use the form below to contact
         Law Lex Mind directly. Your message will be
         sent to our official email.
+
       </p>
 
 
@@ -264,8 +367,7 @@
           value="false">
 
 
-        <!-- IMPORTANT:
-             THIS FIXES YOUR REDIRECT PROBLEM -->
+        <!-- REDIRECT AFTER SUCCESS -->
 
         <input
           type="hidden"
@@ -453,10 +555,13 @@
       </h2>
 
       <p>
+
         Your message has been successfully submitted
         to Law Lex Mind. We will review your enquiry
         and respond through the email address you provided.
+
       </p>
+
 
       <div class="hero-buttons">
 
@@ -509,9 +614,11 @@
       </h3>
 
       <p>
+
         Contact us regarding internship opportunities,
         application information, eligibility and
         internship-related questions.
+
       </p>
 
 
@@ -520,9 +627,11 @@
       </h3>
 
       <p>
+
         Contact us regarding research papers, legal
         articles, case commentaries and publication
         submissions.
+
       </p>
 
 
@@ -531,9 +640,11 @@
       </h3>
 
       <p>
+
         Students can contact us regarding legal
         research, academic articles and research-based
         legal content.
+
       </p>
 
 
@@ -542,9 +653,11 @@
       </h3>
 
       <p>
+
         For other questions relating to Law Lex Mind,
         feel free to send us a message using the form
         above.
+
       </p>
 
 
@@ -694,6 +807,8 @@
 
 <script>
 
+document.addEventListener("DOMContentLoaded", function() {
+
   const urlParams =
     new URLSearchParams(window.location.search);
 
@@ -710,12 +825,15 @@
       successMessage.style.display = "block";
 
       successMessage.scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "center"
       });
 
     }
 
   }
+
+});
 
 </script>
 
