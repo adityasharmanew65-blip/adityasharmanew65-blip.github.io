@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,14 +17,16 @@
 
   <link rel="icon" type="image/png" href="./logo.png">
 
-  <link rel="stylesheet" href="./style.css?v=2">
+  <link rel="stylesheet" href="./style.css?v=5">
 
 </head>
 
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="site-header">
 
@@ -49,44 +50,57 @@
 </header>
 
 
-<!-- NAVIGATION -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <nav class="main-navigation">
 
   <div class="nav-inner">
 
     <div class="nav-brand">
-      <a href="/">
+
+      <a href="./index.html">
         Law Lex Mind
       </a>
+
     </div>
 
-    <!-- Three Dot Button -->
-    <button class="dots-menu-btn"
-            type="button"
-            aria-label="Open navigation menu"
-            onclick="toggleDotsMenu()">
+
+    <!-- THREE DOT BUTTON -->
+
+    <button
+      class="dots-menu-btn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="dotsMenu"
+      onclick="toggleDotsMenu()">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
-    <!-- Dropdown Navigation -->
+
+    <!-- DROPDOWN MENU -->
+
     <div class="dots-menu" id="dotsMenu">
 
-      <a href="/">Home</a>
+      <a href="./index.html">Home</a>
 
-      <a href="/about">About</a>
+      <a href="./about.html" class="active">About</a>
 
-      <a href="/publications">Publications</a>
+      <a href="./publications.html">Publications</a>
 
-      <a href="/articles">Articles</a>
+      <a href="./articles.html">Articles</a>
 
-      <a href="/internship">Internship</a>
+      <a href="./internship.html">Internship</a>
 
-      <a href="/contact">Contact</a>
+      <a href="./contact.html">Contact</a>
 
-      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="./policy.html">Policy</a>
 
     </div>
 
@@ -95,7 +109,9 @@
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="policy-hero">
 
@@ -120,173 +136,211 @@
 </section>
 
 
-<!-- CONTENT -->
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
 
 <main>
 
-<section class="policy-section">
 
-  <div class="policy-container">
+  <!-- WHO WE ARE -->
 
-    <div class="policy-card">
+  <section class="policy-section">
 
-      <p class="small-heading">
-        WHO WE ARE
-      </p>
+    <div class="policy-container">
 
-      <h2>
-        About Law Lex Mind
-      </h2>
+      <div class="policy-card">
 
-      <p>
-        Law Lex Mind is a platform designed for law students
-        and aspiring legal professionals who want to develop
-        their academic and professional skills.
-      </p>
+        <p class="small-heading">
+          WHO WE ARE
+        </p>
 
-      <p>
-        The platform brings together legal articles,
-        research resources, publication opportunities and
-        internship information in one accessible digital
-        space.
-      </p>
+        <h2>
+          About Law Lex Mind
+        </h2>
 
-    </div>
+        <p>
+          Law Lex Mind is a platform designed for law students
+          and aspiring legal professionals who want to develop
+          their academic and professional skills.
+        </p>
 
-  </div>
-
-</section>
-
-
-<section class="policy-section">
-
-  <div class="policy-container">
-
-    <div class="policy-card">
-
-      <p class="small-heading">
-        OUR MISSION
-      </p>
-
-      <h2>
-        Supporting the Next Generation of Legal Minds
-      </h2>
-
-      <p>
-        Our aim is to encourage students to go beyond
-        classroom learning and actively engage with
-        research, legal writing, analysis and practical
-        opportunities.
-      </p>
-
-      <p>
-        We believe that consistent research and writing
-        can help students strengthen their understanding
-        of law and develop valuable academic skills.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="policy-section">
-
-  <div class="policy-container">
-
-    <div class="policy-card">
-
-      <p class="small-heading">
-        WHAT WE DO
-      </p>
-
-      <h2>
-        Our Areas of Focus
-      </h2>
-
-      <h3>Legal Research</h3>
-
-      <p>
-        We encourage students to explore legal concepts,
-        legislation, judicial decisions and contemporary
-        legal developments.
-      </p>
-
-      <h3>Legal Writing</h3>
-
-      <p>
-        Students can develop structured writing and
-        analytical skills through articles, research
-        papers and academic content.
-      </p>
-
-      <h3>Publications</h3>
-
-      <p>
-        Law Lex Mind provides opportunities for students
-        to submit suitable academic and legal writing.
-      </p>
-
-      <h3>Internships</h3>
-
-      <p>
-        We share internship-related opportunities that
-        can help students explore practical and
-        professional experiences.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="policy-contact">
-
-  <div class="policy-container">
-
-    <div class="contact-content">
-
-      <p class="small-heading">
-        CONNECT WITH US
-      </p>
-
-      <h2>
-        Start Your Legal Journey
-      </h2>
-
-      <p>
-        Explore our articles, publication opportunities
-        and internships.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="articles.html" class="btn">
-          Explore Articles →
-        </a>
-
-        <a href="contact.html" class="btn secondary-btn">
-          Contact Us →
-        </a>
+        <p>
+          The platform brings together legal articles,
+          research resources, publication opportunities and
+          internship information in one accessible digital
+          space.
+        </p>
 
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+
+  <!-- OUR MISSION -->
+
+  <section class="policy-section">
+
+    <div class="policy-container">
+
+      <div class="policy-card">
+
+        <p class="small-heading">
+          OUR MISSION
+        </p>
+
+        <h2>
+          Supporting the Next Generation of Legal Minds
+        </h2>
+
+        <p>
+          Our aim is to encourage students to go beyond
+          classroom learning and actively engage with
+          research, legal writing, analysis and practical
+          opportunities.
+        </p>
+
+        <p>
+          We believe that consistent research and writing
+          can help students strengthen their understanding
+          of law and develop valuable academic skills.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT WE DO -->
+
+  <section class="policy-section">
+
+    <div class="policy-container">
+
+      <div class="policy-card">
+
+        <p class="small-heading">
+          WHAT WE DO
+        </p>
+
+        <h2>
+          Our Areas of Focus
+        </h2>
+
+
+        <h3>
+          Legal Research
+        </h3>
+
+        <p>
+          We encourage students to explore legal concepts,
+          legislation, judicial decisions and contemporary
+          legal developments.
+        </p>
+
+
+        <h3>
+          Legal Writing
+        </h3>
+
+        <p>
+          Students can develop structured writing and
+          analytical skills through articles, research
+          papers and academic content.
+        </p>
+
+
+        <h3>
+          Publications
+        </h3>
+
+        <p>
+          Law Lex Mind provides opportunities for students
+          to submit suitable academic and legal writing.
+        </p>
+
+
+        <h3>
+          Internships
+        </h3>
+
+        <p>
+          We share internship-related opportunities that
+          can help students explore practical and
+          professional experiences.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTACT / CTA
+  ====================================================== -->
+
+  <section class="policy-contact">
+
+    <div class="policy-container">
+
+      <div class="contact-content">
+
+        <p class="small-heading">
+          CONNECT WITH US
+        </p>
+
+        <h2>
+          Start Your Legal Journey
+        </h2>
+
+        <p>
+          Explore our articles, publication opportunities
+          and internships.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="./articles.html"
+            class="btn">
+
+            Explore Articles →
+
+          </a>
+
+
+          <a
+            href="./contact.html"
+            class="btn secondary-btn">
+
+            Contact Us →
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer class="site-footer">
+
 
   <div class="footer-logo">
 
@@ -295,50 +349,207 @@
       alt="Law Lex Mind Logo"
       class="footer-logo-img">
 
-    <h3>Law Lex Mind</h3>
+    <h3>
+      Law Lex Mind
+    </h3>
 
-    <p>Research • Write • Learn • Grow</p>
+    <p>
+      Research • Write • Learn • Grow
+    </p>
 
   </div>
+
+
+  <!-- FOOTER LINKS -->
 
   <div class="footer-links">
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="internship.html">Internship</a>
-    <a href="publications.html">Publications</a>
-    <a href="articles.html">Articles</a>
-    <a href="contact.html">Contact</a>
-    <a href="policy.html">Policy</a>
+    <a href="./index.html">
+      Home
+    </a>
+
+    <a href="./about.html" class="active">
+      About
+    </a>
+
+    <a href="./internship.html">
+      Internship
+    </a>
+
+    <a href="./publications.html">
+      Publications
+    </a>
+
+    <a href="./articles.html">
+      Articles
+    </a>
+
+    <a href="./contact.html">
+      Contact
+    </a>
+
+    <a href="./policy.html">
+      Policy
+    </a>
 
   </div>
+
+
+  <!-- FOOTER CONTACT -->
 
   <div class="footer-contact">
 
     <p>
       📧 Email:
+
       <a href="mailto:lexmindsindia@gmail.com">
         lexmindsindia@gmail.com
       </a>
     </p>
 
+
     <p>
       🔗 LinkedIn:
+
       <a
         href="https://www.linkedin.com/company/legal-school-notes/"
         target="_blank"
         rel="noopener noreferrer">
+
         Law Lex Mind
+
       </a>
+
     </p>
 
   </div>
 
+
+  <!-- COPYRIGHT -->
+
   <p class="copyright">
+
     © 2026 Law Lex Mind. All Rights Reserved.
+
   </p>
 
 </footer>
+
+
+<!-- =========================================================
+     THREE-DOT MENU SCRIPT
+     This is required because your site currently has
+     no script.js file.
+========================================================= -->
+
+<script>
+
+function toggleDotsMenu() {
+
+  const menu = document.getElementById("dotsMenu");
+  const button = document.querySelector(".dots-menu-btn");
+
+  if (!menu || !button) return;
+
+  const isOpen = menu.classList.toggle("active");
+
+  button.classList.toggle("active", isOpen);
+
+  button.setAttribute(
+    "aria-expanded",
+    isOpen ? "true" : "false"
+  );
+
+}
+
+
+/* Close menu when clicking outside */
+
+document.addEventListener("click", function(event) {
+
+  const menu = document.getElementById("dotsMenu");
+  const button = document.querySelector(".dots-menu-btn");
+
+  if (!menu || !button) return;
+
+  if (
+    !menu.contains(event.target) &&
+    !button.contains(event.target)
+  ) {
+
+    menu.classList.remove("active");
+
+    button.classList.remove("active");
+
+    button.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+  }
+
+});
+
+
+/* Close menu after selecting a page */
+
+document.querySelectorAll(".dots-menu a").forEach(function(link) {
+
+  link.addEventListener("click", function() {
+
+    const menu = document.getElementById("dotsMenu");
+    const button = document.querySelector(".dots-menu-btn");
+
+    if (menu) {
+      menu.classList.remove("active");
+    }
+
+    if (button) {
+
+      button.classList.remove("active");
+
+      button.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  });
+
+});
+
+
+/* Close menu with Escape key */
+
+document.addEventListener("keydown", function(event) {
+
+  if (event.key === "Escape") {
+
+    const menu = document.getElementById("dotsMenu");
+    const button = document.querySelector(".dots-menu-btn");
+
+    if (menu) {
+      menu.classList.remove("active");
+    }
+
+    if (button) {
+
+      button.classList.remove("active");
+
+      button.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  }
+
+});
+
+</script>
+
 
 </body>
 </html>
