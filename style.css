@@ -313,21 +313,20 @@ header::after {
 
 
 /* =========================================================
-   9. PREMIUM NAVIGATION
+   9. PREMIUM THREE-DOT NAVIGATION
+   LEXMINDS INDIA
 ========================================================= */
 
-.main-navigation,
-.navbar {
+.main-navigation {
   width: 100%;
-
   position: sticky;
-
   top: 0;
-
   z-index: 5000;
 
   background:
-    rgba(7, 21, 34, 0.90);
+    rgba(7, 21, 34, 0.94);
+
+  color: var(--white);
 
   border-bottom:
     1px solid
@@ -335,134 +334,526 @@ header::after {
 
   box-shadow:
     0 8px 30px
-    rgba(0, 0, 0, 0.08);
+    rgba(0, 0, 0, 0.10);
 
   backdrop-filter: blur(16px);
-
   -webkit-backdrop-filter: blur(16px);
 }
 
-.main-navigation {
+
+/* =========================================================
+   NAV INNER
+========================================================= */
+
+.nav-inner {
+  width: min(1120px, calc(100% - 40px));
+
   min-height: 64px;
+
+  margin: 0 auto;
 
   display: flex;
 
   align-items: center;
 
-  justify-content: center;
+  justify-content: space-between;
 
-  gap: 3px;
-
-  padding: 0 20px;
+  position: relative;
 }
 
-.main-navigation a {
+
+/* =========================================================
+   NAV BRAND
+========================================================= */
+
+.nav-brand {
   position: relative;
 
+  z-index: 10;
+}
+
+.nav-brand a {
   display: inline-flex;
+
+  align-items: center;
+
+  color: var(--white);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  transition:
+    color var(--transition),
+    transform var(--transition);
+}
+
+.nav-brand a:hover {
+  color: var(--gold-400);
+
+  transform:
+    translateY(-1px);
+}
+
+
+/* =========================================================
+   THREE DOT BUTTON
+========================================================= */
+
+.dots-menu-btn {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  flex-direction: column;
 
   align-items: center;
 
   justify-content: center;
 
-  min-height: 64px;
+  gap: 4px;
 
-  padding: 0 18px;
+  padding: 0;
 
-  color: #dce4eb;
+  border:
+    1px solid
+    rgba(215, 180, 93, 0.38);
 
-  font-size: 13.5px;
+  border-radius: 8px;
 
-  font-weight: 700;
+  background:
+    rgba(215, 180, 93, 0.05);
 
-  letter-spacing: 0.2px;
+  color: var(--gold-400);
 
-  border-radius: 6px;
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 6000;
 
   transition:
-    color var(--transition),
     background var(--transition),
-    transform var(--transition);
-}
-
-.main-navigation a:hover {
-  color: var(--gold-400);
-
-  background:
-    rgba(215, 180, 93, 0.07);
-
-  transform: translateY(-1px);
-}
-
-.main-navigation a.active {
-  color: var(--gold-400);
-
-  background:
-    rgba(215, 180, 93, 0.065);
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 
-/* Animated underline */
+/* Three dots */
 
-.main-navigation a::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-
-  bottom: 8px;
-
-  width: 0;
-
-  height: 2px;
-
-  border-radius: 10px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--gold-500),
-      var(--gold-300)
-    );
-
-  transform:
-    translateX(-50%);
-
-  transition:
-    width 0.35s cubic-bezier(.2,.8,.2,1);
-}
-
-.main-navigation a:hover::after,
-.main-navigation a.active::after {
-  width: calc(100% - 36px);
-}
-
-
-/* Active top indicator */
-
-.main-navigation a.active::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: 50%;
+.dots-menu-btn span {
+  display: block;
 
   width: 5px;
   height: 5px;
 
   border-radius: 50%;
 
-  background: var(--gold-400);
+  background:
+    var(--gold-400);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* Hover */
+
+.dots-menu-btn:hover {
+  background:
+    rgba(215, 180, 93, 0.12);
+
+  border-color:
+    rgba(215, 180, 93, 0.75);
 
   transform:
-    translateX(-50%);
+    translateY(-2px);
 
   box-shadow:
-    0 0 12px
-    rgba(215, 180, 93, 0.65);
+    0 8px 20px
+    rgba(215, 180, 93, 0.12);
+}
+
+
+/* Active button */
+
+.dots-menu-btn.active {
+  background:
+    var(--gold-500);
+
+  border-color:
+    var(--gold-500);
+
+  box-shadow:
+    0 8px 25px
+    rgba(215, 180, 93, 0.20);
+}
+
+.dots-menu-btn.active span {
+  background:
+    var(--navy-900);
+}
+
+
+/* =========================================================
+   DROPDOWN MENU
+========================================================= */
+
+.dots-menu {
+  position: absolute;
+
+  top: calc(100% + 10px);
+
+  right: 0;
+
+  width: 245px;
+
+  padding: 8px;
+
+  background:
+    rgba(7, 21, 34, 0.98);
+
+  border:
+    1px solid
+    rgba(215, 180, 93, 0.28);
+
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    0 20px 45px
+    rgba(0, 0, 0, 0.28);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(-10px)
+    scale(0.97);
+
+  transform-origin:
+    top right;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
+
+  pointer-events: none;
+}
+
+
+/* Menu opened */
+
+.dots-menu.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   DROPDOWN LINKS
+========================================================= */
+
+.dots-menu a {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 45px;
+
+  padding:
+    11px 15px;
+
+  color:
+    #dce4eb;
+
+  font-size: 13.5px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15px;
+
+  border-radius: 6px;
+
+  transition:
+    color var(--transition),
+    background var(--transition),
+    padding-left var(--transition);
+}
+
+
+/* Small gold indicator */
+
+.dots-menu a::before {
+  content: "";
+
+  width: 0;
+
+  height: 5px;
+
+  margin-right: 0;
+
+  border-radius: 20px;
+
+  background:
+    var(--gold-400);
+
+  opacity: 0;
+
+  transition:
+    width 0.25s ease,
+    margin-right 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* Hover */
+
+.dots-menu a:hover {
+  color:
+    var(--gold-400);
+
+  background:
+    rgba(215, 180, 93, 0.08);
+
+  padding-left: 18px;
+}
+
+.dots-menu a:hover::before {
+  width: 5px;
+
+  margin-right: 9px;
+
+  opacity: 1;
+}
+
+
+/* Active */
+
+.dots-menu a.active {
+  color:
+    var(--gold-400);
+
+  background:
+    rgba(215, 180, 93, 0.08);
+}
+
+
+/* =========================================================
+   OLD NAVIGATION SUPPORT
+   Keeps old Odoo/navigation elements from interfering
+========================================================= */
+
+.nav-container {
+  width: min(1120px, calc(100% - 40px));
+
+  min-height: 64px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* Hide old navigation links */
+
+.main-navigation > a {
+  display: none;
+}
+
+
+/* Old navigation system */
+
+.nav-links {
+  display: none;
+}
+
+
+/* =========================================================
+   OLD MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+  display: none;
+}
+
+
+/* =========================================================
+   NAVIGATION MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .main-navigation {
+    min-height: 58px;
+
+    background:
+      rgba(7, 21, 34, 0.97);
+  }
+
+
+  .nav-inner {
+    width:
+      calc(100% - 30px);
+
+    min-height: 58px;
+  }
+
+
+  /* Brand */
+
+  .nav-brand a {
+    font-size: 18px;
+  }
+
+
+  /* Three dot button */
+
+  .dots-menu-btn {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 7px;
+  }
+
+
+  .dots-menu-btn span {
+    width: 4px;
+    height: 4px;
+  }
+
+
+  /* Dropdown */
+
+  .dots-menu {
+    top:
+      calc(100% + 8px);
+
+    right: 0;
+
+    width:
+      min(245px, calc(100vw - 30px));
+  }
+
+
+  .dots-menu a {
+    min-height: 46px;
+
+    font-size: 13px;
+
+    padding:
+      12px 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .nav-inner {
+    width:
+      calc(100% - 24px);
+  }
+
+
+  .nav-brand a {
+    font-size: 17px;
+  }
+
+
+  .dots-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .dots-menu {
+    width:
+      calc(100vw - 24px);
+
+    max-width: 245px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .nav-brand a {
+    font-size: 16px;
+  }
+
+  .dots-menu-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.dots-menu-btn:focus-visible {
+  outline:
+    2px solid
+    var(--gold-500);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .dots-menu,
+  .dots-menu-btn,
+  .dots-menu a,
+  .dots-menu a::before {
+    transition: none !important;
+  }
 }
 
 
