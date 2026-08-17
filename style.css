@@ -1,14 +1,23 @@
 /* =========================================================
    LEXMINDS INDIA
    PREMIUM MASTER STYLE.CSS
-   VERSION 5.0
-   ========================================================= */
+   REFACTORED VERSION 6.0
+
+   IMPORTANT:
+   - Single navigation system
+   - Mobile three-dot navigation
+   - No conflicting old mobile navigation
+   - Responsive
+   - Premium navy + gold theme
+========================================================= */
+
 
 /* =========================================================
    1. DESIGN SYSTEM
 ========================================================= */
 
 :root {
+
   --navy-950: #030b13;
   --navy-900: #071522;
   --navy-850: #0a1b2b;
@@ -23,8 +32,10 @@
   --cream-dark: #eee9dc;
 
   --white: #ffffff;
+
   --text: #17202b;
   --text-soft: #64748b;
+
   --border: #e4dfd3;
 
   --shadow-sm:
@@ -41,7 +52,7 @@
   --radius-lg: 16px;
 
   --transition:
-    0.3s cubic-bezier(.2,.65,.3,1);
+    0.3s cubic-bezier(.2, .65, .3, 1);
 }
 
 
@@ -61,6 +72,8 @@ html {
 }
 
 body {
+  margin: 0;
+
   font-family:
     Arial,
     Helvetica,
@@ -75,6 +88,7 @@ body {
   overflow-x: hidden;
 
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -107,7 +121,9 @@ button {
 .container,
 .policy-container {
   width: min(1120px, calc(100% - 40px));
-  margin: 0 auto;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -121,6 +137,8 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 0;
+
   font-family:
     Georgia,
     "Times New Roman",
@@ -140,6 +158,7 @@ h3 {
 }
 
 p {
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -162,7 +181,7 @@ p {
 
 
 /* =========================================================
-   5. GLOBAL SELECTION
+   5. SELECTION
 ========================================================= */
 
 ::selection {
@@ -251,7 +270,6 @@ header::after {
   height: 72px;
 
   object-fit: contain;
-
   object-position: center;
 
   flex-shrink: 0;
@@ -301,7 +319,6 @@ header::after {
 
 .brand-text p {
   margin-top: 5px;
-
   margin-bottom: 0;
 
   font-size: 13px;
@@ -313,18 +330,20 @@ header::after {
 
 
 /* =========================================================
-   9. PREMIUM THREE-DOT NAVIGATION
-   LEXMINDS INDIA
+   9. MAIN NAVIGATION
 ========================================================= */
 
 .main-navigation {
   width: 100%;
+
   position: sticky;
+
   top: 0;
+
   z-index: 5000;
 
   background:
-    rgba(7, 21, 34, 0.94);
+    rgba(7, 21, 34, 0.96);
 
   color: var(--white);
 
@@ -342,7 +361,7 @@ header::after {
 
 
 /* =========================================================
-   NAV INNER
+   10. NAV INNER
 ========================================================= */
 
 .nav-inner {
@@ -363,13 +382,13 @@ header::after {
 
 
 /* =========================================================
-   NAV BRAND
+   11. NAV BRAND
 ========================================================= */
 
 .nav-brand {
   position: relative;
 
-  z-index: 10;
+  z-index: 5002;
 }
 
 .nav-brand a {
@@ -404,7 +423,7 @@ header::after {
 
 
 /* =========================================================
-   THREE DOT BUTTON
+   12. THREE DOT BUTTON
 ========================================================= */
 
 .dots-menu-btn {
@@ -440,15 +459,14 @@ header::after {
 
   z-index: 6000;
 
+  -webkit-tap-highlight-color: transparent;
+
   transition:
     background var(--transition),
     border-color var(--transition),
     transform var(--transition),
     box-shadow var(--transition);
 }
-
-
-/* Three dots */
 
 .dots-menu-btn span {
   display: block;
@@ -466,9 +484,6 @@ header::after {
     background 0.25s ease;
 }
 
-
-/* Hover */
-
 .dots-menu-btn:hover {
   background:
     rgba(215, 180, 93, 0.12);
@@ -483,9 +498,6 @@ header::after {
     0 8px 20px
     rgba(215, 180, 93, 0.12);
 }
-
-
-/* Active button */
 
 .dots-menu-btn.active {
   background:
@@ -506,7 +518,7 @@ header::after {
 
 
 /* =========================================================
-   DROPDOWN MENU
+   13. DROPDOWN MENU
 ========================================================= */
 
 .dots-menu {
@@ -516,12 +528,12 @@ header::after {
 
   right: 0;
 
-  width: 245px;
+  width: 250px;
 
   padding: 8px;
 
   background:
-    rgba(7, 21, 34, 0.98);
+    rgba(7, 21, 34, 0.99);
 
   border:
     1px solid
@@ -557,10 +569,12 @@ header::after {
     transform 0.25s ease;
 
   pointer-events: none;
+
+  z-index: 7000;
 }
 
 
-/* Menu opened */
+/* OPEN MENU */
 
 .dots-menu.active {
   opacity: 1;
@@ -576,7 +590,7 @@ header::after {
 
 
 /* =========================================================
-   DROPDOWN LINKS
+   14. DROPDOWN LINKS
 ========================================================= */
 
 .dots-menu a {
@@ -610,9 +624,6 @@ header::after {
     padding-left var(--transition);
 }
 
-
-/* Small gold indicator */
-
 .dots-menu a::before {
   content: "";
 
@@ -635,9 +646,6 @@ header::after {
     opacity 0.25s ease;
 }
 
-
-/* Hover */
-
 .dots-menu a:hover {
   color:
     var(--gold-400);
@@ -656,9 +664,6 @@ header::after {
   opacity: 1;
 }
 
-
-/* Active */
-
 .dots-menu a.active {
   color:
     var(--gold-400);
@@ -669,309 +674,21 @@ header::after {
 
 
 /* =========================================================
-   OLD NAVIGATION SUPPORT
-   Keeps old Odoo/navigation elements from interfering
+   15. REMOVE OLD NAVIGATION SYSTEM
 ========================================================= */
 
-.nav-container {
-  width: min(1120px, calc(100% - 40px));
-
-  min-height: 64px;
-
-  margin: 0 auto;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
+.nav-links,
+.menu-toggle {
+  display: none !important;
 }
-
-
-/* Hide old navigation links */
 
 .main-navigation > a {
-  display: none;
-}
-
-
-/* Old navigation system */
-
-.nav-links {
-  display: none;
+  display: none !important;
 }
 
 
 /* =========================================================
-   OLD MOBILE MENU BUTTON
-========================================================= */
-
-.menu-toggle {
-  display: none;
-}
-
-
-/* =========================================================
-   NAVIGATION MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-  .main-navigation {
-    min-height: 58px;
-
-    background:
-      rgba(7, 21, 34, 0.97);
-  }
-
-
-  .nav-inner {
-    width:
-      calc(100% - 30px);
-
-    min-height: 58px;
-  }
-
-
-  /* Brand */
-
-  .nav-brand a {
-    font-size: 18px;
-  }
-
-
-  /* Three dot button */
-
-  .dots-menu-btn {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 7px;
-  }
-
-
-  .dots-menu-btn span {
-    width: 4px;
-    height: 4px;
-  }
-
-
-  /* Dropdown */
-
-  .dots-menu {
-    top:
-      calc(100% + 8px);
-
-    right: 0;
-
-    width:
-      min(245px, calc(100vw - 30px));
-  }
-
-
-  .dots-menu a {
-    min-height: 46px;
-
-    font-size: 13px;
-
-    padding:
-      12px 14px;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 430px) {
-
-  .nav-inner {
-    width:
-      calc(100% - 24px);
-  }
-
-
-  .nav-brand a {
-    font-size: 17px;
-  }
-
-
-  .dots-menu-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-
-  .dots-menu {
-    width:
-      calc(100vw - 24px);
-
-    max-width: 245px;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL DEVICES
-========================================================= */
-
-@media (max-width: 350px) {
-
-  .nav-brand a {
-    font-size: 16px;
-  }
-
-  .dots-menu-btn {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-.dots-menu-btn:focus-visible {
-  outline:
-    2px solid
-    var(--gold-500);
-
-  outline-offset: 3px;
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .dots-menu,
-  .dots-menu-btn,
-  .dots-menu a,
-  .dots-menu a::before {
-    transition: none !important;
-  }
-}
-
-
-/* =========================================================
-   10. OLD NAVIGATION SUPPORT
-========================================================= */
-
-.nav-container {
-  width: min(1120px, calc(100% - 40px));
-
-  min-height: 64px;
-
-  margin: 0 auto;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-}
-
-.nav-brand {
-  color: var(--white);
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-weight: 700;
-
-  font-size: 18px;
-}
-
-.nav-links {
-  display: flex;
-
-  align-items: center;
-
-  gap: 4px;
-}
-
-.nav-links a {
-  position: relative;
-
-  padding: 17px 15px;
-
-  color: #dce4eb;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  transition:
-    color var(--transition),
-    background var(--transition);
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--gold-400);
-}
-
-.nav-links a.active::after {
-  content: "";
-
-  position: absolute;
-
-  left: 15px;
-  right: 15px;
-
-  bottom: 8px;
-
-  height: 2px;
-
-  background: var(--gold-500);
-}
-
-
-/* =========================================================
-   11. MOBILE MENU BUTTON
-========================================================= */
-
-.menu-toggle {
-  display: none;
-
-  width: 44px;
-  height: 40px;
-
-  border:
-    1px solid
-    rgba(215, 180, 93, 0.45);
-
-  border-radius: 7px;
-
-  background:
-    rgba(215, 180, 93, 0.05);
-
-  padding: 8px;
-}
-
-.menu-toggle span {
-  display: block;
-
-  width: 100%;
-  height: 2px;
-
-  margin: 5px 0;
-
-  background: var(--gold-500);
-
-  transition:
-    transform 0.25s ease;
-}
-
-
-/* =========================================================
-   12. LOADER
+   16. LOADER
 ========================================================= */
 
 #website-loader,
@@ -1121,10 +838,11 @@ header::after {
 
 
 /* =========================================================
-   13. LOADER ANIMATIONS
+   17. LOADER ANIMATIONS
 ========================================================= */
 
 @keyframes loading {
+
   from {
     width: 0;
   }
@@ -1132,9 +850,11 @@ header::after {
   to {
     width: 100%;
   }
+
 }
 
 @keyframes loaderAppear {
+
   from {
     opacity: 0;
 
@@ -1148,9 +868,11 @@ header::after {
     transform:
       translateY(0);
   }
+
 }
 
 @keyframes loaderLogo {
+
   from {
     transform:
       scale(0.96)
@@ -1162,9 +884,11 @@ header::after {
       scale(1.04)
       rotate(1deg);
   }
+
 }
 
 @keyframes loadingText {
+
   from {
     opacity: 0.45;
   }
@@ -1172,39 +896,37 @@ header::after {
   to {
     opacity: 1;
   }
+
 }
 
 @keyframes automaticLoaderHide {
+
   0% {
     opacity: 1;
-
     visibility: visible;
   }
 
   70% {
     opacity: 1;
-
     visibility: visible;
   }
 
   90% {
     opacity: 0;
-
     visibility: hidden;
   }
 
   100% {
     opacity: 0;
-
     visibility: hidden;
-
     pointer-events: none;
   }
+
 }
 
 
 /* =========================================================
-   14. HERO
+   18. HERO
 ========================================================= */
 
 .hero {
@@ -1228,9 +950,6 @@ header::after {
 
   color: var(--white);
 }
-
-
-/* Decorative light */
 
 .hero::before {
   content: "";
@@ -1261,9 +980,6 @@ header::after {
   pointer-events: none;
 }
 
-
-/* Decorative grid */
-
 .hero::after {
   content: "";
 
@@ -1290,6 +1006,7 @@ header::after {
 }
 
 @keyframes heroGlow {
+
   from {
     transform: scale(0.95);
   }
@@ -1297,6 +1014,7 @@ header::after {
   to {
     transform: scale(1.08);
   }
+
 }
 
 .hero-content {
@@ -1318,6 +1036,7 @@ header::after {
 }
 
 @keyframes heroContentIn {
+
   from {
     opacity: 0;
 
@@ -1331,6 +1050,7 @@ header::after {
     transform:
       translateY(0);
   }
+
 }
 
 .hero h2 {
@@ -1361,7 +1081,7 @@ header::after {
 
 
 /* =========================================================
-   15. INNER PAGE HERO
+   19. INNER PAGE HERO
 ========================================================= */
 
 .policy-hero {
@@ -1436,7 +1156,7 @@ header::after {
 
 
 /* =========================================================
-   16. BUTTONS
+   20. BUTTONS
 ========================================================= */
 
 .hero-buttons {
@@ -1544,7 +1264,7 @@ header::after {
 
 
 /* =========================================================
-   17. LINKEDIN BUTTON
+   21. LINKEDIN BUTTON
 ========================================================= */
 
 .linkedin-btn {
@@ -1567,7 +1287,7 @@ header::after {
 
 
 /* =========================================================
-   18. MAIN SECTIONS
+   22. MAIN SECTIONS
 ========================================================= */
 
 main {
@@ -1599,7 +1319,7 @@ section.container {
 
 
 /* =========================================================
-   19. GENERAL CARDS
+   23. GENERAL CARDS
 ========================================================= */
 
 .card {
@@ -1684,7 +1404,7 @@ section.container {
 
 
 /* =========================================================
-   20. POLICY CARD
+   24. POLICY CARD
 ========================================================= */
 
 .policy-card {
@@ -1740,7 +1460,7 @@ section.container {
 
 
 /* =========================================================
-   21. SECTION HEADINGS
+   25. SECTION HEADINGS
 ========================================================= */
 
 .section-heading {
@@ -1777,7 +1497,7 @@ section.container {
 
 
 /* =========================================================
-   22. FEATURE GRID
+   26. FEATURE GRID
 ========================================================= */
 
 .feature-grid {
@@ -1843,7 +1563,7 @@ section.container {
 
 
 /* =========================================================
-   23. ARTICLE CARDS
+   27. ARTICLE CARDS
 ========================================================= */
 
 .article-grid {
@@ -1972,7 +1692,7 @@ section.container {
 
 
 /* =========================================================
-   24. ARTICLE CATEGORY
+   28. ARTICLE CATEGORY
 ========================================================= */
 
 .article-category {
@@ -2002,7 +1722,7 @@ section.container {
 
 
 /* =========================================================
-   25. ARTICLE LIST
+   29. ARTICLE LIST
 ========================================================= */
 
 .article-list {
@@ -2072,7 +1792,7 @@ section.container {
 
 
 /* =========================================================
-   26. DARK SECTION
+   30. DARK SECTION
 ========================================================= */
 
 .dark-section {
@@ -2131,7 +1851,7 @@ section.container {
 
 
 /* =========================================================
-   27. CTA
+   31. CTA
 ========================================================= */
 
 .cta-section {
@@ -2189,7 +1909,7 @@ section.container {
 
 
 /* =========================================================
-   28. CONTACT
+   32. CONTACT
 ========================================================= */
 
 .contact-content {
@@ -2212,7 +1932,7 @@ section.container {
 
 
 /* =========================================================
-   29. CONTACT FORM
+   33. CONTACT FORM
 ========================================================= */
 
 .contact-form {
@@ -2306,7 +2026,7 @@ section.container {
 
 
 /* =========================================================
-   30. SUBMISSION BOX
+   34. SUBMISSION BOX
 ========================================================= */
 
 .submission-box {
@@ -2356,7 +2076,7 @@ section.container {
 
 
 /* =========================================================
-   31. POLICY CONTACT
+   35. POLICY CONTACT
 ========================================================= */
 
 .policy-contact {
@@ -2388,7 +2108,7 @@ section.container {
 
 
 /* =========================================================
-   32. PUBLICATION INFORMATION
+   36. PUBLICATION INFORMATION
 ========================================================= */
 
 .publication-info {
@@ -2451,7 +2171,7 @@ section.container {
 
 
 /* =========================================================
-   33. FOOTER
+   37. FOOTER
 ========================================================= */
 
 .site-footer,
@@ -2510,7 +2230,6 @@ footer::before {
 
 .footer-logo-img {
   width: 70px;
-
   height: 70px;
 
   object-fit: contain;
@@ -2610,7 +2329,7 @@ footer::before {
 
 
 /* =========================================================
-   34. CONTENT LINKS
+   38. CONTENT LINKS
 ========================================================= */
 
 .policy-card a:not(.btn),
@@ -2634,7 +2353,7 @@ footer::before {
 
 
 /* =========================================================
-   35. DIVIDER
+   39. DIVIDER
 ========================================================= */
 
 .section-divider {
@@ -2656,7 +2375,7 @@ footer::before {
 
 
 /* =========================================================
-   36. BACK TO TOP
+   40. BACK TO TOP
 ========================================================= */
 
 .back-to-top {
@@ -2667,7 +2386,6 @@ footer::before {
   bottom: 20px;
 
   width: 46px;
-
   height: 46px;
 
   display: flex;
@@ -2711,7 +2429,7 @@ footer::before {
 
 
 /* =========================================================
-   37. ACCESSIBILITY
+   41. ACCESSIBILITY
 ========================================================= */
 
 a:focus-visible,
@@ -2726,9 +2444,17 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
+.dots-menu-btn:focus-visible {
+  outline:
+    2px solid
+    var(--gold-500);
+
+  outline-offset: 3px;
+}
+
 
 /* =========================================================
-   38. LOGO SIZE PROTECTION
+   42. LOGO SIZE PROTECTION
 ========================================================= */
 
 header img,
@@ -2758,7 +2484,7 @@ header img,
 
 
 /* =========================================================
-   39. TABLET
+   43. TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -2778,25 +2504,6 @@ header img,
       repeat(2, minmax(0, 1fr));
   }
 
-  .main-navigation {
-    gap: 0;
-
-    padding: 0 10px;
-  }
-
-  .main-navigation a {
-    padding-left: 13px;
-    padding-right: 13px;
-
-    font-size: 13px;
-  }
-
-  .main-navigation a:hover::after,
-  .main-navigation a.active::after {
-    width:
-      calc(100% - 26px);
-  }
-
   .hero {
     min-height: 580px;
   }
@@ -2804,16 +2511,19 @@ header img,
   .hero h2 {
     font-size: 54px;
   }
+
 }
 
 
 /* =========================================================
-   40. MOBILE
+   44. MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
 
-  /* HEADER */
+  /* -----------------------------------------
+     HEADER
+  ----------------------------------------- */
 
   .site-header {
     padding: 13px 0;
@@ -2840,125 +2550,79 @@ header img,
   }
 
 
-  /* NAVIGATION */
+  /* -----------------------------------------
+     THREE DOT NAVIGATION
+  ----------------------------------------- */
 
   .main-navigation {
+    min-height: 58px;
+
+    display: block;
+
     position: sticky;
 
     top: 0;
 
-    display: grid;
-
-    grid-template-columns:
-      repeat(3, 1fr);
-
-    gap: 0;
-
-    min-height: auto;
-
-    padding: 0;
-
-    background:
-      rgba(7,21,34,0.96);
+    z-index: 5000;
   }
 
-  .main-navigation a {
-    min-height: 53px;
-
-    padding:
-      10px 5px;
-
-    text-align: center;
-
-    font-size: 11.5px;
-
-    line-height: 1.25;
-
-    border-right:
-      1px solid
-      rgba(255,255,255,0.04);
-
-    border-bottom:
-      1px solid
-      rgba(255,255,255,0.04);
-
-    border-radius: 0;
-  }
-
-  .main-navigation a:hover {
-    transform: none;
-
-    background:
-      rgba(215,180,93,0.08);
-  }
-
-  .main-navigation a::after {
-    bottom: 4px;
-  }
-
-  .main-navigation a:hover::after,
-  .main-navigation a.active::after {
-    left: 15%;
-
-    width: 70%;
-  }
-
-  .main-navigation a.active::before {
-    display: none;
-  }
-
-
-  /* OLD NAVIGATION */
-
-  .nav-container {
+  .nav-inner {
     width:
       calc(100% - 30px);
+
+    min-height: 58px;
   }
 
-  .menu-toggle {
-    display: block;
+  .nav-brand a {
+    font-size: 18px;
   }
 
-  .nav-links {
-    display: none;
+  .dots-menu-btn {
+    width: 42px;
+    height: 42px;
 
-    position: absolute;
+    border-radius: 7px;
+  }
 
-    top: 100%;
+  .dots-menu-btn span {
+    width: 4px;
+    height: 4px;
+  }
 
-    left: 0;
+  .dots-menu {
+
+    top:
+      calc(100% + 8px);
+
     right: 0;
 
-    z-index: 1000;
+    width:
+      min(
+        270px,
+        calc(100vw - 30px)
+      );
 
-    flex-direction: column;
+    max-height:
+      calc(100vh - 85px);
 
-    align-items: stretch;
+    overflow-y: auto;
 
-    background:
-      var(--navy-900);
-
-    border-top:
-      1px solid
-      rgba(215,180,93,0.25);
+    -webkit-overflow-scrolling: touch;
   }
 
-  .nav-links.active {
-    display: flex;
-  }
+  .dots-menu a {
+    min-height: 48px;
 
-  .nav-links a {
-    padding: 14px 20px;
+    padding:
+      12px 14px;
 
-    border-bottom:
-      1px solid
-      rgba(255,255,255,0.06);
-
-    text-align: center;
+    font-size: 13px;
   }
 
 
-  /* HERO */
+  /* -----------------------------------------
+     HERO
+  ----------------------------------------- */
 
   .hero {
     min-height: 590px;
@@ -2980,7 +2644,9 @@ header img,
   }
 
 
-  /* INNER HERO */
+  /* -----------------------------------------
+     INNER HERO
+  ----------------------------------------- */
 
   .policy-hero {
     min-height: 440px;
@@ -2998,7 +2664,9 @@ header img,
   }
 
 
-  /* CONTAINERS */
+  /* -----------------------------------------
+     CONTAINERS
+  ----------------------------------------- */
 
   .container,
   .policy-container {
@@ -3007,7 +2675,9 @@ header img,
   }
 
 
-  /* CARDS */
+  /* -----------------------------------------
+     CARDS
+  ----------------------------------------- */
 
   .card,
   .policy-card {
@@ -3023,7 +2693,9 @@ header img,
   }
 
 
-  /* GRIDS */
+  /* -----------------------------------------
+     GRIDS
+  ----------------------------------------- */
 
   .feature-grid,
   .article-grid,
@@ -3032,7 +2704,9 @@ header img,
   }
 
 
-  /* SECTIONS */
+  /* -----------------------------------------
+     SECTIONS
+  ----------------------------------------- */
 
   section.container {
     padding-top: 60px;
@@ -3054,7 +2728,9 @@ header img,
   }
 
 
-  /* BUTTONS */
+  /* -----------------------------------------
+     BUTTONS
+  ----------------------------------------- */
 
   .hero-buttons {
     flex-direction: column;
@@ -3067,14 +2743,18 @@ header img,
   }
 
 
-  /* CONTACT */
+  /* -----------------------------------------
+     CONTACT
+  ----------------------------------------- */
 
   .contact-form {
     padding: 25px;
   }
 
 
-  /* ARTICLE LIST */
+  /* -----------------------------------------
+     ARTICLE LIST
+  ----------------------------------------- */
 
   .article-list-item {
     flex-direction: column;
@@ -3083,18 +2763,21 @@ header img,
   }
 
 
-  /* FOOTER */
+  /* -----------------------------------------
+     FOOTER
+  ----------------------------------------- */
 
   .footer-links {
     flex-direction: column;
 
     gap: 10px;
   }
+
 }
 
 
 /* =========================================================
-   41. SMALL MOBILE
+   45. SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 430px) {
@@ -3112,19 +2795,33 @@ header img,
     font-size: 11px;
   }
 
-  .main-navigation {
-    grid-template-columns:
-      repeat(2, 1fr);
+
+  /* THREE DOT MENU */
+
+  .nav-inner {
+    width:
+      calc(100% - 24px);
   }
 
-  .main-navigation a {
-    min-height: 50px;
-
-    padding:
-      11px 4px;
-
-    font-size: 11px;
+  .nav-brand a {
+    font-size: 17px;
   }
+
+  .dots-menu-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dots-menu {
+    width:
+      min(
+        270px,
+        calc(100vw - 24px)
+      );
+  }
+
+
+  /* TYPOGRAPHY */
 
   .hero h2,
   .policy-hero h2 {
@@ -3138,6 +2835,9 @@ header img,
     letter-spacing: 1.5px;
   }
 
+
+  /* POLICY */
+
   .policy-card {
     padding: 20px;
   }
@@ -3150,17 +2850,29 @@ header img,
     font-size: 15px;
   }
 
+
+  /* CONTACT */
+
   .contact-form {
     padding: 20px;
   }
+
+
+  /* ARTICLE */
 
   .article-card {
     padding: 22px;
   }
 
+
+  /* SUBMISSION */
+
   .submission-box {
     padding: 20px;
   }
+
+
+  /* LOADER */
 
   .loader-logo,
   .page-loader-logo {
@@ -3178,6 +2890,9 @@ header img,
     width: 190px;
   }
 
+
+  /* BACK TO TOP */
+
   .back-to-top {
     right: 14px;
     bottom: 14px;
@@ -3185,34 +2900,40 @@ header img,
     width: 42px;
     height: 42px;
   }
+
 }
 
 
 /* =========================================================
-   42. VERY SMALL DEVICES
+   46. VERY SMALL DEVICES
 ========================================================= */
 
 @media (max-width: 350px) {
 
-  .main-navigation {
-    grid-template-columns: 1fr;
+  .nav-brand a {
+    font-size: 16px;
   }
 
-  .main-navigation a {
-    min-height: 44px;
+  .dots-menu-btn {
+    width: 38px;
+    height: 38px;
+  }
 
-    border-right: none;
+  .dots-menu {
+    width:
+      calc(100vw - 20px);
   }
 
   .hero h2,
   .policy-hero h2 {
     font-size: 32px;
   }
+
 }
 
 
 /* =========================================================
-   43. REDUCED MOTION
+   47. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3233,11 +2954,12 @@ header img,
     transition-duration:
       0.01ms !important;
   }
+
 }
 
 
 /* =========================================================
-   44. FINAL LOADER SAFETY
+   48. FINAL LOADER SAFETY
 ========================================================= */
 
 #website-loader,
@@ -3251,5 +2973,6 @@ header img,
 
 
 /* =========================================================
-   END OF LEXMINDS INDIA VERSION 5.0
+   END OF LEXMINDS INDIA
+   REFACTORED VERSION 6.0
 ========================================================= */
