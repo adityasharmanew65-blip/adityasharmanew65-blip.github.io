@@ -1,7 +1,7 @@
 /* =========================================================
    LAW LEX MIND
    COMPLETE MASTER STYLE.CSS
-   VERSION 3.0
+   VERSION 4.0
    ========================================================= */
 
 
@@ -17,7 +17,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 20px;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -121,6 +121,7 @@ header {
 
   display: flex;
   align-items: center;
+
   gap: 18px;
 }
 
@@ -156,57 +157,168 @@ header {
 
 /* =========================================================
    5. MAIN NAVIGATION
+   MODERN PROFESSIONAL VERSION
 ========================================================= */
 
 .main-navigation,
 .navbar {
   width: 100%;
-  background: #0b1b2a;
-  border-bottom: 1px solid rgba(201, 159, 60, 0.25);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 5000;
+
+  background: rgba(11, 27, 42, 0.97);
+
+  border-bottom:
+    1px solid rgba(215, 180, 93, 0.28);
+
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.08);
+
+  backdrop-filter: blur(10px);
 }
 
+
+/*
+   Navigation inner alignment.
+
+   Works with your current HTML where the links
+   are directly inside .main-navigation.
+*/
+
 .main-navigation {
-  min-height: 58px;
+  min-height: 62px;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
-  gap: 6px;
+  gap: 4px;
+
+  padding: 0 20px;
 }
+
+
+/*
+   Navigation links
+*/
 
 .main-navigation a {
   position: relative;
 
-  padding: 17px 15px;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 62px;
+
+  padding: 0 18px;
 
   color: #e8edf2;
 
   font-size: 14px;
+
   font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  border-radius: 4px;
 
   transition:
     color 0.25s ease,
-    background 0.25s ease;
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
-.main-navigation a:hover,
+
+/*
+   Hover background
+*/
+
+.main-navigation a:hover {
+  color: #d7b45d;
+
+  background:
+    rgba(215, 180, 93, 0.07);
+
+  transform: translateY(-1px);
+}
+
+
+/*
+   Active navigation item
+*/
+
 .main-navigation a.active {
   color: #d7b45d;
+
+  background:
+    rgba(215, 180, 93, 0.06);
 }
 
-.main-navigation a.active::after {
+
+/*
+   Animated gold underline
+*/
+
+.main-navigation a::after {
   content: "";
 
   position: absolute;
 
-  left: 15px;
-  right: 15px;
+  left: 50%;
+
   bottom: 8px;
+
+  width: 0;
 
   height: 2px;
 
   background: #d7b45d;
+
+  transform: translateX(-50%);
+
+  transition:
+    width 0.3s ease;
+}
+
+
+/*
+   Show underline on hover and active
+*/
+
+.main-navigation a:hover::after,
+.main-navigation a.active::after {
+  width: calc(100% - 36px);
+}
+
+
+/*
+   Small gold navigation indicator
+*/
+
+.main-navigation a.active::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 50%;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #d7b45d;
+
+  transform: translateX(-50%);
 }
 
 
@@ -216,12 +328,15 @@ header {
 
 .nav-container {
   width: min(1120px, calc(100% - 40px));
-  min-height: 58px;
+
+  min-height: 62px;
 
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
 
@@ -231,22 +346,32 @@ header {
   font-family: Georgia, "Times New Roman", serif;
 
   font-weight: 700;
+
   font-size: 18px;
 }
 
 .nav-links {
   display: flex;
+
   align-items: center;
+
   gap: 5px;
 }
 
 .nav-links a {
-  padding: 17px 13px;
+  position: relative;
+
+  padding: 17px 15px;
 
   color: #e8edf2;
 
   font-size: 14px;
+
   font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
 }
 
 .nav-links a:hover,
@@ -254,9 +379,24 @@ header {
   color: #d7b45d;
 }
 
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+
+  bottom: 8px;
+
+  height: 2px;
+
+  background: #d7b45d;
+}
+
 
 /* =========================================================
-   7. MOBILE MENU
+   7. MOBILE MENU SUPPORT
 ========================================================= */
 
 .menu-toggle {
@@ -266,6 +406,7 @@ header {
   height: 40px;
 
   border: 1px solid rgba(215, 180, 93, 0.45);
+
   border-radius: 6px;
 
   background: transparent;
@@ -287,22 +428,7 @@ header {
 
 /* =========================================================
    8. WEBSITE LOADER
-   IMPORTANT FIX
 ========================================================= */
-
-/*
-   The previous CSS kept the loader visible indefinitely.
-
-   This version automatically fades the loader away after
-   approximately 2.5 seconds.
-
-   If your HTML contains either:
-   #website-loader
-   OR
-   .page-loader
-
-   this will work.
-*/
 
 #website-loader,
 .page-loader {
@@ -324,39 +450,10 @@ header {
   opacity: 1;
   visibility: visible;
 
-  animation: automaticLoaderHide 2.5s ease forwards;
+  animation:
+    automaticLoaderHide 2.5s ease forwards;
 
   pointer-events: none;
-}
-
-
-/*
-   Loader automatically disappears.
-*/
-
-@keyframes automaticLoaderHide {
-
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  70% {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  90% {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
-
 }
 
 
@@ -372,7 +469,8 @@ header {
 
   color: #ffffff;
 
-  animation: loaderAppear 0.8s ease forwards;
+  animation:
+    loaderAppear 0.8s ease forwards;
 }
 
 .loader-logo,
@@ -384,7 +482,8 @@ header {
 
   margin: 0 auto 18px;
 
-  animation: loaderLogo 1.5s ease-in-out infinite alternate;
+  animation:
+    loaderLogo 1.5s ease-in-out infinite alternate;
 }
 
 .loader-content h1,
@@ -426,17 +525,20 @@ header {
 
   background: #d7b45d;
 
-  animation: loading 2s ease forwards;
+  animation:
+    loading 2s ease forwards;
 }
 
 .loader-text,
 .page-loader-loading {
   font-size: 12px;
+
   color: #cbd5e1;
 }
 
 .page-loader-loading {
-  animation: loadingText 1s ease-in-out infinite alternate;
+  animation:
+    loadingText 1s ease-in-out infinite alternate;
 }
 
 
@@ -460,12 +562,16 @@ header {
 
   from {
     opacity: 0;
-    transform: translateY(20px);
+
+    transform:
+      translateY(20px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+
+    transform:
+      translateY(0);
   }
 
 }
@@ -473,11 +579,13 @@ header {
 @keyframes loaderLogo {
 
   from {
-    transform: scale(0.96);
+    transform:
+      scale(0.96);
   }
 
   to {
-    transform: scale(1.04);
+    transform:
+      scale(1.04);
   }
 
 }
@@ -494,6 +602,36 @@ header {
 
 }
 
+@keyframes automaticLoaderHide {
+
+  0% {
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+  70% {
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+  90% {
+    opacity: 0;
+
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+  }
+
+}
+
 
 /* =========================================================
    11. HERO
@@ -503,6 +641,7 @@ header {
   min-height: 610px;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -525,7 +664,8 @@ header {
 }
 
 .hero h2 {
-  font-size: clamp(42px, 6vw, 70px);
+  font-size:
+    clamp(42px, 6vw, 70px);
 
   margin-bottom: 25px;
 }
@@ -552,6 +692,7 @@ header {
   min-height: 440px;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -574,7 +715,8 @@ header {
 }
 
 .policy-hero h2 {
-  font-size: clamp(42px, 5vw, 62px);
+  font-size:
+    clamp(42px, 5vw, 62px);
 
   margin-bottom: 25px;
 
@@ -615,11 +757,13 @@ header {
   border-radius: 5px;
 
   background: #d7b45d;
+
   color: #071522;
 
   border: 1px solid #d7b45d;
 
   font-size: 14px;
+
   font-weight: 700;
 
   transition:
@@ -630,12 +774,14 @@ header {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
   background: #e3c875;
 
   box-shadow:
-    0 6px 18px rgba(7, 21, 34, 0.18);
+    0 6px 18px
+    rgba(7, 21, 34, 0.18);
 }
 
 .secondary-btn {
@@ -713,7 +859,8 @@ section.container {
   padding: 35px;
 
   box-shadow:
-    0 8px 30px rgba(7, 21, 34, 0.06);
+    0 8px 30px
+    rgba(7, 21, 34, 0.06);
 
   transition:
     transform 0.25s ease,
@@ -722,10 +869,12 @@ section.container {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-5px);
 
   box-shadow:
-    0 14px 35px rgba(7, 21, 34, 0.10);
+    0 14px 35px
+    rgba(7, 21, 34, 0.10);
 
   border-color: #d7b45d;
 }
@@ -761,7 +910,8 @@ section.container {
   border-radius: 8px;
 
   box-shadow:
-    0 8px 28px rgba(7, 21, 34, 0.05);
+    0 8px 28px
+    rgba(7, 21, 34, 0.05);
 }
 
 .policy-card h2 {
@@ -854,7 +1004,8 @@ section.container {
 
   font-size: 14px;
 
-  transition: color 0.2s ease;
+  transition:
+    color 0.2s ease;
 }
 
 .card-button:hover {
@@ -893,7 +1044,8 @@ section.container {
   padding: 30px;
 
   box-shadow:
-    0 8px 25px rgba(7, 21, 34, 0.06);
+    0 8px 25px
+    rgba(7, 21, 34, 0.06);
 
   transition:
     transform 0.25s ease,
@@ -902,12 +1054,14 @@ section.container {
 }
 
 .article-card:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-5px);
 
   border-color: #d7b45d;
 
   box-shadow:
-    0 14px 35px rgba(7, 21, 34, 0.10);
+    0 14px 35px
+    rgba(7, 21, 34, 0.10);
 }
 
 .article-icon {
@@ -1015,7 +1169,8 @@ section.container {
 }
 
 .article-list-item:hover {
-  transform: translateX(4px);
+  transform:
+    translateX(4px);
 
   border-color: #d7b45d;
 }
@@ -1120,7 +1275,8 @@ section.container {
   border-radius: 8px;
 
   box-shadow:
-    0 8px 28px rgba(7, 21, 34, 0.06);
+    0 8px 28px
+    rgba(7, 21, 34, 0.06);
 }
 
 .form-group {
@@ -1175,7 +1331,8 @@ section.container {
   border-color: #d7b45d;
 
   box-shadow:
-    0 0 0 3px rgba(215, 180, 93, 0.15);
+    0 0 0 3px
+    rgba(215, 180, 93, 0.15);
 }
 
 .form-note {
@@ -1299,7 +1456,8 @@ footer {
 
   text-align: center;
 
-  border-top: 1px solid rgba(215, 180, 93, 0.25);
+  border-top:
+    1px solid rgba(215, 180, 93, 0.25);
 }
 
 .footer-logo {
@@ -1345,7 +1503,8 @@ footer {
 
   font-size: 14px;
 
-  transition: color 0.2s ease;
+  transition:
+    color 0.2s ease;
 }
 
 .footer-links a:hover,
@@ -1374,7 +1533,8 @@ footer {
 
   padding-top: 20px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top:
+    1px solid rgba(255, 255, 255, 0.08);
 
   color: #94a3b8;
 
@@ -1448,7 +1608,8 @@ footer {
   font-weight: 700;
 
   box-shadow:
-    0 5px 18px rgba(0, 0, 0, 0.18);
+    0 5px 18px
+    rgba(0, 0, 0, 0.18);
 
   z-index: 1000;
 }
@@ -1467,7 +1628,8 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #d7b45d;
+  outline:
+    2px solid #d7b45d;
 
   outline-offset: 3px;
 }
@@ -1527,6 +1689,28 @@ header img,
       repeat(2, minmax(0, 1fr));
   }
 
+  /*
+     Tablet navigation
+  */
+
+  .main-navigation {
+    gap: 0;
+
+    padding: 0 10px;
+  }
+
+  .main-navigation a {
+    padding-left: 13px;
+    padding-right: 13px;
+
+    font-size: 13px;
+  }
+
+  .main-navigation a:hover::after,
+  .main-navigation a.active::after {
+    width: calc(100% - 26px);
+  }
+
   .hero {
     min-height: 560px;
   }
@@ -1544,7 +1728,9 @@ header img,
 
 @media (max-width: 700px) {
 
-  /* HEADER */
+  /* =====================================================
+     HEADER
+  ===================================================== */
 
   .site-header {
     padding: 13px 0;
@@ -1558,7 +1744,6 @@ header img,
 
   .site-logo {
     width: 58px;
-
     height: 58px;
   }
 
@@ -1571,9 +1756,16 @@ header img,
   }
 
 
-  /* NAVIGATION */
+  /* =====================================================
+     MAIN NAVIGATION
+  ===================================================== */
 
   .main-navigation {
+
+    position: sticky;
+
+    top: 0;
+
     display: grid;
 
     grid-template-columns:
@@ -1581,27 +1773,80 @@ header img,
 
     gap: 0;
 
+    min-height: auto;
+
     padding: 0;
+
+    background:
+      rgba(11, 27, 42, 0.98);
   }
 
+
   .main-navigation a {
-    padding: 13px 5px;
+
+    min-height: 52px;
+
+    padding:
+      10px 5px;
 
     text-align: center;
 
     font-size: 12px;
+
+    border-right:
+      1px solid
+      rgba(255, 255, 255, 0.04);
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.04);
+
+    border-radius: 0;
+
+    line-height: 1.3;
   }
 
+
+  .main-navigation a:hover {
+
+    background:
+      rgba(215, 180, 93, 0.08);
+
+    transform: none;
+  }
+
+
+  .main-navigation a::after {
+
+    bottom: 4px;
+
+    height: 2px;
+
+  }
+
+
+  .main-navigation a:hover::after,
   .main-navigation a.active::after {
-    left: 20%;
 
-    right: 20%;
+    left: 15%;
 
-    bottom: 5px;
+    right: 15%;
+
+    width: 70%;
+
   }
 
 
-  /* OLD NAVIGATION */
+  .main-navigation a.active::before {
+
+    display: none;
+
+  }
+
+
+  /* =====================================================
+     OLD NAVIGATION
+  ===================================================== */
 
   .nav-container {
     width: calc(100% - 30px);
@@ -1612,6 +1857,7 @@ header img,
   }
 
   .nav-links {
+
     display: none;
 
     position: absolute;
@@ -1631,7 +1877,8 @@ header img,
     background: #071522;
 
     border-top:
-      1px solid rgba(215, 180, 93, 0.25);
+      1px solid
+      rgba(215, 180, 93, 0.25);
   }
 
   .nav-links.active {
@@ -1639,146 +1886,194 @@ header img,
   }
 
   .nav-links a {
+
     padding: 14px 20px;
 
     border-bottom:
-      1px solid rgba(255, 255, 255, 0.06);
+      1px solid
+      rgba(255, 255, 255, 0.06);
 
     text-align: center;
   }
 
 
-  /* HERO */
+  /* =====================================================
+     HERO
+  ===================================================== */
 
   .hero {
+
     min-height: 560px;
 
     padding: 70px 0;
   }
 
   .hero-content {
-    width: calc(100% - 30px);
+
+    width:
+      calc(100% - 30px);
   }
 
   .hero h2 {
+
     font-size: 42px;
   }
 
   .hero-text {
+
     font-size: 15px;
   }
 
 
-  /* INNER HERO */
+  /* =====================================================
+     INNER HERO
+  ===================================================== */
 
   .policy-hero {
+
     min-height: 430px;
 
     padding: 65px 0;
   }
 
   .policy-hero-content {
-    width: calc(100% - 30px);
+
+    width:
+      calc(100% - 30px);
   }
 
   .policy-hero h2 {
+
     font-size: 42px;
   }
 
 
-  /* CONTAINERS */
+  /* =====================================================
+     CONTAINERS
+  ===================================================== */
 
   .container,
   .policy-container {
-    width: calc(100% - 30px);
+
+    width:
+      calc(100% - 30px);
   }
 
 
-  /* CARDS */
+  /* =====================================================
+     CARDS
+  ===================================================== */
 
   .card,
   .policy-card {
+
     padding: 25px;
   }
 
   .policy-card h2 {
+
     font-size: 28px;
   }
 
   .policy-card h3 {
+
     font-size: 19px;
   }
 
 
-  /* GRIDS */
+  /* =====================================================
+     GRIDS
+  ===================================================== */
 
   .feature-grid {
+
     grid-template-columns: 1fr;
   }
 
   .article-grid {
+
     grid-template-columns: 1fr;
   }
 
   .publication-info {
+
     grid-template-columns: 1fr;
   }
 
 
-  /* SECTIONS */
+  /* =====================================================
+     SECTIONS
+  ===================================================== */
 
   section.container {
+
     padding-top: 55px;
 
     padding-bottom: 55px;
   }
 
   .policy-section {
+
     padding: 50px 0;
   }
 
   .dark-section,
   .policy-contact {
+
     padding: 65px 0;
   }
 
   .cta-section {
+
     padding: 65px 0;
   }
 
 
-  /* BUTTONS */
+  /* =====================================================
+     BUTTONS
+  ===================================================== */
 
   .hero-buttons {
+
     flex-direction: column;
 
     align-items: stretch;
   }
 
   .btn {
+
     width: 100%;
   }
 
 
-  /* CONTACT */
+  /* =====================================================
+     CONTACT
+  ===================================================== */
 
   .contact-form {
+
     padding: 25px;
   }
 
 
-  /* ARTICLE LIST */
+  /* =====================================================
+     ARTICLE LIST
+  ===================================================== */
 
   .article-list-item {
+
     flex-direction: column;
 
     align-items: flex-start;
   }
 
 
-  /* FOOTER */
+  /* =====================================================
+     FOOTER
+  ===================================================== */
 
   .footer-links {
+
     flex-direction: column;
 
     gap: 10px;
@@ -1794,66 +2089,89 @@ header img,
 @media (max-width: 430px) {
 
   .site-logo {
+
     width: 52px;
 
     height: 52px;
   }
 
   .brand-text h1 {
+
     font-size: 20px;
   }
 
   .brand-text p {
+
     font-size: 11px;
   }
 
+
+  /* 2 COLUMN MOBILE NAV */
+
   .main-navigation {
+
     grid-template-columns:
       repeat(2, 1fr);
   }
 
   .main-navigation a {
-    padding: 12px 4px;
+
+    min-height: 50px;
+
+    padding:
+      11px 4px;
+
+    font-size: 11.5px;
   }
+
 
   .hero h2,
   .policy-hero h2 {
+
     font-size: 36px;
   }
 
   .hero-tag,
   .small-heading {
+
     font-size: 10px;
 
     letter-spacing: 1.5px;
   }
 
   .policy-card {
+
     padding: 20px;
   }
 
   .policy-card h2 {
+
     font-size: 25px;
   }
 
   .policy-card p {
+
     font-size: 15px;
   }
 
   .contact-form {
+
     padding: 20px;
   }
 
   .article-card {
+
     padding: 22px;
   }
 
   .submission-box {
+
     padding: 20px;
   }
 
   .loader-logo,
   .page-loader-logo {
+
     width: 75px !important;
 
     height: 75px !important;
@@ -1861,11 +2179,13 @@ header img,
 
   .loader-content h1,
   .page-loader-name {
+
     font-size: 24px;
   }
 
   .loader-line,
   .page-loader-bar {
+
     width: 190px;
   }
 
@@ -1873,41 +2193,66 @@ header img,
 
 
 /* =========================================================
-   39. REDUCED MOTION
+   39. VERY SMALL DEVICES
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 350px) {
 
-  html {
-    scroll-behavior: auto;
+  .main-navigation {
+
+    grid-template-columns: 1fr;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
+  .main-navigation a {
 
-    animation-iteration-count: 1 !important;
+    min-height: 44px;
 
-    transition-duration: 0.01ms !important;
+    border-right: none;
   }
 
 }
 
 
 /* =========================================================
-   40. FINAL LOADER SAFETY FIX
+   40. REDUCED MOTION
 ========================================================= */
 
-/*
-   After 3 seconds the loader is completely invisible and
-   cannot interfere with clicks or scrolling.
-*/
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.01ms !important;
+  }
+
+}
+
+
+/* =========================================================
+   41. FINAL LOADER SAFETY FIX
+========================================================= */
 
 #website-loader,
 .page-loader {
+
   animation:
-    automaticLoaderHide 2.5s ease forwards !important;
+    automaticLoaderHide
+    2.5s
+    ease
+    forwards !important;
 }
 
 
