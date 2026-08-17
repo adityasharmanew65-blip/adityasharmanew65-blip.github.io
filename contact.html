@@ -37,27 +37,21 @@
 ===================================================== -->
 
 <script>
-
 function toggleDotsMenu() {
-
   const menu = document.getElementById("dotsMenu");
+  const button = document.querySelector(".dots-menu-btn");
 
-  if (menu) {
-    menu.classList.toggle("show");
-  }
+  if (!menu || !button) return;
 
+  menu.classList.toggle("active");
+  button.classList.toggle("active");
 }
 
-
 /* Close menu when clicking outside */
-
 document.addEventListener("click", function(event) {
 
-  const menu =
-    document.getElementById("dotsMenu");
-
-  const button =
-    document.querySelector(".dots-menu-btn");
+  const menu = document.getElementById("dotsMenu");
+  const button = document.querySelector(".dots-menu-btn");
 
   if (!menu || !button) return;
 
@@ -65,39 +59,32 @@ document.addEventListener("click", function(event) {
     !menu.contains(event.target) &&
     !button.contains(event.target)
   ) {
-
-    menu.classList.remove("show");
-
+    menu.classList.remove("active");
+    button.classList.remove("active");
   }
 
 });
 
-
 /* Close menu after selecting a link */
+document.querySelectorAll(".dots-menu a").forEach(function(link) {
 
-document.addEventListener("DOMContentLoaded", function() {
+  link.addEventListener("click", function() {
 
-  document
-    .querySelectorAll(".dots-menu a")
-    .forEach(function(link) {
+    const menu = document.getElementById("dotsMenu");
+    const button = document.querySelector(".dots-menu-btn");
 
-      link.addEventListener("click", function() {
+    if (menu) {
+      menu.classList.remove("active");
+    }
 
-        const menu =
-          document.getElementById("dotsMenu");
+    if (button) {
+      button.classList.remove("active");
+    }
 
-        if (menu) {
-          menu.classList.remove("show");
-        }
-
-      });
-
-    });
+  });
 
 });
-
 </script>
-
 
 <!-- =====================================================
      HEADER
