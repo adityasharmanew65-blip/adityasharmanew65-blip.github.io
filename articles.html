@@ -9,16 +9,16 @@
   <title>Legal Articles & Resources | Law Lex Mind</title>
 
   <meta name="description"
-        content="Explore legal articles and research resources on Contract Law, Law of Torts, Specific Relief and other areas of legal study through Law Lex Mind.">
+        content="Explore legal articles and research resources on Criminal Law, Contract Law, Law of Torts, Specific Relief and other areas of legal study through Law Lex Mind.">
 
   <meta name="keywords"
-        content="legal articles, law students, contract law, tort law, negligence, defamation, strict liability, specific relief, legal research, Law Lex Mind">
+        content="legal articles, law students, criminal law, BNS, IPC, criminal justice, contract law, tort law, negligence, defamation, strict liability, specific relief, legal research, Law Lex Mind">
 
   <meta name="author" content="Law Lex Mind">
 
   <link rel="icon" type="image/png" href="./logo.png">
 
-  <link rel="stylesheet" href="./style.css?v=2">
+  <link rel="stylesheet" href="./style.css?v=3">
 
 </head>
 
@@ -93,7 +93,8 @@
     <p class="hero-text">
       Explore structured legal resources covering
       important concepts, principles, doctrines,
-      remedies and case laws.
+      remedies, criminal justice developments and
+      landmark case laws.
     </p>
 
     <p class="hero-text">
@@ -147,8 +148,8 @@
 
       <p>
         Browse the articles below to explore topics
-        relating to Contract Law, Law of Torts and
-        Specific Relief.
+        relating to Criminal Law, Contract Law,
+        Law of Torts and Specific Relief.
       </p>
 
       <p>
@@ -191,7 +192,7 @@
         <input
           type="search"
           id="articleSearch"
-          placeholder="Search articles e.g. negligence, contract, defamation..."
+          placeholder="Search articles e.g. negligence, BNS, contract, defamation..."
           aria-label="Search legal articles">
 
       </div>
@@ -223,32 +224,63 @@
 
     <div class="category-buttons">
 
+      <!-- ALL -->
+
       <button
         type="button"
         class="category-btn active"
         data-category="all">
+
         All Articles
+
       </button>
+
+
+      <!-- CRIMINAL LAW -->
+
+      <button
+        type="button"
+        class="category-btn"
+        data-category="criminal">
+
+        Criminal Law
+
+      </button>
+
+
+      <!-- TORTS -->
 
       <button
         type="button"
         class="category-btn"
         data-category="torts">
+
         Law of Torts
+
       </button>
+
+
+      <!-- CONTRACT -->
 
       <button
         type="button"
         class="category-btn"
         data-category="contract">
+
         Contract Law
+
       </button>
+
+
+      <!-- SPECIFIC RELIEF -->
 
       <button
         type="button"
         class="category-btn"
         data-category="relief">
+
         Specific Relief
+
       </button>
 
     </div>
@@ -283,8 +315,130 @@
 
 
       <!-- =================================================
-           NEGLIGENCE
+           CRIMINAL LAW ARTICLES
       ================================================== -->
+
+
+      <!-- CRIMINAL LAW IN INDIA -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="criminal"
+        data-title="criminal law in india evolution challenges road ahead criminal justice">
+
+        <div class="feature-icon">
+          ⚖️
+        </div>
+
+        <p class="article-category">
+          CRIMINAL LAW
+        </p>
+
+        <h3>
+          Criminal Law in India: Evolution, Challenges and the Road Ahead
+        </h3>
+
+        <p>
+          Explore the evolution of criminal law in India,
+          contemporary challenges and the future direction
+          of the country's criminal justice system.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/criminal-law-in-india-evolution-challenges-and-the-road-ahead"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+      <!-- JUSTICE IN TRANSITION -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="criminal"
+        data-title="justice in transition modernizing india criminal justice framework">
+
+        <div class="feature-icon">
+          🏛️
+        </div>
+
+        <p class="article-category">
+          CRIMINAL LAW
+        </p>
+
+        <h3>
+          Justice in Transition: Modernizing India's Criminal Justice Framework
+        </h3>
+
+        <p>
+          Examine the changing criminal justice framework
+          in India and the importance of modernization
+          in the administration of criminal justice.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/justice-in-transition-modernizing-indias-criminal-justice-framework"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+      <!-- IPC TO BNS -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="criminal"
+        data-title="IPC BNS transforming india criminal justice system Bharatiya Nyaya Sanhita">
+
+        <div class="feature-icon">
+          📚
+        </div>
+
+        <p class="article-category">
+          CRIMINAL LAW
+        </p>
+
+        <h3>
+          From IPC to BNS: Transforming India's Criminal Justice System
+        </h3>
+
+        <p>
+          Understand the transition from the Indian Penal
+          Code to the Bharatiya Nyaya Sanhita and its
+          significance for India's criminal justice system.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/from-ipc-to-bns-transforming-indias-criminal-justice-system"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+      <!-- =================================================
+           TORT LAW ARTICLES
+      ================================================== -->
+
+
+      <!-- NEGLIGENCE -->
 
       <article
         class="card feature-card article-card"
@@ -322,14 +476,12 @@
       </article>
 
 
-      <!-- =================================================
-           DEFAMATION
-      ================================================== -->
+      <!-- DEFAMATION -->
 
       <article
         class="card feature-card article-card"
         data-category="torts"
-        data-title="defamation tort law">
+        data-title="defamation tort law reputation">
 
         <div class="feature-icon">
           🗣️
@@ -362,9 +514,7 @@
       </article>
 
 
-      <!-- =================================================
-           STRICT LIABILITY
-      ================================================== -->
+      <!-- STRICT LIABILITY -->
 
       <article
         class="card feature-card article-card"
@@ -402,9 +552,50 @@
       </article>
 
 
+      <!-- ABSOLUTE LIABILITY -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="torts"
+        data-title="absolute liability MC Mehta Union of India tort law">
+
+        <div class="feature-icon">
+          🏭
+        </div>
+
+        <p class="article-category">
+          LAW OF TORTS
+        </p>
+
+        <h3>
+          Absolute Liability: MC Mehta v. Union of India
+        </h3>
+
+        <p>
+          Examine the doctrine of absolute liability and
+          its development through the landmark decision
+          in MC Mehta v. Union of India.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/absolute-liability-from-mc-mehta-v-union-of-india"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
       <!-- =================================================
-           FORMATION OF CONTRACT
+           CONTRACT LAW ARTICLES
       ================================================== -->
+
+
+      <!-- FORMATION OF CONTRACT -->
 
       <article
         class="card feature-card article-card"
@@ -442,9 +633,7 @@
       </article>
 
 
-      <!-- =================================================
-           PERFORMANCE OF CONTRACT
-      ================================================== -->
+      <!-- PERFORMANCE OF CONTRACT -->
 
       <article
         class="card feature-card article-card"
@@ -482,9 +671,7 @@
       </article>
 
 
-      <!-- =================================================
-           QUASI CONTRACTS
-      ================================================== -->
+      <!-- QUASI CONTRACTS -->
 
       <article
         class="card feature-card article-card"
@@ -522,9 +709,7 @@
       </article>
 
 
-      <!-- =================================================
-           LIMITATION ON FREEDOM
-      ================================================== -->
+      <!-- LIMITATION ON FREEDOM -->
 
       <article
         class="card feature-card article-card"
@@ -562,9 +747,50 @@
       </article>
 
 
+      <!-- RESCISSION -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="contract"
+        data-title="rescission contracts contract law specific relief">
+
+        <div class="feature-icon">
+          🔄
+        </div>
+
+        <p class="article-category">
+          CONTRACT LAW
+        </p>
+
+        <h3>
+          Rescission of Contracts
+        </h3>
+
+        <p>
+          Explore the concept of rescission of contracts,
+          the circumstances in which rescission may arise
+          and its legal significance.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/rescission-of-contracts"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
       <!-- =================================================
-           SPECIFIC RELIEF ACT
+           SPECIFIC RELIEF ARTICLES
       ================================================== -->
+
+
+      <!-- SPECIFIC RELIEF ACT -->
 
       <article
         class="card feature-card article-card"
@@ -602,9 +828,7 @@
       </article>
 
 
-      <!-- =================================================
-           RECOVERY OF POSSESSION
-      ================================================== -->
+      <!-- RECOVERY OF POSSESSION -->
 
       <article
         class="card feature-card article-card"
@@ -642,10 +866,88 @@
       </article>
 
 
+      <!-- INJUNCTIONS -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="relief"
+        data-title="injunctions specific relief act 1963">
+
+        <div class="feature-icon">
+          🛡️
+        </div>
+
+        <p class="article-category">
+          SPECIFIC RELIEF
+        </p>
+
+        <h3>
+          Injunctions under Specific Relief Act, 1963
+        </h3>
+
+        <p>
+          Understand injunctions under the Specific Relief
+          Act, 1963 and the principles governing this
+          important equitable remedy.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/injunctions-under-specific-relief-act-1963"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
+      <!-- CANCELLATION OF INSTRUMENTS -->
+
+      <article
+        class="card feature-card article-card"
+        data-category="relief"
+        data-title="cancellation instruments specific relief act">
+
+        <div class="feature-icon">
+          📄
+        </div>
+
+        <p class="article-category">
+          SPECIFIC RELIEF
+        </p>
+
+        <h3>
+          Cancellation of Instruments
+        </h3>
+
+        <p>
+          Explore the legal remedy of cancellation of
+          instruments and the circumstances in which
+          such relief may be granted.
+        </p>
+
+        <a
+          href="https://legal-school-notes.odoo.com/cancellation-of-instruments"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card-button">
+
+          Read Article →
+
+        </a>
+
+      </article>
+
+
     </div>
 
 
-    <!-- NO RESULTS -->
+    <!-- =================================================
+         NO RESULTS
+    ================================================== -->
 
     <div
       id="noResults"
@@ -895,6 +1197,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let selectedCategory = "all";
 
 
+  /* =====================================================
+     FILTER ARTICLES
+  ===================================================== */
+
   function filterArticles() {
 
     const searchTerm =
@@ -908,7 +1214,8 @@ document.addEventListener("DOMContentLoaded", function () {
     articles.forEach(function (article) {
 
       const title =
-        article.dataset.title.toLowerCase();
+        (article.dataset.title || "")
+        .toLowerCase();
 
       const text =
         article.innerText.toLowerCase();
@@ -943,6 +1250,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
+    /* ===================================================
+       NO RESULTS MESSAGE
+    =================================================== */
+
     if (visibleCount === 0) {
 
       noResults.style.display = "block";
@@ -956,11 +1267,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  searchInput.addEventListener(
-    "input",
-    filterArticles
-  );
+  /* =====================================================
+     SEARCH EVENT
+  ===================================================== */
 
+  if (searchInput) {
+
+    searchInput.addEventListener(
+      "input",
+      filterArticles
+    );
+
+  }
+
+
+  /* =====================================================
+     CATEGORY BUTTONS
+  ===================================================== */
 
   categoryButtons.forEach(function (button) {
 
@@ -969,6 +1292,8 @@ document.addEventListener("DOMContentLoaded", function () {
       function () {
 
 
+        /* Remove active from all buttons */
+
         categoryButtons.forEach(function (btn) {
 
           btn.classList.remove("active");
@@ -976,19 +1301,47 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
+        /* Activate clicked button */
+
         button.classList.add("active");
 
+
+        /* Set selected category */
 
         selectedCategory =
           button.dataset.category;
 
 
+        /* Apply filter */
+
         filterArticles();
+
+
+        /* Scroll to articles */
+
+        const articleSection =
+          document.getElementById("articles");
+
+        if (articleSection) {
+
+          articleSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
 
       }
     );
 
   });
+
+
+  /* =====================================================
+     INITIAL FILTER
+  ===================================================== */
+
+  filterArticles();
 
 });
 
