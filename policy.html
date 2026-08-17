@@ -63,35 +63,46 @@
      NAVIGATION
 ===================================================== -->
 
-<nav class="main-navigation" aria-label="Main Navigation">
+<nav class="main-navigation">
 
-  <a href="index.html">
-    Home
-  </a>
+  <div class="nav-inner">
 
-  <a href="about.html">
-    About
-  </a>
+    <div class="nav-brand">
+      <a href="/">
+        Law Lex Mind
+      </a>
+    </div>
 
-  <a href="internship.html">
-    Internship
-  </a>
+    <!-- Three Dot Button -->
+    <button class="dots-menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            onclick="toggleDotsMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <a href="publications.html">
-    Publications
-  </a>
+    <!-- Dropdown Navigation -->
+    <div class="dots-menu" id="dotsMenu">
 
-  <a href="articles.html">
-    Articles
-  </a>
+      <a href="/">Home</a>
 
-  <a href="contact.html">
-    Contact
-  </a>
+      <a href="/about">About</a>
 
-  <a href="policy.html" class="active">
-    Policy
-  </a>
+      <a href="/publications">Publications</a>
+
+      <a href="/articles">Articles</a>
+
+      <a href="/internship">Internship</a>
+
+      <a href="/contact">Contact</a>
+
+      <a href="/privacy-policy">Privacy Policy</a>
+
+    </div>
+
+  </div>
 
 </nav>
 
