@@ -2,89 +2,256 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>Contact Law Lex Mind | Legal Enquiries & Internships</title>
+  <title>Contact Us | Law Lex Mind</title>
 
   <meta name="description"
-        content="Contact Law Lex Mind for legal internships, publications, articles, research and student enquiries. Send your message directly through our contact form.">
+        content="Contact Law Lex Mind for legal articles, publications, internships, law notes, collaborations and academic queries.">
 
   <meta name="keywords"
-        content="Law Lex Mind contact, legal internship enquiry, law student contact, legal publications, legal research">
+        content="Law Lex Mind contact, legal contact, law student publications, legal internship, legal articles">
 
   <meta name="author"
         content="Law Lex Mind">
 
-  <link rel="icon"
-        type="image/png"
-        href="./logo.png">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet"
-        href="./style.css?v=3">
+  <style>
+
+    /* =====================================================
+       CONTACT PAGE
+    ===================================================== */
+
+    .contact-page {
+      padding: 80px 0;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background:
+        linear-gradient(
+          135deg,
+          #030b13,
+          #0d2235
+        );
+
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-info::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      right: -120px;
+      bottom: -120px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(215,180,93,0.15),
+          transparent 70%
+        );
+    }
+
+    .contact-info h2 {
+      color: white;
+      margin-bottom: 18px;
+    }
+
+    .contact-info p {
+      color: #c8d3dd;
+    }
+
+    .contact-detail {
+      margin-top: 28px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-detail-item {
+      margin-bottom: 22px;
+    }
+
+    .contact-detail-item strong {
+      display: block;
+      color: var(--gold-400);
+      margin-bottom: 5px;
+    }
+
+    .contact-detail-item a {
+      color: #ffffff;
+      word-break: break-word;
+    }
+
+    .contact-detail-item a:hover {
+      color: var(--gold-400);
+    }
+
+    .contact-form-card {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-form-card h2 {
+      color: var(--navy-900);
+      margin-bottom: 10px;
+    }
+
+    .contact-form-card > p {
+      color: var(--text-soft);
+      margin-bottom: 30px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 800;
+      font-size: 13px;
+      color: var(--navy-900);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #d7d2c7;
+      border-radius: 7px;
+      background: #ffffff;
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--gold-500);
+      box-shadow:
+        0 0 0 4px
+        rgba(215,180,93,0.13);
+    }
+
+    .form-group textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    .required {
+      color: #b42318;
+    }
+
+    .form-submit {
+      margin-top: 5px;
+    }
+
+    .form-submit button {
+      border: none;
+    }
+
+    .form-note {
+      margin-top: 15px;
+      color: var(--text-soft);
+      font-size: 12px;
+    }
+
+    .contact-topics {
+      margin-top: 70px;
+    }
+
+    .contact-topics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .contact-topic {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-topic h3 {
+      color: var(--navy-900);
+      margin-bottom: 8px;
+    }
+
+    .contact-topic p {
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .contact-page {
+        padding: 55px 0;
+      }
+
+      .contact-info,
+      .contact-form-card {
+        padding: 25px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .contact-topics-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
 
 </head>
 
 
 <body>
 
-
-<!-- =====================================================
-     MOBILE THREE-DOT MENU SCRIPT
-===================================================== -->
-
-<script>
-function toggleDotsMenu() {
-  const menu = document.getElementById("dotsMenu");
-  const button = document.querySelector(".dots-menu-btn");
-
-  if (!menu || !button) return;
-
-  menu.classList.toggle("active");
-  button.classList.toggle("active");
-}
-
-/* Close menu when clicking outside */
-document.addEventListener("click", function(event) {
-
-  const menu = document.getElementById("dotsMenu");
-  const button = document.querySelector(".dots-menu-btn");
-
-  if (!menu || !button) return;
-
-  if (
-    !menu.contains(event.target) &&
-    !button.contains(event.target)
-  ) {
-    menu.classList.remove("active");
-    button.classList.remove("active");
-  }
-
-});
-
-/* Close menu after selecting a link */
-document.querySelectorAll(".dots-menu a").forEach(function(link) {
-
-  link.addEventListener("click", function() {
-
-    const menu = document.getElementById("dotsMenu");
-    const button = document.querySelector(".dots-menu-btn");
-
-    if (menu) {
-      menu.classList.remove("active");
-    }
-
-    if (button) {
-      button.classList.remove("active");
-    }
-
-  });
-
-});
-</script>
 
 <!-- =====================================================
      HEADER
@@ -95,15 +262,13 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
   <div class="logo-area">
 
     <img
-      src="./logo.png"
+      src="logo.png"
       alt="Law Lex Mind Logo"
       class="site-logo">
 
     <div class="brand-text">
 
-      <h1>
-        Law Lex Mind
-      </h1>
+      <h1>Law Lex Mind</h1>
 
       <p>
         Research • Write • Learn • Grow
@@ -126,61 +291,41 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
 
     <div class="nav-brand">
 
-      <a href="/">
+      <a href="index.html">
         Law Lex Mind
       </a>
 
     </div>
 
 
-    <!-- THREE DOT BUTTON -->
+    <div class="nav-links">
 
-    <button
-      class="dots-menu-btn"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      onclick="toggleDotsMenu()">
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-    </button>
-
-
-    <!-- DROPDOWN NAVIGATION -->
-
-    <div
-      class="dots-menu"
-      id="dotsMenu">
-
-      <a href="/">
+      <a href="index.html">
         Home
       </a>
 
-      <a href="/about">
+      <a href="about.html">
         About
       </a>
 
-      <a href="/publications">
+      <a href="publications.html">
         Publications
       </a>
 
-      <a href="/articles">
+      <a href="notes.html">
+        Notes
+      </a>
+
+      <a href="articles.html">
         Articles
       </a>
 
-      <a href="/internship">
+      <a href="internship.html">
         Internship
       </a>
 
-      <a href="/contact">
+      <a href="contact.html" class="active">
         Contact
-      </a>
-
-      <a href="/privacy-policy">
-        Privacy Policy
       </a>
 
     </div>
@@ -191,7 +336,7 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
 
 
 <!-- =====================================================
-     HERO
+     PAGE HERO
 ===================================================== -->
 
 <section class="policy-hero">
@@ -208,9 +353,9 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
 
     <p class="hero-text">
 
-      Have a question about internships, publications,
-      legal articles, research or student opportunities?
-      Send us a message directly.
+      Have a question, publication enquiry,
+      internship-related query or collaboration idea?
+      We would be happy to hear from you.
 
     </p>
 
@@ -220,353 +365,402 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
 
 
 <!-- =====================================================
-     MAIN
+     CONTACT SECTION
 ===================================================== -->
 
-<main>
+<section class="contact-page">
+
+  <div class="container">
+
+    <div class="contact-wrapper">
 
 
-<!-- =====================================================
-     CONTACT INFORMATION
-===================================================== -->
+      <!-- CONTACT INFORMATION -->
 
-<section class="policy-section">
+      <div class="contact-info">
 
-  <div class="policy-container">
+        <p class="small-heading">
+          CONTACT INFORMATION
+        </p>
 
-    <div class="policy-card">
+        <h2>
+          Let's Connect
+        </h2>
 
-      <p class="small-heading">
-        CONTACT INFORMATION
-      </p>
+        <p>
 
-      <h2>
-        We'd Like to Hear From You
-      </h2>
+          Law Lex Mind welcomes enquiries from
+          law students, researchers, writers,
+          academics and organisations.
 
-      <p>
-
-        Law students, researchers and aspiring legal
-        professionals can contact Law Lex Mind regarding
-        internships, publications, articles, research
-        opportunities and general enquiries.
-
-      </p>
+        </p>
 
 
-      <h3>
-        Email
-      </h3>
-
-      <p>
-
-        <a href="mailto:lexmindsindia@gmail.com">
-
-          lexmindsindia@gmail.com
-
-        </a>
-
-      </p>
+        <div class="contact-detail">
 
 
-      <h3>
-        LinkedIn
-      </h3>
+          <div class="contact-detail-item">
 
-      <p>
+            <strong>
+              📧 Email
+            </strong>
 
-        <a
-          href="https://www.linkedin.com/company/legal-school-notes/"
-          target="_blank"
-          rel="noopener noreferrer">
+            <a href="mailto:lexmindsindia@gmail.com">
 
-          Law Lex Mind on LinkedIn
+              lexmindsindia@gmail.com
 
-        </a>
+            </a>
 
-      </p>
+          </div>
+
+
+          <div class="contact-detail-item">
+
+            <strong>
+              🔗 LinkedIn
+            </strong>
+
+            <a
+              href="https://www.linkedin.com/company/legal-school-notes/"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Law Lex Mind
+
+            </a>
+
+          </div>
+
+
+          <div class="contact-detail-item">
+
+            <strong>
+              📝 Publications
+            </strong>
+
+            <a href="publications.html">
+
+              Submit Your Work →
+
+            </a>
+
+          </div>
+
+
+          <div class="contact-detail-item">
+
+            <strong>
+              🎓 Internships
+            </strong>
+
+            <a href="internship.html">
+
+              View Internship Updates →
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT FORM -->
+
+      <div class="contact-form-card">
+
+        <p class="small-heading">
+          SEND A MESSAGE
+        </p>
+
+        <h2>
+          Contact Form
+        </h2>
+
+        <p>
+
+          Fill in the form below and submit your
+          enquiry. Please provide accurate information
+          so that we can respond appropriately.
+
+        </p>
+
+
+        <!--
+          FORMSPREE FORM
+
+          IMPORTANT:
+          Replace YOUR_FORMSPREE_ID with your
+          actual Formspree form ID.
+
+          Example:
+          https://formspree.io/f/abcdwxyz
+        -->
+
+        <form
+          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+          method="POST">
+
+
+          <div class="form-row">
+
+
+            <div class="form-group">
+
+              <label for="name">
+                Full Name
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email Address
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Optional">
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="subject">
+                Subject
+                <span class="required">*</span>
+              </label>
+
+              <select
+                id="subject"
+                name="subject"
+                required>
+
+                <option value="">
+                  Select an enquiry type
+                </option>
+
+                <option value="General Enquiry">
+                  General Enquiry
+                </option>
+
+                <option value="Publication">
+                  Publication Enquiry
+                </option>
+
+                <option value="Article Submission">
+                  Article Submission
+                </option>
+
+                <option value="Internship">
+                  Internship Enquiry
+                </option>
+
+                <option value="Law Notes">
+                  Law Notes / Study Material
+                </option>
+
+                <option value="Collaboration">
+                  Collaboration
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Your Message
+              <span class="required">*</span>
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message here..."
+              required></textarea>
+
+          </div>
+
+
+          <!-- EMAIL SUBJECT -->
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Contact Form Submission - Law Lex Mind">
+
+
+          <!-- REDIRECT AFTER SUBMISSION -->
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://adityasharmanew65-blip.github.io/thank-you.html">
+
+
+          <div class="form-submit">
+
+            <button
+              type="submit"
+              class="btn">
+
+              Send Message →
+
+            </button>
+
+          </div>
+
+
+          <p class="form-note">
+
+            Your message will be sent to the email
+            address connected to your form service.
+
+          </p>
+
+
+        </form>
+
+      </div>
 
     </div>
 
-  </div>
 
-</section>
+    <!-- =================================================
+         CONTACT TOPICS
+    ================================================== -->
 
+    <div class="contact-topics">
 
-<!-- =====================================================
-     DIRECT MESSAGE FORM
-===================================================== -->
+      <div class="section-heading">
 
-<section class="policy-section">
+        <p class="small-heading">
+          WHAT CAN WE HELP WITH?
+        </p>
 
-  <div class="policy-container">
+        <h2>
+          Contact Law Lex Mind About
+        </h2>
 
-    <div class="policy-card">
-
-      <p class="small-heading">
-        STUDENT ENQUIRY
-      </p>
-
-      <h2>
-        Send Us a Message
-      </h2>
-
-      <p>
-
-        Students can use the form below to contact
-        Law Lex Mind directly. Your message will be
-        sent to our official email.
-
-      </p>
+      </div>
 
 
-      <!-- =================================================
-           FORMSUBMIT FORM
-      ================================================== -->
-
-      <form
-        action="https://formsubmit.co/lexmindsindia@gmail.com"
-        method="POST"
-        class="contact-form">
+      <div class="contact-topics-grid">
 
 
-        <!-- EMAIL SUBJECT -->
+        <div class="contact-topic">
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Student Enquiry - Law Lex Mind">
+          <h3>
+            📝 Publications
+          </h3>
 
+          <p>
 
-        <!-- EMAIL TEMPLATE -->
+            Questions regarding article submissions,
+            research papers, case commentaries and
+            publication opportunities.
 
-        <input
-          type="hidden"
-          name="_template"
-          value="table">
-
-
-        <!-- DISABLE CAPTCHA -->
-
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false">
-
-
-        <!-- REDIRECT AFTER SUCCESS -->
-
-        <input
-          type="hidden"
-          name="_next"
-          value="https://adityasharmanew65-blip.github.io/contact.html?success=true">
-
-
-        <!-- NAME -->
-
-        <div class="form-group">
-
-          <label for="name">
-            Full Name
-          </label>
-
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
-            required>
+          </p>
 
         </div>
 
 
-        <!-- EMAIL -->
+        <div class="contact-topic">
 
-        <div class="form-group">
+          <h3>
+            🎓 Internships
+          </h3>
 
-          <label for="email">
-            Email Address
-          </label>
+          <p>
 
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email address"
-            required>
+            Ask about internship updates,
+            opportunities, applications and
+            student guidance.
 
-        </div>
-
-
-        <!-- PHONE -->
-
-        <div class="form-group">
-
-          <label for="phone">
-            Phone Number
-          </label>
-
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number">
+          </p>
 
         </div>
 
 
-        <!-- COURSE -->
+        <div class="contact-topic">
 
-        <div class="form-group">
+          <h3>
+            📚 Study Materials
+          </h3>
 
-          <label for="course">
-            Course / Year
-          </label>
+          <p>
 
-          <input
-            type="text"
-            id="course"
-            name="course"
-            placeholder="Example: B.A. LL.B. 2nd Year">
+            Contact us regarding law notes,
+            academic resources and legal study
+            materials.
 
-        </div>
-
-
-        <!-- ENQUIRY TYPE -->
-
-        <div class="form-group">
-
-          <label for="enquiry">
-            Enquiry Type
-          </label>
-
-          <select
-            id="enquiry"
-            name="enquiry"
-            required>
-
-            <option value="">
-              Select an enquiry type
-            </option>
-
-            <option value="Internship">
-              Internship
-            </option>
-
-            <option value="Publication">
-              Publication
-            </option>
-
-            <option value="Article">
-              Article
-            </option>
-
-            <option value="Legal Research">
-              Legal Research
-            </option>
-
-            <option value="General Enquiry">
-              General Enquiry
-            </option>
-
-            <option value="Other">
-              Other
-            </option>
-
-          </select>
+          </p>
 
         </div>
 
 
-        <!-- MESSAGE -->
+        <div class="contact-topic">
 
-        <div class="form-group">
+          <h3>
+            🤝 Collaboration
+          </h3>
 
-          <label for="message">
-            Your Message
-          </label>
+          <p>
 
-          <textarea
-            id="message"
-            name="message"
-            rows="7"
-            placeholder="Write your message here..."
-            required></textarea>
+            Interested in collaborating with
+            Law Lex Mind? Send us your proposal
+            through the contact form.
 
-        </div>
-
-
-        <!-- SUBMIT -->
-
-        <div class="form-submit">
-
-          <button
-            type="submit"
-            class="btn">
-
-            Send Message →
-
-          </button>
+          </p>
 
         </div>
 
-
-      </form>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     SUCCESS MESSAGE
-===================================================== -->
-
-<section
-  class="policy-section"
-  id="success-message"
-  style="display:none;">
-
-  <div class="policy-container">
-
-    <div class="policy-card">
-
-      <p class="small-heading">
-        MESSAGE SENT
-      </p>
-
-      <h2>
-        Thank You for Contacting Us!
-      </h2>
-
-      <p>
-
-        Your message has been successfully submitted
-        to Law Lex Mind. We will review your enquiry
-        and respond through the email address you provided.
-
-      </p>
-
-
-      <div class="hero-buttons">
-
-        <a
-          href="index.html"
-          class="btn">
-
-          Back to Home →
-
-        </a>
-
-        <a
-          href="internship.html"
-          class="btn secondary-btn">
-
-          View Internships
-
-        </a>
 
       </div>
 
@@ -575,107 +769,6 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
   </div>
 
 </section>
-
-
-<!-- =====================================================
-     COMMON ENQUIRIES
-===================================================== -->
-
-<section class="policy-section">
-
-  <div class="policy-container">
-
-    <div class="policy-card">
-
-      <p class="small-heading">
-        COMMON ENQUIRIES
-      </p>
-
-      <h2>
-        How Can We Help?
-      </h2>
-
-
-      <h3>
-        Internship Enquiries
-      </h3>
-
-      <p>
-
-        Contact us regarding internship opportunities,
-        application information, eligibility and
-        internship-related questions.
-
-      </p>
-
-
-      <h3>
-        Publication Enquiries
-      </h3>
-
-      <p>
-
-        Contact us regarding research papers, legal
-        articles, case commentaries and publication
-        submissions.
-
-      </p>
-
-
-      <h3>
-        Article & Research Enquiries
-      </h3>
-
-      <p>
-
-        Students can contact us regarding legal
-        research, academic articles and research-based
-        legal content.
-
-      </p>
-
-
-      <h3>
-        General Questions
-      </h3>
-
-      <p>
-
-        For other questions relating to Law Lex Mind,
-        feel free to send us a message using the form
-        above.
-
-      </p>
-
-
-      <div class="hero-buttons">
-
-        <a
-          href="internship.html"
-          class="btn">
-
-          Explore Internships →
-
-        </a>
-
-        <a
-          href="publications.html"
-          class="btn secondary-btn">
-
-          Publication Opportunities
-
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-</main>
 
 
 <!-- =====================================================
@@ -685,12 +778,10 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
 <footer class="site-footer">
 
 
-  <!-- LOGO -->
-
   <div class="footer-logo">
 
     <img
-      src="./logo.png"
+      src="logo.png"
       alt="Law Lex Mind Logo"
       class="footer-logo-img">
 
@@ -705,8 +796,6 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
   </div>
 
 
-  <!-- LINKS -->
-
   <div class="footer-links">
 
     <a href="index.html">
@@ -717,16 +806,20 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
       About
     </a>
 
-    <a href="internship.html">
-      Internship
-    </a>
-
     <a href="publications.html">
       Publications
     </a>
 
+    <a href="notes.html">
+      Notes
+    </a>
+
     <a href="articles.html">
       Articles
+    </a>
+
+    <a href="internship.html">
+      Internship
     </a>
 
     <a href="contact.html">
@@ -734,13 +827,11 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
     </a>
 
     <a href="policy.html">
-      Policy
+      Privacy Policy
     </a>
 
   </div>
 
-
-  <!-- CONTACT -->
 
   <div class="footer-contact">
 
@@ -755,7 +846,6 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
       </a>
 
     </p>
-
 
     <p>
 
@@ -775,8 +865,6 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
   </div>
 
 
-  <!-- COPYRIGHT -->
-
   <p class="copyright">
 
     © 2026 Law Lex Mind.
@@ -786,43 +874,6 @@ document.querySelectorAll(".dots-menu a").forEach(function(link) {
 
 
 </footer>
-
-
-<!-- =====================================================
-     SUCCESS URL SCRIPT
-===================================================== -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  const urlParams =
-    new URLSearchParams(window.location.search);
-
-  const success =
-    urlParams.get("success");
-
-  if (success === "true") {
-
-    const successMessage =
-      document.getElementById("success-message");
-
-    if (successMessage) {
-
-      successMessage.style.display = "block";
-
-      successMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-
-    }
-
-  }
-
-});
-
-</script>
 
 
 </body>
