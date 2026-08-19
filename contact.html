@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -7,14 +8,14 @@
 
   <title>Contact Us | Law Lex Mind</title>
 
-  <meta name="description"
-        content="Contact Law Lex Mind for legal articles, publications, internships, law notes, collaborations and academic queries.">
+<meta name="description"
+     content="Contact Law Lex Mind for legal articles, publications, internships, collaborations and academic queries.">
 
-  <meta name="keywords"
-        content="Law Lex Mind contact, legal contact, law student publications, legal internship, legal articles">
+<meta name="keywords"
+     content="Law Lex Mind contact, legal contact, law student publications, legal internship, legal articles">
 
-  <meta name="author"
-        content="Law Lex Mind">
+<meta name="author"
+     content="Law Lex Mind">
 
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="stylesheet" href="style.css">
@@ -35,6 +36,10 @@
       gap: 35px;
       align-items: start;
     }
+
+    /* =====================================================
+       CONTACT INFORMATION
+    ===================================================== */
 
     .contact-info {
       background:
@@ -60,6 +65,7 @@
       right: -120px;
       bottom: -120px;
       border-radius: 50%;
+
       background:
         radial-gradient(
           circle,
@@ -102,6 +108,10 @@
       color: var(--gold-400);
     }
 
+    /* =====================================================
+       FORM CARD
+    ===================================================== */
+
     .contact-form-card {
       background: #ffffff;
       padding: 40px;
@@ -143,18 +153,26 @@
     .form-group select {
       width: 100%;
       padding: 14px 15px;
+
       border: 1px solid #d7d2c7;
       border-radius: 7px;
+
       background: #ffffff;
       color: var(--text);
+
       font-size: 15px;
       outline: none;
+
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
     }
 
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
       border-color: var(--gold-500);
+
       box-shadow:
         0 0 0 4px
         rgba(215,180,93,0.13);
@@ -183,6 +201,10 @@
       font-size: 12px;
     }
 
+    /* =====================================================
+       CONTACT TOPICS
+    ===================================================== */
+
     .contact-topics {
       margin-top: 70px;
     }
@@ -195,10 +217,27 @@
 
     .contact-topic {
       background: #ffffff;
+
       border: 1px solid var(--border);
       border-radius: 12px;
+
       padding: 25px;
+
       box-shadow: var(--shadow-sm);
+
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .contact-topic:hover {
+      transform: translateY(-5px);
+
+      border-color:
+        rgba(215,180,93,0.6);
+
+      box-shadow: var(--shadow-md);
     }
 
     .contact-topic h3 {
@@ -210,6 +249,10 @@
       color: var(--text-soft);
       font-size: 14px;
     }
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
     @media (max-width: 850px) {
 
@@ -249,9 +292,7 @@
 
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      HEADER
@@ -261,25 +302,28 @@
 
   <div class="logo-area">
 
-    <img
-      src="logo.png"
-      alt="Law Lex Mind Logo"
-      class="site-logo">
+```
+<img
+  src="logo.png"
+  alt="Law Lex Mind Logo"
+  class="site-logo">
 
-    <div class="brand-text">
+<div class="brand-text">
 
-      <h1>Law Lex Mind</h1>
+  <h1>
+    Law Lex Mind
+  </h1>
 
-      <p>
-        Research • Write • Learn • Grow
-      </p>
+  <p>
+    Research • Write • Learn • Grow
+  </p>
 
-    </div>
+</div>
+```
 
   </div>
 
 </header>
-
 
 <!-- =====================================================
      NAVIGATION
@@ -289,32 +333,51 @@
 
   <div class="nav-inner">
 
-    <div class="nav-brand">
-      <a href="index.html">Law Lex Mind</a>
-    </div>
+```
+<div class="nav-brand">
 
-    <div class="nav-links">
+  <a href="index.html">
+    Law Lex Mind
+  </a>
 
-      <a href="index.html">Home</a>
+</div>
 
-      <a href="about.html">About</a>
+<div class="nav-links">
 
-      <a href="publications.html" class="active">Publications</a>
+  <a href="index.html">
+    Home
+  </a>
 
-      <a href="articles.html">Articles</a>
+  <a href="about.html">
+    About
+  </a>
 
-      <a href="internship.html">Internship</a>
+  <a href="publications.html">
+    Publications
+  </a>
 
-      <a href="contact.html">Contact</a>
+  <a href="articles.html">
+    Articles
+  </a>
 
-      <a href="policy.html">Privacy Policy</a>
+  <a href="internship.html">
+    Internship
+  </a>
 
-    </div>
+  <a href="contact.html" class="active">
+    Contact
+  </a>
+
+  <a href="policy.html">
+    Privacy Policy
+  </a>
+
+</div>
+```
 
   </div>
 
 </nav>
-
 
 <!-- =====================================================
      PAGE HERO
@@ -324,26 +387,27 @@
 
   <div class="policy-hero-content">
 
-    <p class="hero-tag">
-      GET IN TOUCH
-    </p>
+```
+<p class="hero-tag">
+  GET IN TOUCH
+</p>
 
-    <h2>
-      Contact <span>Law Lex Mind</span>
-    </h2>
+<h2>
+  Contact <span>Law Lex Mind</span>
+</h2>
 
-    <p class="hero-text">
+<p class="hero-text">
 
-      Have a question, publication enquiry,
-      internship-related query or collaboration idea?
-      We would be happy to hear from you.
+  Have a question, publication enquiry,
+  internship-related query or collaboration idea?
+  We would be happy to hear from you.
 
-    </p>
+</p>
+```
 
   </div>
 
 </section>
-
 
 <!-- =====================================================
      CONTACT SECTION
@@ -353,404 +417,435 @@
 
   <div class="container">
 
-    <div class="contact-wrapper">
+```
+<div class="contact-wrapper">
 
 
-      <!-- CONTACT INFORMATION -->
+  <!-- =================================================
+       CONTACT INFORMATION
+  ================================================== -->
 
-      <div class="contact-info">
+  <div class="contact-info">
 
-        <p class="small-heading">
-          CONTACT INFORMATION
-        </p>
+    <p class="small-heading">
+      CONTACT INFORMATION
+    </p>
 
-        <h2>
-          Let's Connect
-        </h2>
+    <h2>
+      Let's Connect
+    </h2>
 
-        <p>
+    <p>
 
-          Law Lex Mind welcomes enquiries from
-          law students, researchers, writers,
-          academics and organisations.
+      Law Lex Mind welcomes enquiries from
+      law students, researchers, writers,
+      academics and organisations.
 
-        </p>
-
-
-        <div class="contact-detail">
-
-
-          <div class="contact-detail-item">
-
-            <strong>
-              📧 Email
-            </strong>
-
-            <a href="mailto:lexmindsindia@gmail.com">
-
-              lexmindsindia@gmail.com
-
-            </a>
-
-          </div>
+    </p>
 
 
-          <div class="contact-detail-item">
-
-            <strong>
-              🔗 LinkedIn
-            </strong>
-
-            <a
-              href="https://www.linkedin.com/company/legal-school-notes/"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              Law Lex Mind
-
-            </a>
-
-          </div>
+    <div class="contact-detail">
 
 
-          <div class="contact-detail-item">
+      <!-- EMAIL -->
 
-            <strong>
-              📝 Publications
-            </strong>
+      <div class="contact-detail-item">
 
-            <a href="publications.html">
+        <strong>
+          📧 Email
+        </strong>
 
-              Submit Your Work →
+        <a
+          href="mailto:lexmindsindia@gmail.com">
 
-            </a>
+          lexmindsindia@gmail.com
 
-          </div>
-
-
-          <div class="contact-detail-item">
-
-            <strong>
-              🎓 Internships
-            </strong>
-
-            <a href="internship.html">
-
-              View Internship Updates →
-
-            </a>
-
-          </div>
-
-
-        </div>
+        </a>
 
       </div>
 
 
-      <!-- CONTACT FORM -->
+      <!-- LINKEDIN -->
 
-      <div class="contact-form-card">
+      <div class="contact-detail-item">
 
-        <p class="small-heading">
-          SEND A MESSAGE
-        </p>
+        <strong>
+          🔗 LinkedIn
+        </strong>
 
-        <h2>
-          Contact Form
-        </h2>
+        <a
+          href="https://www.linkedin.com/company/legal-school-notes/"
+          target="_blank"
+          rel="noopener noreferrer">
 
-        <p>
+          Law Lex Mind
 
-          Fill in the form below and submit your
-          enquiry. Please provide accurate information
-          so that we can respond appropriately.
-
-        </p>
-
-
-        <!--
-          FORMSPREE FORM
-
-          IMPORTANT:
-          Replace YOUR_FORMSPREE_ID with your
-          actual Formspree form ID.
-
-          Example:
-          https://formspree.io/f/abcdwxyz
-        -->
-
-        <form
-          action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-          method="POST">
-
-
-          <div class="form-row">
-
-
-            <div class="form-group">
-
-              <label for="name">
-                Full Name
-                <span class="required">*</span>
-              </label>
-
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your full name"
-                required>
-
-            </div>
-
-
-            <div class="form-group">
-
-              <label for="email">
-                Email Address
-                <span class="required">*</span>
-              </label>
-
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email address"
-                required>
-
-            </div>
-
-          </div>
-
-
-          <div class="form-row">
-
-
-            <div class="form-group">
-
-              <label for="phone">
-                Phone Number
-              </label>
-
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Optional">
-
-            </div>
-
-
-            <div class="form-group">
-
-              <label for="subject">
-                Subject
-                <span class="required">*</span>
-              </label>
-
-              <select
-                id="subject"
-                name="subject"
-                required>
-
-                <option value="">
-                  Select an enquiry type
-                </option>
-
-                <option value="General Enquiry">
-                  General Enquiry
-                </option>
-
-                <option value="Publication">
-                  Publication Enquiry
-                </option>
-
-                <option value="Article Submission">
-                  Article Submission
-                </option>
-
-                <option value="Internship">
-                  Internship Enquiry
-                </option>
-
-                <option value="Law Notes">
-                  Law Notes / Study Material
-                </option>
-
-                <option value="Collaboration">
-                  Collaboration
-                </option>
-
-                <option value="Other">
-                  Other
-                </option>
-
-              </select>
-
-            </div>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="message">
-              Your Message
-              <span class="required">*</span>
-            </label>
-
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Write your message here..."
-              required></textarea>
-
-          </div>
-
-
-          <!-- EMAIL SUBJECT -->
-
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Contact Form Submission - Law Lex Mind">
-
-
-          <!-- REDIRECT AFTER SUBMISSION -->
-
-          <input
-            type="hidden"
-            name="_next"
-            value="https://adityasharmanew65-blip.github.io/thank-you.html">
-
-
-          <div class="form-submit">
-
-            <button
-              type="submit"
-              class="btn">
-
-              Send Message →
-
-            </button>
-
-          </div>
-
-
-          <p class="form-note">
-
-            Your message will be sent to the email
-            address connected to your form service.
-
-          </p>
-
-
-        </form>
-
-      </div>
-
-    </div>
-
-
-    <!-- =================================================
-         CONTACT TOPICS
-    ================================================== -->
-
-    <div class="contact-topics">
-
-      <div class="section-heading">
-
-        <p class="small-heading">
-          WHAT CAN WE HELP WITH?
-        </p>
-
-        <h2>
-          Contact Law Lex Mind About
-        </h2>
+        </a>
 
       </div>
 
 
-      <div class="contact-topics-grid">
+      <!-- PUBLICATIONS -->
 
+      <div class="contact-detail-item">
 
-        <div class="contact-topic">
+        <strong>
+          📝 Publications
+        </strong>
 
-          <h3>
-            📝 Publications
-          </h3>
+        <a href="publications.html">
 
-          <p>
+          Submit Your Work →
 
-            Questions regarding article submissions,
-            research papers, case commentaries and
-            publication opportunities.
-
-          </p>
-
-        </div>
-
-
-        <div class="contact-topic">
-
-          <h3>
-            🎓 Internships
-          </h3>
-
-          <p>
-
-            Ask about internship updates,
-            opportunities, applications and
-            student guidance.
-
-          </p>
-
-        </div>
-
-
-        <div class="contact-topic">
-
-          <h3>
-            📚 Study Materials
-          </h3>
-
-          <p>
-
-            Contact us regarding law notes,
-            academic resources and legal study
-            materials.
-
-          </p>
-
-        </div>
-
-
-        <div class="contact-topic">
-
-          <h3>
-            🤝 Collaboration
-          </h3>
-
-          <p>
-
-            Interested in collaborating with
-            Law Lex Mind? Send us your proposal
-            through the contact form.
-
-          </p>
-
-        </div>
-
+        </a>
 
       </div>
+
+
+      <!-- INTERNSHIP -->
+
+      <div class="contact-detail-item">
+
+        <strong>
+          🎓 Internships
+        </strong>
+
+        <a href="internship.html">
+
+          View Internship Updates →
+
+        </a>
+
+      </div>
+
 
     </div>
 
   </div>
 
-</section>
 
+  <!-- =================================================
+       CONTACT FORM
+  ================================================== -->
+
+  <div class="contact-form-card">
+
+    <p class="small-heading">
+      SEND A MESSAGE
+    </p>
+
+    <h2>
+      Contact Form
+    </h2>
+
+    <p>
+
+      Fill in the form below and submit your
+      enquiry. Please provide accurate information
+      so that we can respond appropriately.
+
+    </p>
+
+
+    <!-- =================================================
+         FORMSPREE
+
+         YOUR ACTUAL ENDPOINT:
+         https://formspree.io/f/mqpzgowa
+    ================================================== -->
+
+    <form
+      action="https://formspree.io/f/mqpzgowa"
+      method="POST">
+
+
+      <!-- NAME + EMAIL -->
+
+      <div class="form-row">
+
+
+        <div class="form-group">
+
+          <label for="name">
+
+            Full Name
+            <span class="required">*</span>
+
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            autocomplete="name"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="email">
+
+            Email Address
+            <span class="required">*</span>
+
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- PHONE + SUBJECT -->
+
+      <div class="form-row">
+
+
+        <div class="form-group">
+
+          <label for="phone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Optional"
+            autocomplete="tel">
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="subject">
+
+            Subject
+            <span class="required">*</span>
+
+          </label>
+
+          <select
+            id="subject"
+            name="subject"
+            required>
+
+            <option value="">
+              Select an enquiry type
+            </option>
+
+            <option value="General Enquiry">
+              General Enquiry
+            </option>
+
+            <option value="Publication Enquiry">
+              Publication Enquiry
+            </option>
+
+            <option value="Article Submission">
+              Article Submission
+            </option>
+
+            <option value="Internship Enquiry">
+              Internship Enquiry
+            </option>
+
+            <option value="Collaboration">
+              Collaboration
+            </option>
+
+            <option value="Academic Query">
+              Academic Query
+            </option>
+
+            <option value="Other">
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- MESSAGE -->
+
+      <div class="form-group">
+
+        <label for="message">
+
+          Your Message
+          <span class="required">*</span>
+
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          required></textarea>
+
+      </div>
+
+
+      <!-- EMAIL SUBJECT -->
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Contact Form Submission - Law Lex Mind">
+
+
+      <!-- REPLY-TO -->
+
+      <input
+        type="hidden"
+        name="_replyto"
+        value="">
+
+
+      <!-- SUBMIT -->
+
+      <div class="form-submit">
+
+        <button
+          type="submit"
+          class="btn">
+
+          Send Message →
+
+        </button>
+
+      </div>
+
+
+      <p class="form-note">
+
+        Your message will be securely submitted
+        through our contact form service.
+
+      </p>
+
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =================================================
+     CONTACT TOPICS
+================================================== -->
+
+<div class="contact-topics">
+
+  <div class="section-heading">
+
+    <p class="small-heading">
+      WHAT CAN WE HELP WITH?
+    </p>
+
+    <h2>
+      Contact Law Lex Mind About
+    </h2>
+
+  </div>
+
+
+  <div class="contact-topics-grid">
+
+
+    <div class="contact-topic">
+
+      <h3>
+        📝 Publications
+      </h3>
+
+      <p>
+
+        Questions regarding article submissions,
+        research papers, case commentaries and
+        publication opportunities.
+
+      </p>
+
+    </div>
+
+
+    <div class="contact-topic">
+
+      <h3>
+        🎓 Internships
+      </h3>
+
+      <p>
+
+        Ask about internship updates,
+        opportunities, applications and
+        student guidance.
+
+      </p>
+
+    </div>
+
+
+    <div class="contact-topic">
+
+      <h3>
+        📚 Academic Resources
+      </h3>
+
+      <p>
+
+        Contact us regarding legal resources,
+        academic content and student-focused
+        learning materials.
+
+      </p>
+
+    </div>
+
+
+    <div class="contact-topic">
+
+      <h3>
+        🤝 Collaboration
+      </h3>
+
+      <p>
+
+        Interested in collaborating with
+        Law Lex Mind? Send us your proposal
+        through the contact form.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
 
 <!-- =====================================================
      FOOTER
@@ -758,68 +853,70 @@
 
 <footer class="site-footer">
 
-
   <div class="footer-logo">
 
-    <img
-      src="logo.png"
-      alt="Law Lex Mind Logo"
-      class="footer-logo-img">
+```
+<img
+  src="logo.png"
+  alt="Law Lex Mind Logo"
+  class="footer-logo-img">
 
-    <h3>
-      Law Lex Mind
-    </h3>
+<h3>
+  Law Lex Mind
+</h3>
 
-    <p>
-      Research • Write • Learn • Grow
-    </p>
+<p>
+  Research • Write • Learn • Grow
+</p>
+```
 
   </div>
-
-
 
   <div class="footer-contact">
 
-    <p>
+```
+<p>
 
-      📧 Email:
+  📧 Email:
 
-      <a href="mailto:lexmindsindia@gmail.com">
+  <a
+    href="mailto:lexmindsindia@gmail.com">
 
-        lexmindsindia@gmail.com
+    lexmindsindia@gmail.com
 
-      </a>
+  </a>
 
-    </p>
+</p>
 
-    <p>
 
-      🔗 LinkedIn:
+<p>
 
-      <a
-        href="https://www.linkedin.com/company/legal-school-notes/"
-        target="_blank"
-        rel="noopener noreferrer">
+  🔗 LinkedIn:
 
-        Law Lex Mind
+  <a
+    href="https://www.linkedin.com/company/legal-school-notes/"
+    target="_blank"
+    rel="noopener noreferrer">
 
-      </a>
+    Law Lex Mind
 
-    </p>
+  </a>
+
+</p>
+```
 
   </div>
 
-
   <p class="copyright">
 
-    © 2026 Law Lex Mind.
-    All Rights Reserved.
+```
+© 2026 Law Lex Mind.
+All Rights Reserved.
+```
 
   </p>
 
-
 </footer>
-
 
 </body>
 
